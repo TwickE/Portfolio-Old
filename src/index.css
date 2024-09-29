@@ -1,0 +1,29 @@
+:root {
+    --font: 'Sora', sans-serif;
+    --primary-color: #283AFF;
+    --secondary-color: #0A1264;
+    --dark-accent-color: #0E0C1C;
+    --light-accent-color: #E3EBFF;
+    --dark-background-color1: #070915;
+    --dark-background-color2: #050509;
+    --light-background-color: #F3F3FC;
+    --white: #FFFFFF;
+    --grey: #747779;
+    --dark-grey: #22272C;
+    --dark-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
+    --light-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--white) 100%);
+    --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%)
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--dark-background-color1);
+}

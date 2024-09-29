@@ -1,0 +1,150 @@
+.navbar {
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-section > svg {
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-section > span {
+    margin-left: 20px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-right: 50px;
+}
+
+.navbar-item {
+    list-style-type: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-link::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background: var(--dark-gradient);
+    background-size: 200%;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
+}
+
+.navbar-link:hover::before {
+    width: 100%;
+}
+
+.link-active::before {
+    width: 100%;
+}
+
+#theme {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+}
+
+#theme > span {
+    position: relative;
+    padding-right: 20px;
+}
+
+#theme > span::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background: var(--dark-gradient);
+    background-size: 200%;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
+}
+
+#theme > span:hover::before {
+    width: 100%;
+}
+
+#theme > span::after {
+    content: '\2b';
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+}
+
+#theme > span:hover::after {
+    content: '\2212';
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+}
+
+.theme-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 99;
+    text-align: left;
+    background-color: var(--dark-background-color2);
+    box-shadow: 0 15px 20px 3px rgba(40, 58, 255, 0.25);
+    gap: 0;
+    margin-top: 30px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* Uncomment these lines if you want to hide the submenu initially */
+    /* transform: scaleY(0); */
+    /* opacity: 0; */
+    /* visibility: hidden; */
+}
+
+.theme-submenu-item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.theme-submenu-item:hover {
+    background-color: var(--dark-accent-color);
+}
