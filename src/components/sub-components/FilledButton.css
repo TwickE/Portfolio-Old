@@ -1,9 +1,9 @@
 .filled-button {
     padding: 17px 35px;
-    background: var(--dark-gradient);
+    background: var(--button-gradient);
     background-size: 200%;
     border-radius: 50px;
-    color: var(--white);
+    color: #FFFFFF;
     border: none;
     cursor: pointer;
     font-weight: 700;

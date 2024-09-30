@@ -1,5 +1,5 @@
 :root {
-    --font: 'Sora', sans-serif;
+    /* --font: 'Sora', sans-serif;
     --primary-color: #283AFF;
     --secondary-color: #0A1264;
     --dark-accent-color: #0E0C1C;
@@ -12,6 +12,33 @@
     --dark-grey: #22272C;
     --dark-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
     --light-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--white) 100%);
+    --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%) */
+    --font: 'Sora', sans-serif;
+    --primary-color: #283AFF;
+    --secondary-color: #0A1264;
+    --accent-color: #E3EBFF;
+    --background-color1: #FFFFFF;
+    --background-color2: #F3F3FC;
+    --text-color: #0E0C1C;
+    --grey: #747779;
+    --form-border-color: #0A1264;
+    --button-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
+    --text-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
+    --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%)
+}
+
+[data-theme="dark"] {
+    --font: 'Sora', sans-serif;
+    --primary-color: #283AFF;
+    --secondary-color: #0A1264;
+    --accent-color: #0E0C1C;
+    --background-color1: #070915;
+    --background-color2: #050509;
+    --text-color: #FFFFFF;
+    --grey: #747779;
+    --form-border-color: #22272C;
+    --button-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
+    --text-gradient: linear-gradient(to right, var(--primary-color) 0%, #ffffff 100%);
     --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%)
 }
 
@@ -22,8 +49,9 @@
 * {
     margin: 0;
     font-family: var(--font);
+    transition: all 0.3s ease-in-out;
 }
 
 body {
-    background-color: var(--dark-background-color1);
+    background-color: var(--background-color1);
 }
