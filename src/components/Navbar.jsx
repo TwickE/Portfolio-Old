@@ -107,11 +107,12 @@ function Navbar(props) {
                 </nav>
             </header>
             <div style={mobileMenuItemsStyles} className='mobile-menu-items'>
-                    <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='' to='/'>Home</Link>
-                    <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='' to='/about'>About</Link>
-                    <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='' to='/projects'>Projects</Link>
-                    <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='' to='/contact'>Contact</Link>
-                    <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='' to='/theme'>Theme</Link>
+                <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='mobile-menu-link' to='/'>Home</Link>
+                <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='mobile-menu-link' to='/about'>About</Link>
+                <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='mobile-menu-link' to='/projects'>Projects</Link>
+                <Link style={{ display: isMenuActive ? 'block' : 'none'}} className='mobile-menu-link' to='/contact'>Contact</Link>
+                <span style={{ display: isMenuActive ? 'block' : 'none'}} className='mobile-menu-link'>Theme</span>
+                
             </div>
         </>
     )
