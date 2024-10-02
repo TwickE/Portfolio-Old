@@ -5,8 +5,8 @@ import iconsFile from '../../assets/icons.svg'
 function OutlineButton({ buttonProps }) {
     return (
         <>
-            <object type="image/svg+xml" data="./src/assets/icons.svg" style={{display: 'none'}}></object>
-            <button className={`outline-button ${buttonProps.buttonSmall ? 'small' : 'large'}`}>
+            <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
+            <button className={`outline-button ${buttonProps.buttonSmall ? 'small' : 'large'}`} onClick={buttonProps.clickFunction}>
                 {buttonProps.startImage && (
                     <svg className='margin-right'>
                         <use href={`${iconsFile}#${buttonProps.startImageSrc}`}></use>
@@ -31,6 +31,7 @@ OutlineButton.propTypes = {
         text: PropTypes.string.isRequired,
         endImage: PropTypes.bool.isRequired,
         endImageSrc: PropTypes.string,
+        clickFunction: PropTypes.func.isRequired
     }).isRequired
 };
 

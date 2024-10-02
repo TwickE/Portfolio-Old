@@ -50,3 +50,10 @@
     margin-bottom: 70px;
     max-width: 540px;
 }
+
+.container-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}

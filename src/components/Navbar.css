@@ -183,6 +183,8 @@ header {
 }
 
 .theme-submenu-item>svg {
+    width: 21px;
+    height: 21px;
     fill: var(--text-color);
 }
 
@@ -352,7 +354,10 @@ header {
     }
 
     .mobile-menu-theme-item>svg {
+        width: 21px;
+        height: 21px;
         fill: #FFFFFF;
+        transition: 0s;
     }
 
     .mobile-menu-theme-item.hidden {
