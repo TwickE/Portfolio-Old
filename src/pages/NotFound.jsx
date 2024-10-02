@@ -1,6 +1,11 @@
+import Navbar from "../components/Navbar"
+
 function NotFound() {
     return (
-        <h1>NotFound</h1>
+        <>
+            <Navbar activeLink="" />
+            <h1>404: Page not found</h1>
+        </>
     )
 }
 

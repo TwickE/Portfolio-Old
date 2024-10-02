@@ -11,7 +11,7 @@ function Navbar(props) {
     const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
 
     const mobileMenuItemsStyles = {
-        height: isMenuActive ?'calc(100dvh - 100px)' : '',
+        height: isMenuActive ?'calc(100dvh - 100px)' : '0px',
         opacity: isMenuActive ? 1 : 0
     }
 

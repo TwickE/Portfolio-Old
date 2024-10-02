@@ -1,6 +1,11 @@
+import Navbar from "../components/Navbar"
+
 function About() {
     return (
-        <h1>About</h1>
+        <>
+            <Navbar activeLink="about" />
+            <h1>About</h1>
+        </>
     )
 }
 

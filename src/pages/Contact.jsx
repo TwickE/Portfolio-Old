@@ -1,6 +1,11 @@
+import Navbar from "../components/Navbar"
+
 function Contact() {
     return (
-        <h1>Contact</h1>
+        <>
+            <Navbar activeLink="contact" />
+            <h1>Contact</h1>
+        </>
     )
 }
 

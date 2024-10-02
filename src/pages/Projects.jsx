@@ -1,6 +1,11 @@
+import Navbar from "../components/Navbar"
+
 function Projects() {
     return (
-        <h1>Projects</h1>
+        <>
+            <Navbar activeLink="projects" />
+            <h1>Projects</h1>
+        </>
     )
 }
 
