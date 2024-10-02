@@ -16,7 +16,6 @@
     border-radius: 50%;
     background: var(--radial-gradient);
     filter: blur(150px);
-    margin-right: -5%;
     margin-top: -5%;
     z-index: -1;
 }

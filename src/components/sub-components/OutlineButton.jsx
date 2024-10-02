@@ -1,13 +1,25 @@
 import './OutlineButton.css'
 import PropTypes from 'prop-types';
+import iconsFile from '../../assets/icons.svg'
 
 function OutlineButton({ buttonProps }) {
     return (
-        <button className={`outline-button ${buttonProps.buttonSmall ? 'small' : 'large'}`}>
-            {buttonProps.startImage && <img src={buttonProps.startImageSrc} alt={buttonProps.startImageText} />}
-            {buttonProps.text}
-            {buttonProps.endImage && <img src={buttonProps.endImageSrc} alt={buttonProps.endImageText} />}
-        </button>
+        <>
+            <object type="image/svg+xml" data="./src/assets/icons.svg" style={{display: 'none'}}></object>
+            <button className={`outline-button ${buttonProps.buttonSmall ? 'small' : 'large'}`}>
+                {buttonProps.startImage && (
+                    <svg className='margin-right'>
+                        <use href={`${iconsFile}#${buttonProps.startImageSrc}`}></use>
+                    </svg>
+                    )}
+                {buttonProps.text}
+                {buttonProps.endImage && (
+                    <svg className='margin-left'>
+                        <use href={`${iconsFile}#${buttonProps.endImageSrc}`}></use>
+                    </svg>
+                    )}
+            </button>
+        </>
     )
 }
 
@@ -16,11 +28,9 @@ OutlineButton.propTypes = {
         buttonSmall: PropTypes.bool.isRequired,
         startImage: PropTypes.bool.isRequired,
         startImageSrc: PropTypes.string,
-        startImageText: PropTypes.string,
         text: PropTypes.string.isRequired,
         endImage: PropTypes.bool.isRequired,
         endImageSrc: PropTypes.string,
-        endImageText: PropTypes.string
     }).isRequired
 };
 
