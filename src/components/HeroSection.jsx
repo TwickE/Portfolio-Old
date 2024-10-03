@@ -31,21 +31,21 @@ function HeroSection() {
                             clickFunction: downloadCV
                         }}
                     />
-                    <button className='socil-button'>
+                    <a className='social-button' style={{marginLeft: "5px"}} href='https://www.linkedin.com/in/frederico-silva-727a8b21a/' target='_blank'>
                         <svg>
                             <use href={`${iconsFile}#linkedin-icon`}></use>
                         </svg>
-                    </button>
-                    <button className='socil-button'>
+                    </a>
+                    <a className='social-button' href='https://github.com/TwickE' target='_blank'>
                         <svg>
                             <use href={`${iconsFile}#github-icon`}></use>
                         </svg>
-                    </button>
-                    <button className='socil-button'>
+                    </a>
+                    <a className='social-button' href='https://codepen.io/TwickE' target='_blank'>
                         <svg>
                             <use href={`${iconsFile}#codepen-icon`}></use>
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
         </main>

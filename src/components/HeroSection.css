@@ -57,3 +57,29 @@
     align-items: center;
     gap: 20px;
 }
+
+.social-button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-button > svg {
+    width: 19px;
+    height: 19px;
+    fill: var(--primary-color);
+    transition: 0s;
+}
+
+.social-button:hover {
+    background-color: var(--primary-color);
+}
+
+.social-button:hover > svg {
+    fill: #FFFFFF;
+}
