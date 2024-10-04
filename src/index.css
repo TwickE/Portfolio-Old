@@ -8,6 +8,7 @@
     --text-color: #0E0C1C;
     --grey: #747779;
     --form-border-color: #0A1264;
+    --profile-photo-border-color: #F0F0F0;
     --button-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
     --text-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
     --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%)
@@ -23,6 +24,7 @@
     --text-color: #FFFFFF;
     --grey: #747779;
     --form-border-color: #22272C;
+    --profile-photo-border-color: #0F0F0F;
     --button-gradient: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 51%, var(--primary-color) 100%);
     --text-gradient: linear-gradient(to right, var(--primary-color) 0%, #ffffff 100%);
     --radial-gradient: linear-gradient(260deg, var(--primary-color) 0%, rgba(67, 84, 210, 0) 100%)

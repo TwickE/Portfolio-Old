@@ -83,3 +83,40 @@
 .social-button:hover > svg {
     fill: #FFFFFF;
 }
+
+.container-photo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-photo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--radial-gradient);
+    filter: blur(150px);
+    margin-left: -5%;
+    margin-bottom: -5%;
+}
+
+.profile-photo {
+    width: 475px;
+    height: 510px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 38px;
+    rotate: 5deg;
+    background: var(--profile-photo-border-color);
+    transition: 0.4s;
+}
+
+.profile-photo:hover {
+    border: 2px solid var(--primary-color);
+    rotate: 0deg;
+}

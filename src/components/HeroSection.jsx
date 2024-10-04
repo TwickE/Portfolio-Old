@@ -2,6 +2,7 @@ import './HeroSection.css'
 import OutlineButton from './sub-components/OutlineButton.jsx'
 import CV from '../assets/CV.pdf'
 import iconsFile from '../assets/icons.svg'
+import profilePhoto from '../assets/profilePhoto.webp'
 
 function HeroSection() {
     const downloadCV = () => {
@@ -47,6 +48,9 @@ function HeroSection() {
                         </svg>
                     </a>
                 </div>
+            </div>
+            <div className='container-photo'>
+                <img className='profile-photo' src={profilePhoto} alt="Profile Photo"/>
             </div>
         </main>
         
