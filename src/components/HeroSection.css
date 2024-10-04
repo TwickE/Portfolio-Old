@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .hero-section::before {
@@ -42,6 +43,10 @@
     background: var(--text-gradient);
     background-clip: text;
     color: transparent;
+}
+
+.container-photo-small {
+    display: none;
 }
 
 .container-info p {
@@ -119,4 +124,226 @@
 .profile-photo:hover {
     border: 2px solid var(--primary-color);
     rotate: 0deg;
+}
+
+@media only screen and (max-width: 1400px) {
+    .hero-section {
+        width: 1140px;
+    }
+
+    .container-info h2 {
+        font-size: 2rem;
+    }
+    
+    .container-info h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .hero-section {
+        width: 960px;
+    }
+
+    .container-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container-info h1 {
+        font-size: 2.3rem;
+    }
+
+    .container-info p {
+        font-size: 1.1rem;
+    }
+
+    .profile-photo {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero-section {
+        width: 800px;
+    }
+
+    .container-info h2 {
+        font-size: 1.4rem;
+    }
+    
+    .container-info h1 {
+        font-size: 2rem;
+    }
+
+    .container-info p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .hero-section {
+        width: 700px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .container-info {
+        width: 700px;
+        margin: auto;
+    }
+
+    .container-photo-small {
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        position: relative;
+    }
+
+    .container-photo-small::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: var(--radial-gradient);
+        filter: blur(150px);
+        margin-left: -5%;
+        margin-bottom: -5%;
+    }
+
+    .profile-photo {
+        width: 475px;
+        height: 510px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 38px;
+        rotate: 5deg;
+        background: var(--profile-photo-border-color);
+        transition: 0.4s;
+    }
+
+    .container-info h2 {
+        font-size: 2rem;
+    }
+    
+    .container-info h1 {
+        font-size: 3rem;
+    }
+
+    .container-info p {
+        font-size: 1.4rem;
+        min-width: 700px;
+        width: 700px;
+    }
+
+    .container-photo {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+    .hero-section {
+        width: 540px;
+    }
+
+    .container-info {
+        width: 540px;
+    }
+
+    .container-photo-small {
+        width: 540px;
+    }
+
+    .container-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .container-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .container-info p {
+        min-width: 540px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .hero-section {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .container-info {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .container-photo-small {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .container-info h1 {
+        font-size: 2rem;
+    }
+
+    .container-info p {
+        font-size: 1.1rem;
+        min-width: 100%;
+        width: 100%;
+        padding: 0 12px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container-info h2 {
+        font-size: 1.2rem;
+    }
+    
+    .container-info h1 {
+        font-size: 1.7rem;
+    }
+
+    .container-info p {
+        font-size: 1rem;
+    }
+
+    .container-buttons {
+        width: 100%;
+        padding: 0 12px;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .container-info h2 {
+        font-size: 1rem;
+    }
+    
+    .container-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .container-info p {
+        font-size: 0.8rem;
+    }
 }

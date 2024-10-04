@@ -20,6 +20,9 @@ function HeroSection() {
             <div className='container-info'>
                 <h2>Hi, I am fred.</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
+                <div className='container-photo-small'>
+                    <img className='profile-photo' src={profilePhoto} alt="Profile Photo"/>
+                </div>
                 <p>I&rsquo;m a technology enthusiast with a focus on Web Development. I consider myself a curious individual, always eager to learn new things.</p>
                 <div className='container-buttons'>
                     <OutlineButton
