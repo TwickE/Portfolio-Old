@@ -18,7 +18,7 @@ function HeroSection() {
         <main className="hero-section">
             <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
             <div className='container-info'>
-                <h2>Hi, I am fred.</h2>
+                <h2>Hi, I am Fred</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
                 <div className='container-photo-small'>
                     <img className='profile-photo' src={profilePhoto} alt="Profile Photo"/>

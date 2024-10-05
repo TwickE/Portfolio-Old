@@ -1,0 +1,14 @@
+[
+    {
+        "skillName": "HTML",
+        "skillImage": "html-icon.webp"
+    },
+    {
+        "skillName": "CSS",
+        "skillImage": "css-icon.webp"
+    },
+    {
+        "skillName": "Sass",
+        "skillImage": "sass-icon.webp"
+    }
+]
