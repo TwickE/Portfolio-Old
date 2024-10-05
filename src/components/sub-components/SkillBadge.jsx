@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 function SkillBadge(props) {
     return (
-        <div className='skill-badge'>
+        <a href={props.skillLink} className='skill-badge' target='_blank'>
             <img src={props.skillImage} alt={`${props.skillName} Icon`} />
             <h3>{props.skillName}</h3>
-        </div>
+        </a>
     )
 }
 
 SkillBadge.propTypes = {
+    skillLink: PropTypes.string.isRequired,
     skillImage: PropTypes.string.isRequired,
     skillName: PropTypes.string.isRequired
 };

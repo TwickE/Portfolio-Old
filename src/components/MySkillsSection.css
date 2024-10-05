@@ -31,8 +31,11 @@
 }
 
 .badges-conatiner {
-    width: 1320px;
+    width: calc(140px * 8 + 15px * 7);
+    margin: auto;
     display: flex;
     flex-direction: row;
+    gap: 15px;
     flex-wrap: wrap;
+    margin-top: 50px;
 }

@@ -20,6 +20,7 @@ function MySkillsSection(props) {
                     {skills.map((skill, index) => (
                         <SkillBadge
                             key={index}
+                            skillLink={skill.skillLink}
                             skillName={skill.skillName}
                             skillImage={loadedImages[skill.skillImage]}
                         />

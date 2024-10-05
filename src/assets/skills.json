@@ -1,29 +1,51 @@
 [
     {
+        "skillLink": "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
         "skillName": "HTML",
         "skillImage": "html-icon.webp"
     },
     {
+        "skillLink": "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
         "skillName": "CSS",
         "skillImage": "css-icon.webp"
     },
     {
+        "skillLink": "https://sass-lang.com/",
         "skillName": "Sass",
         "skillImage": "sass-icon.webp"
     },
     {
+        "skillLink": "https://getbootstrap.com/",
         "skillName": "Bootstrap",
         "skillImage": "bootstrap-icon.webp"
     },
     {
+        "skillLink": "https://www.typescriptlang.org/",
         "skillName": "TypeScript",
         "skillImage": "typescript-icon.webp"
     },
     {
+        "skillLink": "https://www.php.net/",
         "skillName": "php",
         "skillImage": "php-icon.webp"
     },
     {
+        "skillLink": "https://www.php.net/",
+        "skillName": "php",
+        "skillImage": "php-icon.webp"
+    },
+    {
+        "skillLink": "https://www.php.net/",
+        "skillName": "php",
+        "skillImage": "php-icon.webp"
+    },
+    {
+        "skillLink": "https://www.php.net/",
+        "skillName": "php",
+        "skillImage": "php-icon.webp"
+    },
+    {
+        "skillLink": "https://learn.microsoft.com/pt-pt/dotnet/csharp/",
         "skillName": "C#",
         "skillImage": "csharp-icon.webp"
     }

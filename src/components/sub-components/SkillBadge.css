@@ -10,6 +10,7 @@
     justify-content: center;
     gap: 15px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .skill-badge > img {
