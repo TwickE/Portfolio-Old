@@ -10,5 +10,21 @@
     {
         "skillName": "Sass",
         "skillImage": "sass-icon.webp"
+    },
+    {
+        "skillName": "Bootstrap",
+        "skillImage": "bootstrap-icon.webp"
+    },
+    {
+        "skillName": "TypeScript",
+        "skillImage": "typescript-icon.webp"
+    },
+    {
+        "skillName": "php",
+        "skillImage": "php-icon.webp"
+    },
+    {
+        "skillName": "C#",
+        "skillImage": "csharp-icon.webp"
     }
 ]

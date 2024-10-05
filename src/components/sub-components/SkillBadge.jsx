@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function SkillBadge(props) {
     return (
-        <div className='SkillBadge'>
+        <div className='skill-badge'>
             <img src={props.skillImage} alt={`${props.skillName} Icon`} />
-            <p>{props.skillName}</p>
+            <h3>{props.skillName}</h3>
         </div>
     )
 }

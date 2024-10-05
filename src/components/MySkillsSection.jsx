@@ -2,24 +2,10 @@ import './MySkillsSection.css'
 import PropTypes from 'prop-types';
 import SkillBadge from './sub-components/SkillBadge'
 import skillsJSON from '../assets/skills.json'
-import { useEffect, useState } from 'react';
+import useLoadImages from '../hooks/useLoadImages'
 
 function MySkillsSection(props) {
-    const [skills, setSkills] = useState([]);
-    const [loadedImages, setLoadedImages] = useState({});
-
-    useEffect(() => {
-        const loadImages = async () => {
-            const images = {};
-            for (const skill of skillsJSON) {
-                const imageModule = await import(`../assets/skills-images/${skill.skillImage}`);
-                images[skill.skillImage] = imageModule.default;
-            }
-            setLoadedImages(images);
-            setSkills(skillsJSON);
-        };
-        loadImages();
-    }, []);
+    const { skills, loadedImages } = useLoadImages(skillsJSON);
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
