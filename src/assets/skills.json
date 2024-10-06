@@ -1,11 +1,11 @@
 [
     {
-        "skillLink": "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
+        "skillLink": "https://developer.mozilla.org/docs/Web/HTML",
         "skillName": "HTML",
         "skillImage": "html-icon.webp"
     },
     {
-        "skillLink": "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+        "skillLink": "https://developer.mozilla.org/docs/Web/CSS",
         "skillName": "CSS",
         "skillImage": "css-icon.webp"
     },
@@ -30,23 +30,118 @@
         "skillImage": "php-icon.webp"
     },
     {
-        "skillLink": "https://www.php.net/",
-        "skillName": "php",
-        "skillImage": "php-icon.webp"
-    },
-    {
-        "skillLink": "https://www.php.net/",
-        "skillName": "php",
-        "skillImage": "php-icon.webp"
-    },
-    {
-        "skillLink": "https://www.php.net/",
-        "skillName": "php",
-        "skillImage": "php-icon.webp"
-    },
-    {
-        "skillLink": "https://learn.microsoft.com/pt-pt/dotnet/csharp/",
+        "skillLink": "https://learn.microsoft.com/dotnet/csharp/",
         "skillName": "C#",
         "skillImage": "csharp-icon.webp"
+    },
+    {
+        "skillLink": "https://learn.microsoft.com/cpp/?view=msvc-170",
+        "skillName": "C++",
+        "skillImage": "cplusplus-icon.webp"
+    },
+    {
+        "skillLink": "https://www.swift.org/",
+        "skillName": "Swift",
+        "skillImage": "swift-icon.webp"
+    },
+    {
+        "skillLink": "https://www.java.com/",
+        "skillName": "Java",
+        "skillImage": "java-icon.webp"
+    },
+    {
+        "skillLink": "https://kotlinlang.org/",
+        "skillName": "Kotlin",
+        "skillImage": "kotlin-icon.webp"
+    },
+    {
+        "skillLink": "https://www.python.org/",
+        "skillName": "Python",
+        "skillImage": "python-icon.webp"
+    },
+    {
+        "skillLink": "https://react.dev/",
+        "skillName": "React",
+        "skillImage": "react-icon.webp"
+    },
+    {
+        "skillLink": "https://angular.dev/",
+        "skillName": "Angular",
+        "skillImage": "angular-icon.webp"
+    },
+    {
+        "skillLink": "https://ionicframework.com/",
+        "skillName": "Ionic",
+        "skillImage": "ionic-icon.webp"
+    },
+    {
+        "skillLink": "https://expressjs.com/",
+        "skillName": "Express",
+        "skillImage": "express-icon.webp"
+    },
+    {
+        "skillLink": "https://nodejs.org/",
+        "skillName": "NodeJS",
+        "skillImage": "nodejs-icon.webp"
+    },
+    {
+        "skillLink": "https://www.mysql.com/",
+        "skillName": "MySQL",
+        "skillImage": "mysql-icon.webp"
+    },
+    {
+        "skillLink": "https://www.mongodb.com/",
+        "skillName": "MongoDB",
+        "skillImage": "mongodb-icon.webp"
+    },
+    {
+        "skillLink": "https://firebase.google.com/",
+        "skillName": "Firebase",
+        "skillImage": "firebase-icon.webp"
+    },
+    {
+        "skillLink": "https://code.visualstudio.com/",
+        "skillName": "Visual Studio Code",
+        "skillImage": "vscode-icon.webp"
+    },
+    {
+        "skillLink": "https://visualstudio.microsoft.com/",
+        "skillName": "Visual Studio",
+        "skillImage": "visualstudio-icon.webp"
+    },
+    {
+        "skillLink": "https://developer.android.com/",
+        "skillName": "Android Studio",
+        "skillImage": "androidstudio-icon.webp"
+    },
+    {
+        "skillLink": "https://developer.apple.com/xcode/",
+        "skillName": "Xcode",
+        "skillImage": "xcode-icon.webp"
+    },
+    {
+        "skillLink": "https://figma.com/",
+        "skillName": "Figma",
+        "skillImage": "figma-icon.webp"
+    },
+    {
+        "skillLink": "https://www.npmjs.com/",
+        "skillName": "npm",
+        "skillImage": "npm-icon.webp"
+    },
+    {
+        "skillLink": "https://git-scm.com/",
+        "skillName": "git",
+        "skillImage": "git-icon.webp"
+    },
+    {
+        "skillLink": "https://www.gnu.org/software/bash/",
+        "skillName": "Bash",
+        "skillImage": "bash-icon.webp"
+    },
+    {
+        "skillLink": "https://unity.com/",
+        "skillName": "Unity",
+        "skillImage": "unity-icon.webp"
     }
 ]
