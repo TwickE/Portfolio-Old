@@ -224,7 +224,7 @@
         height: 510px;
         border: 2px solid var(--secondary-color);
         border-radius: 38px;
-        rotate: 5deg;
+        rotate: 0deg;
         background: var(--profile-photo-border-color);
         transition: 0.4s;
     }

@@ -66,7 +66,7 @@
         width: 1140px;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 7 + 25px * 6);
     }
 }
@@ -76,7 +76,7 @@
         width: 960px;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 6 + 20px * 5);
         gap: 20px;
     }
@@ -87,7 +87,7 @@
         width: 800px;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 5 + 20px * 4);
     }
 }
@@ -97,9 +97,13 @@
         width: 700px;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 4 + 40px * 3);
         gap: 40px;
+    }
+
+    .badges-container:hover::before {
+        opacity: 0;
     }
 }
 
@@ -112,7 +116,7 @@
         max-width: 100%;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 3 + 40px * 2);
     }
 }
@@ -123,7 +127,7 @@
         padding: 0 12px;
     }
 
-    .badges-conatiner {
+    .badges-container {
         width: calc(140px * 2 + 15px * 1);
         gap: 15px;
     }
