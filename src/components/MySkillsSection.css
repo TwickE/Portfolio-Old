@@ -30,7 +30,7 @@
     margin: auto;
 }
 
-.badges-conatiner {
+.badges-container {
     width: calc(140px * 8 + 25px * 7);
     margin: auto;
     display: flex;
@@ -38,6 +38,27 @@
     gap: 25px;
     flex-wrap: wrap;
     margin-top: 50px;
+    position: relative;
+}
+
+.badges-container::before {
+    content: '';
+    position: absolute;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    width: 150px;
+    height: 150px;
+    background: var(--radial-gradient);
+    border-radius: 50%;
+    filter: blur(75px);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.badges-container:hover::before {
+    opacity: 1;
 }
 
 @media only screen and (max-width: 1400px) {
