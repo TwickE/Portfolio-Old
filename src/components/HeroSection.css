@@ -1,5 +1,6 @@
 .hero-section {
     width: 1320px;
+    min-height: calc(100dvh - 250px);
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -74,7 +75,7 @@
     cursor: pointer;
 }
 
-.social-button > svg {
+.social-button>svg {
     width: 19px;
     height: 19px;
     fill: var(--primary-color);
@@ -85,7 +86,7 @@
     background-color: var(--primary-color);
 }
 
-.social-button:hover > svg {
+.social-button:hover>svg {
     fill: #FFFFFF;
 }
 
@@ -127,6 +128,40 @@
     rotate: 0deg;
 }
 
+@keyframes fadeInLeftBig {
+    from {
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeftBig {
+    animation-name: fadeInLeftBig;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInRightBig {
+    from {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRightBig {
+    animation-name: fadeInRightBig;
+    animation-duration: 2s;
+}
+
 @media only screen and (max-width: 1400px) {
     .hero-section {
         width: 1140px;
@@ -135,7 +170,7 @@
     .container-info h2 {
         font-size: 2rem;
     }
-    
+
     .container-info h1 {
         font-size: 2.7rem;
     }
@@ -149,7 +184,7 @@
     .container-info h2 {
         font-size: 1.8rem;
     }
-    
+
     .container-info h1 {
         font-size: 2.3rem;
     }
@@ -172,7 +207,7 @@
     .container-info h2 {
         font-size: 1.4rem;
     }
-    
+
     .container-info h1 {
         font-size: 2rem;
     }
@@ -193,6 +228,19 @@
 
     .container-info {
         width: 700px;
+        margin: auto;
+    }
+
+    .container-info h2 {
+        margin: auto;
+    }
+
+    .container-info h1 {
+        margin: auto;
+        text-align: center;
+    }
+
+    .container-buttons {
         margin: auto;
     }
 
@@ -232,7 +280,7 @@
     .container-info h2 {
         font-size: 2rem;
     }
-    
+
     .container-info h1 {
         font-size: 3rem;
     }
@@ -266,7 +314,7 @@
     .container-info h2 {
         font-size: 1.8rem;
     }
-    
+
     .container-info h1 {
         font-size: 2.5rem;
     }
@@ -300,7 +348,7 @@
     .container-info h2 {
         font-size: 1.5rem;
     }
-    
+
     .container-info h1 {
         font-size: 2rem;
     }
@@ -317,7 +365,7 @@
     .container-info h2 {
         font-size: 1.2rem;
     }
-    
+
     .container-info h1 {
         font-size: 1.7rem;
     }
@@ -340,7 +388,7 @@
     .container-info h2 {
         font-size: 1rem;
     }
-    
+
     .container-info h1 {
         font-size: 1.3rem;
     }
