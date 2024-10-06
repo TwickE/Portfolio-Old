@@ -38,3 +38,17 @@
 .skill-badge:hover > h3 {
     color: var(--primary-color);
 }
+
+@media only screen and (max-width: 830px) {
+    .skill-badge {
+        border: 1px solid var(--primary-color);
+    }
+
+    .skill-badge > img {
+        filter: grayscale(0%);
+    }
+
+    .skill-badge > h3 {
+        color: var(--primary-color);
+    }
+}

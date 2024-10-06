@@ -39,3 +39,71 @@
     flex-wrap: wrap;
     margin-top: 50px;
 }
+
+@media only screen and (max-width: 1400px) {
+    .my-skills-inner-conatiner {
+        width: 1140px;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 7 + 25px * 6);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .my-skills-inner-conatiner {
+        width: 960px;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 6 + 20px * 5);
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .my-skills-inner-conatiner {
+        width: 800px;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 5 + 20px * 4);
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .my-skills-inner-conatiner {
+        width: 700px;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 4 + 40px * 3);
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .my-skills-inner-conatiner {
+        width: 540px;
+    }
+
+    .my-skills-inner-conatiner  > p {
+        max-width: 100%;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 3 + 40px * 2);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .my-skills-inner-conatiner {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .badges-conatiner {
+        width: calc(140px * 2 + 15px * 1);
+        gap: 15px;
+    }
+}

@@ -241,6 +241,7 @@
         font-size: 1.4rem;
         min-width: 700px;
         width: 700px;
+        text-align: center;
     }
 
     .container-photo {
