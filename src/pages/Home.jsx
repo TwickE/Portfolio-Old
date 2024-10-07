@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar"
-import HeroSection from "../components/HeroSection"
-import MySkillsSection from "../components/MySkillsSection"
+import Navbar from "../components/main-components/Navbar/Navbar"
+import HeroSection from "../components/main-components/HeroSection/HeroSection"
+import MySkillsSection from "../components/main-components/MySkillsSection/MySkillsSection"
 
 function Home() {
     return (

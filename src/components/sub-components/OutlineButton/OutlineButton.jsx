@@ -1,6 +1,6 @@
 import './OutlineButton.css'
 import PropTypes from 'prop-types';
-import iconsFile from '../../assets/icons.svg'
+import iconsFile from '../../../assets/icons.svg'
 
 function OutlineButton({ buttonProps }) {
     return (

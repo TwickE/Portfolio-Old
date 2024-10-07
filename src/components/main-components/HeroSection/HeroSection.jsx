@@ -1,8 +1,8 @@
 import './HeroSection.css'
-import OutlineButton from './sub-components/OutlineButton.jsx'
-import CV from '../assets/CV.pdf'
-import iconsFile from '../assets/icons.svg'
-import profilePhoto from '../assets/profilePhoto.webp'
+import OutlineButton from '../../sub-components/OutlineButton/OutlineButton.jsx'
+import CV from '../../../assets/CV.pdf'
+import iconsFile from '../../../assets/icons.svg'
+import profilePhoto from '../../../assets/profilePhoto.webp'
 
 function HeroSection() {
     const downloadCV = () => {

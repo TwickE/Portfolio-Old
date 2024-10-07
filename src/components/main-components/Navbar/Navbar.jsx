@@ -1,9 +1,9 @@
 import './Navbar.css'
-import FilledButton from './sub-components/FilledButton'
+import FilledButton from '../../sub-components/FilledButton/FilledButton'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import iconsFile from '../assets/icons.svg'
+import iconsFile from '../../../assets/icons.svg'
 
 function Navbar(props) {
     const [theme, setTheme] = useState('dark');

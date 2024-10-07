@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/main-components/Navbar/Navbar"
 
 function NotFound() {
     return (
