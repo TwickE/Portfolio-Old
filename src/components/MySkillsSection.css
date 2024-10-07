@@ -61,23 +61,6 @@
     opacity: 1;
 }
 
-.fadeInUp-animation {
-    animation-name: fadeInUp-animation;
-    animation-duration: 3s;
-}
-
-.text-animationOn {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 3s;
-}
-
-.text-animationOff {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 3s;
-}
-
 @media only screen and (max-width: 1400px) {
     .my-skills-inner-conatiner {
         width: 1140px;

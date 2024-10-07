@@ -32,22 +32,12 @@ function MySkillsSection(props) {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('skill-badge')) {
-                        entry.target.classList.remove('badge-animationOff');
-                        entry.target.classList.add('badge-animationOn');
-                    } else if (entry.target === titleRef.current || entry.target === descriptionRef.current) {
-                        entry.target.classList.remove('text-animationOff');
-                        entry.target.classList.add('text-animationOn');
-                    }
-                } else {
-                    if (entry.target.classList.contains('skill-badge')) {
-                        entry.target.classList.remove('badge-animationOn');
-                        entry.target.classList.add('badge-animationOff');
-                    } else if (entry.target === titleRef.current || entry.target === descriptionRef.current) {
-                        entry.target.classList.remove('text-animationOn');
-                        entry.target.classList.add('text-animationOff');
-                    }
+                if (entry.target.classList.contains('skill-badge')) {
+                    entry.target.classList.toggle('badge-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('badge-animationOff', !entry.isIntersecting);
+                } else if (entry.target === titleRef.current || entry.target === descriptionRef.current) {
+                    entry.target.classList.toggle('text-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('text-animationOff', !entry.isIntersecting);
                 }
             });
         });
