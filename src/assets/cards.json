@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "cardTitle": "Card 1",
+        "cardDescription": "Card 1 Description",
+        "cardLinks": [
+            {
+                "linkTitle": "Link 1",
+                "linkImage": "https://via.placeholder.com/150",
+                "linkUrl": "https://www.google.com"
+            },
+            {
+                "linkTitle": "Link 2",
+                "linkImage": "https://via.placeholder.com/150",
+                "linkUrl": "https://www.google.com"
+            }
+        ],
+        "cardSmallbadges": [
+            {
+                "badgeTitle": "Badge 1",
+                "badgeImage": "https://via.placeholder.com/50",
+                "badgeLink": "https://www.google.com"
+            },
+            {
+                "badgeTitle": "Badge 2",
+                "badgeImage": "https://via.placeholder.com/50",
+                "badgeLink": "https://www.google.com"
+            }
+        ],
+        "cardimages": [
+            {
+                "image": "https://via.placeholder.com/150",
+                "imageDescription": "Image 1"
+            },
+            {
+                "image": "https://via.placeholder.com/150",
+                "imageDescription": "Image 2"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "cardTitle": "Card 2",
+        "cardDescription": "Card 2 Description",
+        "cardLinks": [
+            {
+                "linkTitle": "Link 1",
+                "linkImage": "https://via.placeholder.com/150",
+                "linkUrl": "https://www.google.com"
+            },
+            {
+                "linkTitle": "Link 2",
+                "linkImage": "https://via.placeholder.com/150",
+                "linkUrl": "https://www.google.com"
+            }
+        ],
+        "cardSmallbadges": [
+            {
+                "badgeTitle": "Badge 1",
+                "badgeImage": "https://via.placeholder.com/50",
+                "badgeLink": "https://www.google.com"
+            },
+            {
+                "badgeTitle": "Badge 2",
+                "badgeImage": "https://via.placeholder.com/50",
+                "badgeLink": "https://www.google.com"
+            }
+        ],
+        "cardimages": [
+            {
+                "image": "https://via.placeholder.com/150",
+                "imageDescription": "Image 1"
+            },
+            {
+                "image": "https://via.placeholder.com/150",
+                "imageDescription": "Image 2"
+            }
+        ]
+    }
+]
