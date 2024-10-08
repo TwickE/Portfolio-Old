@@ -1,0 +1,21 @@
+.small-skill-badge {
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-decoration: none;
+    border: 1px solid var(--small-skill-badge-border-color);
+    border-radius: 20px;
+    background-color: var(--small-skill-badge-background-color);
+}
+
+.small-skill-badge> img {
+    width: 19px;
+    height: 19px;
+}
+
+.small-skill-badge> p {
+    color: var(--text-color);
+}

@@ -2,6 +2,7 @@ import './ProjectCard.css'
 import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
 import iconsFile from '../../../assets/icons.svg'
+import SmallSkillbadge from '../SmallSkillBadge/SmallSkillBadge';
 
 function ProjectCard({ cardProps }) {
     return (
@@ -45,13 +46,22 @@ function ProjectCard({ cardProps }) {
                 ></OutlineButton>
             </div>
             <div className='card-small-badges-container'>
-                
+                <SmallSkillbadge text='HTML' icon=''/>
+                <SmallSkillbadge text='CSS' icon=''/>
+                <SmallSkillbadge text='Jasipt' icon=''/>
+                <SmallSkillbadge text='HTdvML' icon=''/>
+                <SmallSkillbadge text='CSS' icon=''/>
+                <SmallSkillbadge text='vascript' icon=''/>
+                <SmallSkillbadge text='HTdsvdML' icon=''/>
+                <SmallSkillbadge text='CSdsvS' icon=''/>
+                <SmallSkillbadge text='Jcript' icon=''/>
             </div>
             <div className='card-images-conatiner'>
                 <div className='card-images-selector'>
-
+                    <img src="https://via.placeholder.com/300" alt="" />
+                    <img src="https://via.placeholder.com/300" alt="" />
                 </div>
-                <img src={cardProps.images[0].image} alt={cardProps.images[0].imageDescription} />
+                <img className='sected-image' src="https://via.placeholder.com/800" alt='' />
             </div>
         </div>
     )

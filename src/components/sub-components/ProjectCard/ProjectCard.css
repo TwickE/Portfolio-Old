@@ -33,4 +33,51 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    margin-bottom: 25px;
+}
+
+.card-small-badges-container {
+    width: 100%;
+    height: calc(39px * 2 + 10px);
+    overflow-y: scroll;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.card-images-conatiner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.card-images-selector {
+    width: 100px;
+    min-width: 100px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.card-images-selector>img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sected-image {
+    flex: 1;
+    height: 300px;
+    object-fit: contain;
 }
