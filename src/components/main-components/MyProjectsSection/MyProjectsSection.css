@@ -29,3 +29,11 @@
     text-align: center;
     margin: auto;
 }
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}

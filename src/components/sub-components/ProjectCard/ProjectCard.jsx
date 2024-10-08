@@ -3,65 +3,63 @@ import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
 import iconsFile from '../../../assets/icons.svg'
 import SmallSkillbadge from '../SmallSkillBadge/SmallSkillBadge';
+import useLoadBadgeImages from '../../../hooks/useLoadBadgeImages';
+import { useState } from 'react';
 
 function ProjectCard({ cardProps }) {
+    const badgeImages = useLoadBadgeImages(cardProps.cardSmallBadges);
+    const [selectedImage, setSelectedImage] = useState({
+        image: cardProps.cardImages[0].image,
+        imageDescription: cardProps.cardImages[0].imageDescription
+    });
+
+    const handleImageClick = (image, imageDescription) => {
+        setSelectedImage({ image, imageDescription });
+    };
+
     return (
         <div className='card-container'>
             <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
             <h3>{cardProps.cardTitle}</h3>
             <p>{cardProps.cardDescription}</p>
             <div className='card-links-container'>
-                <OutlineButton
-                    buttonProps={{
-                        buttonSmall: true,
-                        startImage: true,
-                        startImageSrc: 'github-icon',
-                        text: "GitHub",
-                        endImage: true,
-                        endImageSrc: 'arrow-icon',
-                        clickFunction: () => window.open(cardProps.cardLinks[0].link)
-                    }}
-                ></OutlineButton>
-                <OutlineButton
-                    buttonProps={{
-                        buttonSmall: true,
-                        startImage: true,
-                        startImageSrc: 'web-icon',
-                        text: "Website",
-                        endImage: true,
-                        endImageSrc: 'arrow-icon',
-                        clickFunction: () => window.open(cardProps.cardLinks[0].link)
-                    }}
-                ></OutlineButton>
-                <OutlineButton
-                    buttonProps={{
-                        buttonSmall: true,
-                        startImage: true,
-                        startImageSrc: 'figma-outline-icon',
-                        text: "Figma",
-                        endImage: true,
-                        endImageSrc: 'arrow-icon',
-                        clickFunction: () => window.open(cardProps.cardLinks[0].link)
-                    }}
-                ></OutlineButton>
+                {cardProps.cardLinks.map((link, index) => (
+                    <OutlineButton
+                        key={index}
+                        buttonProps={{
+                            buttonSmall: true,
+                            startImage: true,
+                            startImageSrc: link.linkImage,
+                            text: link.linkTitle,
+                            endImage: true,
+                            endImageSrc: 'arrow-icon',
+                            clickFunction: () => window.open(link.linkUrl)
+                        }}
+                    />
+                ))}
             </div>
             <div className='card-small-badges-container'>
-                <SmallSkillbadge text='HTML' icon=''/>
-                <SmallSkillbadge text='CSS' icon=''/>
-                <SmallSkillbadge text='Jasipt' icon=''/>
-                <SmallSkillbadge text='HTdvML' icon=''/>
-                <SmallSkillbadge text='CSS' icon=''/>
-                <SmallSkillbadge text='vascript' icon=''/>
-                <SmallSkillbadge text='HTdsvdML' icon=''/>
-                <SmallSkillbadge text='CSdsvS' icon=''/>
-                <SmallSkillbadge text='Jcript' icon=''/>
+                {cardProps.cardSmallBadges.map((badge, index) => (
+                    <SmallSkillbadge
+                    key={index}
+                    text = {badge.badgeTitle}
+                    icon={badgeImages[badge.badgeTitle]}
+                />
+                ))}
             </div>
             <div className='card-images-conatiner'>
                 <div className='card-images-selector'>
-                    <img src="https://via.placeholder.com/300" alt="" />
-                    <img src="https://via.placeholder.com/300" alt="" />
+                    {cardProps.cardImages.map((image, index) => (
+                        <img 
+                            key={index}
+                            src={image.image} 
+                            alt={image.imageDescription}
+                            className={selectedImage.image === image.image ? 'selected-image-border' : ''}
+                            onClick={() => handleImageClick(image.image)}
+                        />
+                    ))}
                 </div>
-                <img className='sected-image' src="https://via.placeholder.com/800" alt='' />
+                <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} />
             </div>
         </div>
     )
@@ -72,14 +70,15 @@ ProjectCard.propTypes = {
         cardTitle: PropTypes.string.isRequired,
         cardDescription: PropTypes.string.isRequired,
         cardLinks: PropTypes.arrayOf(PropTypes.shape({
-            link: PropTypes.string.isRequired,
-            linkText: PropTypes.string.isRequired
+            linkTitle: PropTypes.string.isRequired,
+            linkImage: PropTypes.string.isRequired,
+            linkUrl: PropTypes.string.isRequired
         })).isRequired,
         cardSmallBadges: PropTypes.arrayOf(PropTypes.shape({
-            badgeName: PropTypes.string.isRequired,
+            badgeTitle: PropTypes.string.isRequired,
             badgeImage: PropTypes.string.isRequired
         })).isRequired,
-        images: PropTypes.arrayOf(PropTypes.shape({
+        cardImages: PropTypes.arrayOf(PropTypes.shape({
             image: PropTypes.string.isRequired,
             imageDescription: PropTypes.string.isRequired
         })).isRequired

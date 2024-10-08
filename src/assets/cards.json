@@ -1,78 +1,88 @@
 [
     {
-        "id": 1,
-        "cardTitle": "Card 1",
-        "cardDescription": "Card 1 Description",
+        "cardTitle": "Quizzical",
+        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
         "cardLinks": [
             {
-                "linkTitle": "Link 1",
-                "linkImage": "https://via.placeholder.com/150",
-                "linkUrl": "https://www.google.com"
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Quizzical"
             },
             {
-                "linkTitle": "Link 2",
-                "linkImage": "https://via.placeholder.com/150",
-                "linkUrl": "https://www.google.com"
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
             }
         ],
-        "cardSmallbadges": [
+        "cardSmallBadges": [
             {
-                "badgeTitle": "Badge 1",
-                "badgeImage": "https://via.placeholder.com/50",
-                "badgeLink": "https://www.google.com"
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
             },
             {
-                "badgeTitle": "Badge 2",
-                "badgeImage": "https://via.placeholder.com/50",
-                "badgeLink": "https://www.google.com"
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon.webp"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon.webp"
+            },
+            {
+                "badgeTitle": "API",
+                "badgeImage": "javascript-icon.webp"
             }
         ],
-        "cardimages": [
+        "cardImages": [
             {
-                "image": "https://via.placeholder.com/150",
-                "imageDescription": "Image 1"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical1.png?raw=true",
+                "imageDescription": "Quizzical start screen"
             },
             {
-                "image": "https://via.placeholder.com/150",
-                "imageDescription": "Image 2"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical2.png?raw=true",
+                "imageDescription": "Quizzical end screen with score"
             }
         ]
     },
     {
-        "id": 2,
-        "cardTitle": "Card 2",
-        "cardDescription": "Card 2 Description",
+        "cardTitle": "Quizzical 2",
+        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
         "cardLinks": [
             {
-                "linkTitle": "Link 1",
-                "linkImage": "https://via.placeholder.com/150",
-                "linkUrl": "https://www.google.com"
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Quizzical"
             },
             {
-                "linkTitle": "Link 2",
-                "linkImage": "https://via.placeholder.com/150",
-                "linkUrl": "https://www.google.com"
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
             }
         ],
-        "cardSmallbadges": [
+        "cardSmallBadges": [
             {
-                "badgeTitle": "Badge 1",
-                "badgeImage": "https://via.placeholder.com/50",
-                "badgeLink": "https://www.google.com"
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
             },
             {
-                "badgeTitle": "Badge 2",
-                "badgeImage": "https://via.placeholder.com/50",
-                "badgeLink": "https://www.google.com"
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon.webp"
             }
         ],
-        "cardimages": [
+        "cardImages": [
             {
-                "image": "https://via.placeholder.com/150",
+                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
                 "imageDescription": "Image 1"
             },
             {
-                "image": "https://via.placeholder.com/150",
+                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
+                "imageDescription": "Image 2"
+            },
+            {
+                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
                 "imageDescription": "Image 2"
             }
         ]

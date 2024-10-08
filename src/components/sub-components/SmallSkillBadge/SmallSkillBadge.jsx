@@ -11,7 +11,7 @@ function SmallSkillbadge(props) {
 }
 
 SmallSkillbadge.propTypes = {
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.string,
     text: PropTypes.string.isRequired
 };
 
