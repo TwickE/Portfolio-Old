@@ -2,11 +2,11 @@ import './ProjectCard.css'
 import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
 import iconsFile from '../../../assets/icons.svg'
-import SmallSkillbadge from '../SmallSkillBadge/SmallSkillBadge';
+import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
 import useLoadBadgeImages from '../../../hooks/useLoadBadgeImages';
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 
-function ProjectCard({ cardProps }) {
+const ProjectCard = forwardRef(({ cardProps }, ref) => {
     const badgeImages = useLoadBadgeImages(cardProps.cardSmallBadges);
     const [selectedImage, setSelectedImage] = useState({
         image: cardProps.cardImages[0].image,
@@ -18,9 +18,10 @@ function ProjectCard({ cardProps }) {
     };
 
     return (
-        <div className='card-container'>
+        <div className='card-container' ref={ref}>
             <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
             <h3>{cardProps.cardTitle}</h3>
+            <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>
             <div className='card-links-container'>
                 {cardProps.cardLinks.map((link, index) => (
@@ -33,6 +34,7 @@ function ProjectCard({ cardProps }) {
                             text: link.linkTitle,
                             endImage: true,
                             endImageSrc: 'arrow-icon',
+                            endImageRotate: true,
                             clickFunction: () => window.open(link.linkUrl)
                         }}
                     />
@@ -40,14 +42,14 @@ function ProjectCard({ cardProps }) {
             </div>
             <div className='card-small-badges-container'>
                 {cardProps.cardSmallBadges.map((badge, index) => (
-                    <SmallSkillbadge
+                    <SmallSkillBadge
                     key={index}
                     text = {badge.badgeTitle}
                     icon={badgeImages[badge.badgeTitle]}
                 />
                 ))}
             </div>
-            <div className='card-images-conatiner'>
+            <div className='card-images-container'>
                 <div className='card-images-selector'>
                     {cardProps.cardImages.map((image, index) => (
                         <img 
@@ -63,11 +65,14 @@ function ProjectCard({ cardProps }) {
             </div>
         </div>
     )
-}
+})
+
+ProjectCard.displayName = 'ProjectCard';
 
 ProjectCard.propTypes = {
     cardProps: PropTypes.shape({
         cardTitle: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
         cardDescription: PropTypes.string.isRequired,
         cardLinks: PropTypes.arrayOf(PropTypes.shape({
             linkTitle: PropTypes.string.isRequired,

@@ -1,18 +1,18 @@
-import './SmallSkillbadge.css'
+import './SmallSkillBadge.css'
 import PropTypes from 'prop-types';
 
-function SmallSkillbadge(props) {
+function SmallSkillBadge(props) {
     return (
-        <span className='small-skill-badge'>
-            <img src={props.icon} alt={props.text} />
-            <p>{props.text}</p>
-        </span>
-    )
+        <div className="small-skill-badge">
+            <img src={props.icon} alt={props.text} className="small-skill-badge-icon" />
+            <span className="small-skill-badge-text">{props.text}</span>
+        </div>
+    );
 }
 
-SmallSkillbadge.propTypes = {
-    icon: PropTypes.string,
-    text: PropTypes.string.isRequired
+SmallSkillBadge.propTypes = {
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.string
 };
 
-export default SmallSkillbadge
+export default SmallSkillBadge

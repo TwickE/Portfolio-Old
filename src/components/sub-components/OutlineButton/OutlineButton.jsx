@@ -14,7 +14,7 @@ function OutlineButton({ buttonProps }) {
                     )}
                 {buttonProps.text}
                 {buttonProps.endImage && (
-                    <svg className='rotate'>
+                    <svg className={buttonProps.endImageRotate ? 'rotate' : ''}>
                         <use href={`${iconsFile}#${buttonProps.endImageSrc}`}></use>
                     </svg>
                     )}
@@ -31,6 +31,7 @@ OutlineButton.propTypes = {
         text: PropTypes.string.isRequired,
         endImage: PropTypes.bool.isRequired,
         endImageSrc: PropTypes.string,
+        endImageRotate: PropTypes.bool,
         clickFunction: PropTypes.func.isRequired
     }).isRequired
 };

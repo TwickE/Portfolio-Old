@@ -1,6 +1,126 @@
 [
     {
         "cardTitle": "Quizzical",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Quizzical"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
+            },
+            {
+                "linkTitle": "Figma",
+                "linkImage": "figma-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon.webp"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "php",
+                "badgeImage": "react-icon.webp"
+            },
+            {
+                "badgeTitle": "Ajax",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "MySQL",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "Local Storage",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "Coockies",
+                "badgeImage": "javascript-icon.webp"
+            },
+            {
+                "badgeTitle": "Session Storage",
+                "badgeImage": "javascript-icon.webp"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical1.png?raw=true",
+                "imageDescription": "Quizzical start screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical2.png?raw=true",
+                "imageDescription": "Quizzical end screen with score"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Quizzical 2",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Quizzical"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon.webp"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
+                "imageDescription": "Image 1"
+            },
+            {
+                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
+                "imageDescription": "Image 2"
+            },
+            {
+                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
+                "imageDescription": "Image 2"
+            },
+            {
+                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
+                "imageDescription": "Image 2"
+            },
+            {
+                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
+                "imageDescription": "Image 2"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Quizzical",
+        "date": "Sep 2024 - Sep 2024",
         "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
         "cardLinks": [
             {
@@ -49,6 +169,7 @@
     },
     {
         "cardTitle": "Quizzical 2",
+        "date": "Sep 2024 - Sep 2024",
         "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
         "cardLinks": [
             {
@@ -65,6 +186,55 @@
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "html-icon.webp"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon.webp"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
+                "imageDescription": "Image 1"
+            },
+            {
+                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
+                "imageDescription": "Image 2"
+            },
+            {
+                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
+                "imageDescription": "Image 2"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Quizzical 5",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Quizzical"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Quizzical/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon.webp"
+            },
+            {
+                "badgeTitle": "JavaScript",
                 "badgeImage": "html-icon.webp"
             },
             {

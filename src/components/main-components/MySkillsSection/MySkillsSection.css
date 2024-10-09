@@ -1,6 +1,7 @@
 .my-skills-conatiner {
     width: 100%;
     padding: 50px 0;
+    overflow: hidden;
 }
 
 .my-skills-inner-conatiner {
