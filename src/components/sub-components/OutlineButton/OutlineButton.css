@@ -31,6 +31,10 @@
     margin-right: 5px;
 }
 
+.margin-left {
+    margin-left: 5px;
+}
+
 .outline-button:hover {
     background-color: var(--primary-color);
     color: #FFFFFF;

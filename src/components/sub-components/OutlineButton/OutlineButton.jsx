@@ -11,13 +11,13 @@ function OutlineButton({ buttonProps }) {
                     <svg className='margin-right'>
                         <use href={`${iconsFile}#${buttonProps.startImageSrc}`}></use>
                     </svg>
-                    )}
+                )}
                 {buttonProps.text}
                 {buttonProps.endImage && (
-                    <svg className={buttonProps.endImageRotate ? 'rotate' : ''}>
+                    <svg className={`margin-left ${buttonProps.endImageRotate ? 'rotate' : ''}`}>
                         <use href={`${iconsFile}#${buttonProps.endImageSrc}`}></use>
                     </svg>
-                    )}
+                )}
             </button>
         </>
     )
