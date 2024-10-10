@@ -1,0 +1,59 @@
+.resume-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.resume-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--small-skill-badge-background-color);
+    position: relative;
+}
+
+.resume-card-icon::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 40px);
+    transform: translate(0, -50%);
+
+}
+
+.resume-card-icon > svg {
+    width: 30px;
+    height: 24px;
+    fill: #FFFFFF;
+}
+
+.resume-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.resume-card-text > h5{
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.resume-card-text > h4{
+    color: var(--text-color);
+    font-size: 1.25rem;
+    max-width: 530px;
+}
+
+.resume-card-text > h6{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+}
