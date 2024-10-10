@@ -14,12 +14,16 @@ function MyProjectsSection(props) {
     const firstWorkCardRef = useRef(null);
     const lastWorkCardRef = useRef(null);
     const [workBarHeight, setWorkBarHeight] = useState(0);
+    const titleRef = useRef(null);
+    const educationRef = useRef(null);
+    const workRef = useRef(null);
+    const downloadCVRef = useRef(null);
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
     }
 
-    useEffect(() => {
+    const calculateHeights = () => {
         if (firstEducationCardRef.current && lastEducationCardRef.current) {
             const firstEducationCardRect = firstEducationCardRef.current.getBoundingClientRect();
             const lastEducationCardRect = lastEducationCardRef.current.getBoundingClientRect();
@@ -33,6 +37,14 @@ function MyProjectsSection(props) {
             const workHeight = lastWorkCardRect.top + window.scrollY - (firstWorkCardRect.top + window.scrollY);
             setWorkBarHeight(workHeight);
         }
+    };
+
+    useEffect(() => {
+        calculateHeights();
+        window.addEventListener('resize', calculateHeights);
+        return () => {
+            window.removeEventListener('resize', calculateHeights);
+        };
     }, []);
 
     const downloadCV = () => {
@@ -44,12 +56,65 @@ function MyProjectsSection(props) {
         document.body.removeChild(link);
     }
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.target === educationRef.current) {
+                    entry.target.classList.toggle('left-card-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('left-card-animationOff', !entry.isIntersecting);
+                } else if (entry.target === workRef.current) {
+                    entry.target.classList.toggle('right-card-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('right-card-animationOff', !entry.isIntersecting);
+                } else if (entry.target === titleRef.current) {
+                    entry.target.classList.toggle('text-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('text-animationOff', !entry.isIntersecting);
+                } else if (entry.target === downloadCVRef.current) {
+                    entry.target.classList.toggle('text-animationOn', entry.isIntersecting);
+                    entry.target.classList.toggle('text-animationOff', !entry.isIntersecting);
+                }
+            });
+        });
+
+        const titleElement = titleRef.current;
+        const downloadCVElement = downloadCVRef.current;
+        const educationElement = educationRef.current;
+        const workElement = workRef.current;
+
+        if (titleRef.current) {
+            observer.observe(titleRef.current);
+        }
+        if (downloadCVRef.current) {
+            observer.observe(downloadCVRef.current);
+        }
+        if (educationRef.current) {
+            observer.observe(educationRef.current);
+        }
+        if (workRef.current) {
+            observer.observe(workRef.current);
+        }
+
+        return () => {
+            if (titleElement) {
+                observer.unobserve(titleElement);
+            }
+            if (downloadCVElement) {
+                observer.unobserve(downloadCVElement);
+            }
+            if (educationElement) {
+                observer.unobserve(educationElement);
+            }
+            if (workElement) {
+                observer.unobserve(workElement);
+            }
+        };
+    }, []);
+
     return (
         <section style={backgroundColor} className='my-resume-conatiner'>
             <div className='my-resume-inner-conatiner'>
-                <h2>My Resume</h2>
+                <h2 ref={titleRef}>My Resume</h2>
                 <div className='resume-conatiner'>
-                    <div className='resume-small-container'>
+                    <div className='resume-small-container' ref={educationRef}>
                         <h3>Education</h3>
                         <div className='resume-data-container'
                         style={{ '--education-bar-height': `${educationBarHeight}px` }}>
@@ -65,7 +130,7 @@ function MyProjectsSection(props) {
                             ))}
                         </div>
                     </div>
-                    <div className='resume-small-container'>
+                    <div className='resume-small-container' ref={workRef}>
                         <h3>Work Experience</h3>
                         <div className='resume-data-container'
                         style={{ '--work-bar-height': `${workBarHeight}px` }}>
@@ -82,7 +147,7 @@ function MyProjectsSection(props) {
                         </div>
                     </div>
                 </div>
-                <span style={{display: 'block', width: 'fit-content', margin: 'auto'}}>
+                <span style={{display: 'block', width: 'fit-content', margin: 'auto'}} ref={downloadCVRef}>
                 <OutlineButton
                     buttonProps={{
                         buttonSmall: false,

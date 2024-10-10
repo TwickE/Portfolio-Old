@@ -29,6 +29,7 @@
     flex-direction: row;
     gap: 20px;
     margin-bottom: 50px;
+    overflow: hidden;
 }
 
 .resume-small-container {
@@ -72,4 +73,73 @@
 
 .resume-small-container:nth-child(2) .resume-data-container::before {
     height: var(--work-bar-height, 0);
+}
+
+@media only screen and (max-width: 1400px) {
+    .my-resume-inner-conatiner {
+        width: 1140px;
+    }
+
+    .resume-small-container {
+        width: 560px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .my-resume-inner-conatiner {
+        width: 960px;
+    }
+
+    .resume-small-container {
+        width: 470px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .my-resume-inner-conatiner {
+        width: 800px;
+    }
+
+    .resume-small-container {
+        width: 390px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .my-resume-inner-conatiner {
+        width: 700px;
+    }
+
+    .resume-conatiner {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .resume-small-container > h3 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .resume-small-container {
+        width: 100%;
+        align-items: start;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .my-resume-inner-conatiner {
+        width: 540px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .my-resume-inner-conatiner {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .resume-data-container {
+        padding-left: 33px;
+    }
 }
