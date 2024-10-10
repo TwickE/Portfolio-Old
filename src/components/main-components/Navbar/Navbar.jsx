@@ -17,6 +17,18 @@ function Navbar(props) {
     }
 
     useEffect(() => {
+        const closeMenu = () => {
+            setIsMenuActive(false);
+            setMobileThemeMenuActive(false);
+            document.body.classList.remove('no-scroll');
+        }
+        window.addEventListener('resize', closeMenu);
+        return () => {
+            window.removeEventListener('resize', closeMenu);
+        };
+    }, []);
+
+    useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             setTheme(savedTheme);
