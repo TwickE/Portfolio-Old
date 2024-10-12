@@ -1,6 +1,7 @@
 .contact-conatiner {
     width: 100%;
     padding: 50px 0;
+    overflow: hidden;
 }
 
 .contact-inner-container {

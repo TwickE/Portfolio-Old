@@ -1,7 +1,7 @@
 import './MySkillsSection.css'
 import PropTypes from 'prop-types';
 import SkillBadge from '../../sub-components/SkillBadge/SkillBadge'
-import skillsJSON from '../../../assets/skills.json'
+import skillsJSON from '../../../assets/json/skills.json'
 import useLoadImages from '../../../hooks/useLoadImages'
 import { useRef, useEffect } from 'react';
 

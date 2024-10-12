@@ -2,8 +2,7 @@ import './MyProjectsSection.css'
 import PropTypes from 'prop-types';
 import { useRef,useEffect } from 'react';
 import ProjectCard from '../../sub-components/ProjectCard/ProjectCard';
-import cardsData from '../../../assets/cards.json'
-import FilledButton from '../../sub-components/FilledButton/FilledButton';
+import cardsData from '../../../assets/json/cards.json'
 import { useNavigate } from 'react-router-dom';
 
 function MyProjectsSection(props) {
@@ -96,9 +95,7 @@ function MyProjectsSection(props) {
                     ))}
                 </div>
             </div>
-            <span ref={seeMoreButtonRef}>
-                <FilledButton text='See More Projects' clickFunction={handleSeeMoreProjectsClick} />
-            </span>
+            <button className='filled-button' ref={seeMoreButtonRef} onClick={handleSeeMoreProjectsClick} style={{transition: '0.4s'}}>See More Projects</button>
         </section>
     )
 }
