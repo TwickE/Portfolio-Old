@@ -4,6 +4,7 @@ import FilledButton from '../../sub-components/FilledButton/FilledButton';
 import { useRef } from 'react';
 import Swal from 'sweetalert2'
 import iconsFile from '../../../assets/icons.svg'
+import ContactBadge from '../../sub-components/ContactBadge/ContactBadge';
 
 function ContactSection(props) {
     const formRef = useRef(null);
@@ -69,17 +70,30 @@ function ContactSection(props) {
                     </span>
                 </form>
                 <div className='contact-badges-container'>
-                    <a className='contact-badge' href='mailto: fredericosilva2002@hotmail.com.com' target='_blank'>
-                        <span>
-                            <svg>
-                                <use href={`${iconsFile}#mail-icon`}></use>
-                            </svg>
-                        </span>
-                        <div className='contact-badge-text-container'>
-                            <h6>Email</h6>
-                            <h4>fredericosilva2002@hotmail.com</h4>
-                        </div>
-                    </a>
+                    <ContactBadge
+                        link='mailto: fredericosilva2002@hotmail.com'
+                        icon='mail-icon'
+                        title='Email'
+                        text='fredericosilva2002@hotmail.com'
+                    />
+                    <ContactBadge
+                        link='https://www.linkedin.com/in/frederico-silva-727a8b21a/'
+                        icon='linkedin-icon'
+                        title='LinkedIn'
+                        text='Frederico Silva'
+                    />
+                    <ContactBadge
+                        link='https://github.com/TwickE'
+                        icon='github-icon'
+                        title='Github'
+                        text='@TwickE'
+                    />
+                    <ContactBadge
+                        link='https://codepen.io/TwickE'
+                        icon='codepen-icon'
+                        title='CodePen'
+                        text='@TwickE'
+                    />
                 </div>
             </div>
         </section>

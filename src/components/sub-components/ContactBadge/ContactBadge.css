@@ -1,0 +1,46 @@
+.contact-badge {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    text-decoration: none;
+}
+
+.contact-badge:hover .contact-badge-text-container {
+    color: var(--primary-color);
+}
+
+.contact-badge > span {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--button-gradient);
+    background-size: 200%;
+    border-radius: 50%;
+}
+
+.contact-badge > span > svg {
+    fill: #FFFFFF;
+    width: 30px;
+    height: 30px;
+}
+
+.contact-badge-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #FFFFFF;
+    transition: 0.1s;
+    
+}
+
+.contact-badge-text-container > h6 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact-badge-text-container > h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
