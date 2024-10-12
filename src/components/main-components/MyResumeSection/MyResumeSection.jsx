@@ -110,10 +110,10 @@ function MyProjectsSection(props) {
     }, []);
 
     return (
-        <section style={backgroundColor} className='my-resume-conatiner'>
-            <div className='my-resume-inner-conatiner'>
+        <section style={backgroundColor} className='my-resume-container'>
+            <div className='my-resume-inner-container'>
                 <h2 ref={titleRef}>My Resume</h2>
-                <div className='resume-conatiner'>
+                <div className='resume-container'>
                     <div className='resume-small-container' ref={educationRef}>
                         <h3>Education</h3>
                         <div className='resume-data-container'
