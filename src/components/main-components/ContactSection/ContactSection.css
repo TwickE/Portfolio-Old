@@ -1,0 +1,84 @@
+.contact-conatiner {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.contact-inner-container {
+    width: 1320px;
+    margin: auto;
+    font-display: flex;
+    flex-direction: row;
+}
+
+form {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+}
+
+form > h2 {
+    color: transparent;
+    background: var(--text-gradient);
+    background-clip: text;
+    width: fit-content;
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+form > p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.form-devide-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-inputs {
+    width: 277.5px;
+    min-width: 277.5px;
+    height: 50px;
+    background-color: var(--background-color2);
+    border: 1px solid var(--form-border-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-inputs::placeholder {
+    color: var(--grey);
+}
+
+.form-textarea {
+    width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+    background-color: var(--background-color2);
+    border: 1px solid var(--form-border-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-inputs:focus, .form-textarea:focus {
+    border: 1px solid var(--small-skill-badge-border-color);
+    outline: none;
+}
+
+.form-button {
+    width: fit-content;
+    margin-top: 15px;
+}
+
