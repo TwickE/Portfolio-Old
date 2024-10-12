@@ -4,8 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import OutlineButton from '../../sub-components/OutlineButton/OutlineButton';
 import CV from '../../../assets/cv.pdf'
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
-import educationData from '../../../assets/education.json'
-import workData from '../../../assets/work.json'
+import educationData from '../../../assets/json/education.json'
+import workData from '../../../assets/json/work.json'
 
 function MyProjectsSection(props) {
     const firstEducationCardRef = useRef(null);
