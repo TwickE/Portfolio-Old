@@ -11,7 +11,7 @@ function App() {
 
     useEffect(() => {
         const path = location.pathname;
-        let title = 'My Portfolio'; // Default title
+        let title = 'My Portfolio';
 
         if (path === '/') {
             title = 'Home - My Portfolio';

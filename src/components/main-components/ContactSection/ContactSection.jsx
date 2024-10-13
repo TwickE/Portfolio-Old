@@ -2,7 +2,6 @@ import './ContactSection.css'
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
 import Swal from 'sweetalert2'
-import iconsFile from '../../../assets/icons.svg'
 import ContactBadge from '../../sub-components/ContactBadge/ContactBadge';
 
 function ContactSection(props) {
@@ -117,7 +116,6 @@ function ContactSection(props) {
 
     return (
         <section style={backgroundColor} className='contact-conatiner'>
-            <object type="image/svg+xml" data={iconsFile} style={{ display: 'none' }}></object>
             <div className='contact-inner-container'>
                 <form onSubmit={onSubmit} ref={formRef}>
                     <h2>Let&apos;s Talk!</h2>

@@ -6,7 +6,6 @@ import ReactImage from '../../../assets/skills-images/react-icon.webp'
 function Footer() {
     return (
         <footer className='footer-container'>
-            <object type="image/svg+xml" data={iconsFile} style={{ display: 'none' }}></object>
             <div className='footer-inner-container'>
                 <Link className='footer-navlink' to='/'>
                     <svg className='footer-main-icon'>
