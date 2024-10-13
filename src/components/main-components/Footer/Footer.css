@@ -1,0 +1,54 @@
+.footer-container {
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    background-color: var(--small-skill-badge-background-color);
+}
+
+.footer-inner-container {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer-main-icon {
+    width: 80px;
+    height: 80px;
+    fill: #FFFFFF;
+}
+
+.footer-navlink-container {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.footer-navlink {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.footer-react-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    animation: rotate 7s linear infinite;
+}
+
+.footer-react-icon:hover {
+    filter: drop-shadow(0 0 5px #61DAFB);
+}

@@ -83,7 +83,7 @@ function MyProjectsSection(props) {
     return (
         <section style={backgroundColor} className='my-projects-conatiner'>
             <div className='my-projects-inner-conatiner'>
-                <h2 ref={titleRef}>My Skills</h2>
+                <h2 ref={titleRef}>My Projects</h2>
                 <p ref={descriptionRef}>I bring creative ideas to life through detailed, user-focused solutions. Each project showcases my ability to blend innovation with functionality, delivering results that exceed expectations and drive success.</p>
                 <div className='cards-container'>
                     {cardsData.slice(0, 4).map((card, index) => (
