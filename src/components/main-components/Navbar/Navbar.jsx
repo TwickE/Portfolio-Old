@@ -68,7 +68,6 @@ function Navbar(props) {
 
     return (
         <header className={scrolled ? 'scrolled' : ''}>
-            <object type="image/svg+xml" data={iconsFile} style={{ display: 'none' }}></object>
             <nav className='navbar'>
                 <div className='navbar-section'>
                     <Link to='/'>

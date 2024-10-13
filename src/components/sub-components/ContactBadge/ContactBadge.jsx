@@ -5,7 +5,6 @@ import iconsFile from '../../../assets/icons.svg'
 function ContactBadge(props) {
     return (
         <a className='contact-badge' href={props.link} target='_blank'>
-            <object type="image/svg+xml" data={iconsFile} style={{ display: 'none' }}></object>
             <span>
                 <svg>
                     <use href={`${iconsFile}#${props.icon}`}></use>

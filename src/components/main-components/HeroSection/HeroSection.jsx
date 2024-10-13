@@ -16,7 +16,6 @@ function HeroSection() {
 
     return (
         <main className="hero-section">
-            <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
             <div className='container-info fadeInLeft'>
                 <h2>Hi, I am Fred</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
