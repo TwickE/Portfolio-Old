@@ -47,8 +47,8 @@ form > p {
 }
 
 .form-inputs {
-    width: 277.5px;
-    min-width: 277.5px;
+    width: calc(50% - 7.5px);
+    min-width: calc(50% - 7.5px);
     height: 50px;
     background-color: var(--background-color2);
     border: 1px solid var(--form-border-color);
@@ -90,4 +90,73 @@ form > p {
     justify-content: center;
     gap: 40px;
     margin: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+    .contact-inner-container {
+        width: 1140px;
+    }
+
+    form {
+        width: 560px;
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-inner-container {
+        width: 960px;
+    }
+
+    form {
+        width: 470px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact-inner-container {
+        width: 800px;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    form {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .contact-inner-container {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .contact-inner-container {
+        width: 540px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .contact-inner-container {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-devide-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-inputs {
+        width: 100%;
+        min-width: 100%;
+    }
 }
