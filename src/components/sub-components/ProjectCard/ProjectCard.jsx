@@ -1,7 +1,6 @@
 import './ProjectCard.css'
 import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
-import iconsFile from '../../../assets/icons.svg'
 import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
 import useLoadBadgeImages from '../../../hooks/useLoadBadgeImages';
 import { useState, forwardRef } from 'react';
@@ -19,7 +18,6 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
 
     return (
         <div className='card-container' ref={ref}>
-            <object type="image/svg+xml" data={iconsFile} style={{display: 'none'}}></object>
             <h3>{cardProps.cardTitle}</h3>
             <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>

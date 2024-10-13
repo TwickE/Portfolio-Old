@@ -4,6 +4,7 @@ import MySkillsSection from "../components/main-components/MySkillsSection/MySki
 import MyProjectsSection from "../components/main-components/MyProjectsSection/MyProjectsSection"
 import MyResumeSection from "../components/main-components/MyResumeSection/MyResumeSection"
 import ContactSection from "../components/main-components/ContactSection/ContactSection"
+import Footer from "../components/main-components/Footer/Footer"
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <MyProjectsSection backgroundColor={false}/>
             <MyResumeSection backgroundColor={true}/>
             <ContactSection backgroundColor={false}/>
+            <Footer />
         </>
     )
 }
