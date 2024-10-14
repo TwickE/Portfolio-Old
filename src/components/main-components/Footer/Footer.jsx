@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import ReactImage from '../../../assets/skills-images/react-icon.webp'
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className='footer-container'>
             <div className='footer-inner-container'>
@@ -21,7 +23,7 @@ function Footer() {
                 <div className='footer-credits'>
                     <img className='footer-react-icon' src={ReactImage} alt="React Icon" />
                     <p>Made with React JS</p>
-                    <p>© 2024 All rights reserved by Frederico Silva</p>
+                    <p>{`© ${currentYear} All rights reserved by Frederico Silva`}</p>
                 </div>
             </div>
         </footer>
