@@ -3,6 +3,7 @@
     padding: 50px 0;
     overflow: hidden;
     background-color: var(--small-skill-badge-background-color);
+    bottom: 0;
 }
 
 .footer-inner-container {
