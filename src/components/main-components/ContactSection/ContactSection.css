@@ -72,6 +72,7 @@ form > p {
     padding: 15px 20px;
     color: var(--text-color);
     font-size: 1rem;
+    resize: vertical;
 }
 
 .form-inputs:focus, .form-textarea:focus {
