@@ -1,0 +1,161 @@
+.lets-talk-container {
+    width: 100%;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.lets-talk-inner-container {
+    width: fit-content;
+    margin: auto;
+    font-display: flex;
+    flex-direction: column;
+}
+
+.lets-talk-inner-container>h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.lets-talk-text {
+    color: var(--primary-color);
+    font-size: 8rem;
+    margin: auto;
+    background: transparent;
+}
+
+.lets-talk-text > span {
+    display: inline-block;
+    animation: rippleText 2s ease infinite;
+}
+
+.lets-talk-text > span:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.lets-talk-text > span:nth-child(3) {
+    animation-delay: 0.10s;
+}
+
+.lets-talk-text > span:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.lets-talk-text > span:nth-child(5) {
+    animation-delay: 0.20s;
+}
+
+.lets-talk-text > span:nth-child(6) {
+    animation-delay: 0.25s;
+}
+
+.lets-talk-text > span:nth-child(7) {
+    animation-delay: 0.30s;
+}
+
+.lets-talk-text > span:nth-child(8) {
+    animation-delay: 0.35s;
+}
+
+.lets-talk-text > span:nth-child(9) {
+    animation-delay: 0.40s;
+}
+
+.lets-talk-text > span:nth-child(10) {
+    animation-delay: 0.45s;
+}
+
+.lets-talk-text > span:nth-child(11) {
+    animation-delay: 0.50s;
+}
+
+.redirect-email-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    float: right;
+    margin: 15px 0;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.redirect-email-container > svg {
+    width: 21px;
+    height: 21px;
+    fill: var(--text-color);
+}
+
+.redirect-email-container:hover > .redirect-email::after {
+    width: 100%;
+}
+
+.redirect-email-container:hover > svg {
+    rotate: 45deg;
+}
+
+.redirect-email {
+    position: relative;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.redirect-email::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: var(--text-color);
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 1000px) {
+    .lets-talk-container {
+        padding: 100px 0;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .lets-talk-container {
+        padding: 80px 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .lets-talk-text {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .lets-talk-container {
+        width: 100%;
+        padding: 50px 12px;
+    }
+
+    .lets-talk-text {
+        font-size: 3rem;
+    }
+
+    .lets-talk-inner-container>h4 {
+        font-size: 0.95rem;
+        margin: 5px 0;
+    }
+
+    .redirect-email {
+        font-size: 0.95rem;
+    }
+
+    .redirect-email-container {
+        margin: 5px 0;
+    }
+
+    .redirect-email-container > svg {
+        width: 19px;
+        height: 19px;
+    }
+}
