@@ -20,6 +20,11 @@
         "skillImage": "bootstrap-icon.webp"
     },
     {
+        "skillLink": "https://developer.mozilla.org/docs/Web/JavaScript",
+        "skillName": "JavaScript",
+        "skillImage": "javascript-icon.webp"
+    },
+    {
         "skillLink": "https://www.typescriptlang.org/",
         "skillName": "TypeScript",
         "skillImage": "typescript-icon.webp"
