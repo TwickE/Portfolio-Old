@@ -5,10 +5,12 @@ import MyProjectsSection from "../components/main-components/MyProjectsSection/M
 import MyResumeSection from "../components/main-components/MyResumeSection/MyResumeSection"
 import ContactSection from "../components/main-components/ContactSection/ContactSection"
 import Footer from "../components/main-components/Footer/Footer"
+import ScrollToTop from "../hooks/ScrollToTop"
 
 function Home() {
     return (
         <>
+            <ScrollToTop />
             <Navbar activeLink="home" />
             <HeroSection />
             <MySkillsSection backgroundColor={true}/>
