@@ -1,0 +1,45 @@
+.go-up-container {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	height: 46px;
+	width: 46px;
+	display: block;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 2px var(--small-skill-badge-border-color);
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transform: translateY(15px);
+    transition: all 0.3s linear;
+}
+
+.active-progress {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.go-up-container svg path {
+	fill: none;
+}
+
+.go-up-container svg.progress-circle path {
+	stroke: var(--small-skill-badge-background-color);
+	stroke-width: 4;
+	box-sizing: border-box;
+}
+
+.go-up-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 35px;
+    height: 35px;
+    fill: var(--small-skill-badge-border-color);
+}
