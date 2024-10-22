@@ -5,6 +5,7 @@ import MySkillsSection from "../components/main-components/MySkillsSection/MySki
 import MyResumeSection from "../components/main-components/MyResumeSection/MyResumeSection"
 import LetsTalkSection from "../components/main-components/LetsTalkSection/LetsTalkSection"
 import ScrollToTop from "../hooks/ScrollToTop"
+import GoUp from "../components/sub-components/GoUp/GoUp"
 
 function About() {
     return (
@@ -15,6 +16,7 @@ function About() {
             <MySkillsSection backgroundColor={true}/>
             <MyResumeSection backgroundColor={false}/>
             <LetsTalkSection backgroundColor={true}/>
+            <GoUp />
             <Footer />
         </>
     )
