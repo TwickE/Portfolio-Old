@@ -10,6 +10,11 @@
         "skillImage": "css-icon.webp"
     },
     {
+        "skillLink": "https://tailwindcss.com/",
+        "skillName": "Tailwind CSS",
+        "skillImage": "tailwindcss-icon.webp"
+    },
+    {
         "skillLink": "https://sass-lang.com/",
         "skillName": "Sass",
         "skillImage": "sass-icon.webp"

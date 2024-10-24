@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import iconsFile from '../../../assets/icons.svg'
@@ -9,6 +9,17 @@ function Navbar(props) {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
+    const location = useLocation();
+    console.log(location.pathname)
+
+    const changeNavbarColor = () => {
+        if(location.pathname !== '/' && scrolled === false) {
+            return {
+                color: 'white',
+                fill: 'white'
+            }
+        }
+    }
 
     const mobileMenuItemsStyles = {
         height: isMenuActive ? 'calc(100dvh - 100px)' : '0px',
@@ -71,28 +82,28 @@ function Navbar(props) {
             <nav className='navbar'>
                 <div className='navbar-section'>
                     <Link to='/'>
-                        <svg className='logo'>
+                        <svg className='logo' style={changeNavbarColor()} >
                             <use href={`${iconsFile}#main-icon`}></use>
                         </svg>
                     </Link>
-                    <span>Fred&apos;s Portfolio</span>
+                    <span style={changeNavbarColor()} >Fred&apos;s Portfolio</span>
                 </div>
                 <div className='navbar-section'>
                     <ul className='navbar-items'>
                         <li className='navbar-item'>
-                            <Link className={`navbar-link ${props.activeLink === 'home' ? 'link-active' : ''}`} to='/'>Home</Link>
+                            <Link className={`navbar-link ${props.activeLink === 'home' ? 'link-active' : ''}`} style={changeNavbarColor()} to='/'>Home</Link>
                         </li>
                         <li className='navbar-item'>
-                            <Link className={`navbar-link ${props.activeLink === 'about' ? 'link-active' : ''}`} to='/about'>About</Link>
+                            <Link className={`navbar-link ${props.activeLink === 'about' ? 'link-active' : ''}`} style={changeNavbarColor()} to='/about'>About</Link>
                         </li>
                         <li className='navbar-item'>
-                            <Link className={`navbar-link ${props.activeLink === 'projects' ? 'link-active' : ''}`} to='/projects'>Projects</Link>
+                            <Link className={`navbar-link ${props.activeLink === 'projects' ? 'link-active' : ''}`} style={changeNavbarColor()} to='/projects'>Projects</Link>
                         </li>
                         <li className='navbar-item'>
-                            <Link className={`navbar-link ${props.activeLink === 'contact' ? 'link-active' : ''}`} to='/contact'>Contact</Link>
+                            <Link className={`navbar-link ${props.activeLink === 'contact' ? 'link-active' : ''}`} style={changeNavbarColor()} to='/contact'>Contact</Link>
                         </li>
                         <li className='navbar-item theme-menu'>
-                            <span>Theme</span>
+                            <span style={changeNavbarColor()} >Theme</span>
                             <ul className='theme-submenu'>
                                 <div className='theme-submenu-item' onClick={toggleTheme}>
                                     <svg className={theme === 'light' ? 'active-mode' : ''}>
