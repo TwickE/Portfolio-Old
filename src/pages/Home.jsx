@@ -6,6 +6,7 @@ import MyResumeSection from "../components/main-components/MyResumeSection/MyRes
 import ContactSection from "../components/main-components/ContactSection/ContactSection"
 import Footer from "../components/main-components/Footer/Footer"
 import ScrollToTop from "../hooks/ScrollToTop"
+import GoUp from "../components/sub-components/GoUp/GoUp"
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
             <MyProjectsSection backgroundColor={false}/>
             <MyResumeSection backgroundColor={true}/>
             <ContactSection backgroundColor={false}/>
+            <GoUp />
             <Footer />
         </>
     )

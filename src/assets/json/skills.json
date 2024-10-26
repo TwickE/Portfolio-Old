@@ -71,7 +71,12 @@
     },
     {
         "skillLink": "https://react.dev/",
-        "skillName": "React",
+        "skillName": "React JS",
+        "skillImage": "react-icon.webp"
+    },
+    {
+        "skillLink": "https://reactnative.dev/",
+        "skillName": "React Native",
         "skillImage": "react-icon.webp"
     },
     {
