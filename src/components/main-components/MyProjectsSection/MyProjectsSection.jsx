@@ -20,6 +20,19 @@ function MyProjectsSection(props) {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
     }
 
+    const displayButton = () => {
+        if (props.allProjects) {
+            return {
+                display: 'none',
+                transition: '0.4s'
+            }
+        } else {
+            return {
+                transition: '0.4s'
+            }
+        }
+    }
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -86,22 +99,35 @@ function MyProjectsSection(props) {
                 <h2 ref={titleRef}>My Projects</h2>
                 <p ref={descriptionRef}>I bring creative ideas to life through detailed, user-focused solutions. Each project showcases my ability to blend innovation with functionality, delivering results that exceed expectations and drive success.</p>
                 <div className='cards-container'>
-                    {cardsData.slice(0, 4).map((card, index) => (
-                        <ProjectCard 
-                            key={index}
-                            cardProps={card}
-                            ref={(el) => projectCardRefs.current[index] = el}
-                        />
-                    ))}
+                    {
+                        props.allProjects ? (
+                            cardsData.map((card, index) => (
+                                <ProjectCard 
+                                    key={index}
+                                    cardProps={card}
+                                    ref={(el) => projectCardRefs.current[index] = el}
+                                />
+                            ))
+                         ) : (
+                            cardsData.slice(0, 4).map((card, index) => (
+                                <ProjectCard 
+                                    key={index}
+                                    cardProps={card}
+                                    ref={(el) => projectCardRefs.current[index] = el}
+                                />
+                            ))
+                         )
+                    }
                 </div>
             </div>
-            <button className='filled-button' ref={seeMoreButtonRef} onClick={handleSeeMoreProjectsClick} style={{transition: '0.4s'}}>See More Projects</button>
+            <button className='filled-button' ref={seeMoreButtonRef} onClick={handleSeeMoreProjectsClick} style={displayButton()}>See More Projects</button>
         </section>
     )
 }
 
 MyProjectsSection.propTypes = {
-    backgroundColor: PropTypes.bool.isRequired
+    backgroundColor: PropTypes.bool.isRequired,
+    allProjects: PropTypes.bool
 };
 
 export default MyProjectsSection

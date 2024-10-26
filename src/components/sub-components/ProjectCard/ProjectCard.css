@@ -94,7 +94,22 @@
     height: 300px;
     max-width: 433px;
     object-fit: contain;
-    border: 1px solid var(--secondary-color);
+    cursor: zoom-in;
+}
+
+.close-button {
+    margin: 0;
+}
+
+.modal-image {
+    width: 80dvw;
+    max-height: 80dvh;
+    object-fit: contain;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 45px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -159,6 +174,10 @@
     .selected-image {
         max-width: 383px;
     }
+
+    .modal-image {
+        width: 100dvw;
+    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -188,5 +207,12 @@
         height: 300px;
         max-height: 300px;
         max-width: 100%;
+    }
+
+    .modal-image {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        border-radius: 0 0 5px 5px;
     }
 }

@@ -56,6 +56,10 @@ body {
     background-color: var(--background-color1);
 }
 
+.swal2-shown>[aria-hidden='true'] {
+    filter: blur(3px);
+}
+
 .filled-button {
     padding: 17px 35px;
     background: var(--button-gradient);
@@ -165,6 +169,7 @@ body {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -177,7 +182,7 @@ body {
 
     15% {
         transform: translate3D(2px, -2px, 2px) scale(1.2);
-        color:var(--text-color);
+        color: var(--text-color);
     }
 
     30% {

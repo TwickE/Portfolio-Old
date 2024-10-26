@@ -10,7 +10,6 @@ function Navbar(props) {
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
     const location = useLocation();
-    console.log(location.pathname)
 
     const changeNavbarColor = () => {
         if(location.pathname !== '/' && scrolled === false) {

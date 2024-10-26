@@ -4,6 +4,7 @@ import OutlineButton from '../OutlineButton/OutlineButton';
 import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
 import useLoadBadgeImages from '../../../hooks/useLoadBadgeImages';
 import { useState, forwardRef } from 'react';
+import Swal from 'sweetalert2'
 
 const ProjectCard = forwardRef(({ cardProps }, ref) => {
     const badgeImages = useLoadBadgeImages(cardProps.cardSmallBadges);
@@ -15,6 +16,25 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
     const handleImageClick = (image, imageDescription) => {
         setSelectedImage({ image, imageDescription });
     };
+
+    const openImageModal = () => {
+        document.body.style.overflow = 'hidden'
+        Swal.fire({
+            imageUrl: selectedImage.image,
+            imageAlt: selectedImage.imageDescription,
+            width: 'fit-content',
+            background: 'var(--background-color1)',
+            showConfirmButton: false,
+            showCloseButton: true,
+            padding: '0',
+            customClass: {
+                closeButton: 'close-button',
+                image: 'modal-image'
+            }
+        }).then(() => {
+            document.body.style.overflow = 'auto'
+        })
+    }
 
     return (
         <div className='card-container' ref={ref}>
@@ -41,25 +61,25 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
             <div className='card-small-badges-container'>
                 {cardProps.cardSmallBadges.map((badge, index) => (
                     <SmallSkillBadge
-                    key={index}
-                    text = {badge.badgeTitle}
-                    icon={badgeImages[badge.badgeTitle]}
-                />
+                        key={index}
+                        text={badge.badgeTitle}
+                        icon={badgeImages[badge.badgeTitle]}
+                    />
                 ))}
             </div>
             <div className='card-images-container'>
                 <div className='card-images-selector'>
                     {cardProps.cardImages.map((image, index) => (
-                        <img 
+                        <img
                             key={index}
-                            src={image.image} 
+                            src={image.image}
                             alt={image.imageDescription}
                             className={selectedImage.image === image.image ? 'selected-image-border' : ''}
                             onClick={() => handleImageClick(image.image)}
                         />
                     ))}
                 </div>
-                <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} />
+                <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} onClick={() => openImageModal()} />
             </div>
         </div>
     )
