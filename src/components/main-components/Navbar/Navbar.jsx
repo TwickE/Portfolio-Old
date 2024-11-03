@@ -119,7 +119,7 @@ function Navbar(props) {
                             </ul>
                         </li>
                     </ul>
-                    <button className='filled-button'>Hire Me!</button>
+                    <button className='filled-button' onClick={() => (window.open('https://www.linkedin.com/in/frederico-silva-727a8b21a/', '_blank'))}>Hire Me!</button>
                 </div>
                 <div className='mobile-menu'>
                     <button className='filled-button'>Hire Me!</button>
