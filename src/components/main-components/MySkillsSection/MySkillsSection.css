@@ -13,7 +13,7 @@
     justify-content: center;
 }
 
-.my-skills-inner-conatiner>h2 {
+.my-skills-inner-conatiner > div > h2 {
     color: transparent;
     background: var(--text-gradient);
     background-clip: text;
@@ -24,7 +24,7 @@
     margin-bottom: 15px;
 }
 
-.my-skills-inner-conatiner>p {
+.my-skills-inner-conatiner> div > p {
     color: var(--text-color);
     width: 600px;
     text-align: center;
@@ -47,11 +47,11 @@
     position: absolute;
     top: var(--y, 0);
     left: var(--x, 0);
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: var(--radial-gradient);
     border-radius: 50%;
-    filter: blur(75px);
+    filter: blur(65px);
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: opacity 0.2s ease;
@@ -113,7 +113,7 @@
         width: 540px;
     }
 
-    .my-skills-inner-conatiner>p {
+    .my-skills-inner-conatiner> div > p {
         max-width: 100%;
     }
 

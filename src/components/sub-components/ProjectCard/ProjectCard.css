@@ -1,5 +1,6 @@
 .card-container {
     width: 650px;
+    height: 100%;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -181,19 +182,37 @@
 }
 
 @media only screen and (max-width: 575px) {
+    .card-container {
+        min-width: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card-container>p {
+        text-align: center;
+    }
+
+    .card-links-container {
+        justify-content: center;
+    }
+
+    .card-small-badges-container {
+        justify-content: center;
+    }
+    
     .card-images-container {
         flex-direction: column;
     }
 
     .card-images-selector {
         order: 2;
-        width: 100%;
         min-width: 100%;
         min-height: 100px;
         height: 100px;
         flex-direction: row;
-        overflow-y: none;
-        overflow-x: auto;
+        justify-content: center;
+        overflow-y: unset;
+        overflow-x: scroll;
     }
 
     .card-images-selector>img {
@@ -206,7 +225,6 @@
         flex: 1;
         height: 300px;
         max-height: 300px;
-        max-width: 100%;
     }
 
     .modal-image {

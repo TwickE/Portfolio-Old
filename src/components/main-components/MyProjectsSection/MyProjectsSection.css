@@ -17,7 +17,7 @@
     overflow: hidden;
 }
 
-.my-projects-inner-conatiner>h2 {
+.my-projects-inner-conatiner > div > h2 {
     color: transparent;
     background: var(--text-gradient);
     background-clip: text;
@@ -28,7 +28,7 @@
     margin-bottom: 15px;
 }
 
-.my-projects-inner-conatiner>p {
+.my-projects-inner-conatiner > div > p {
     color: var(--text-color);
     width: 600px;
     text-align: center;
@@ -73,7 +73,7 @@
         width: 540px;
     }
 
-    .my-projects-inner-conatiner>p {
+    .my-projects-inner-conatiner > div > p {
         max-width: 100%;
     }
 }
