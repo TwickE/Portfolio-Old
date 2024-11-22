@@ -5,6 +5,7 @@ import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
 import useLoadBadgeImages from '../../../hooks/useLoadBadgeImages';
 import { useState, forwardRef } from 'react';
 import Swal from 'sweetalert2'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const ProjectCard = forwardRef(({ cardProps }, ref) => {
     const badgeImages = useLoadBadgeImages(cardProps.cardSmallBadges);
@@ -37,7 +38,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
     }
 
     return (
-        <div className='card-container' ref={ref}>
+        <ScrollAnimation key={index} animateIn={index %2 === 0 ? 'fadeInLeft' : 'fadeInRight'} offset={50} className='card-container' ref={ref}>
             <h3>{cardProps.cardTitle}</h3>
             <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>
@@ -81,7 +82,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
                 </div>
                 <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} onClick={() => openImageModal()} />
             </div>
-        </div>
+        </ScrollAnimation>
     )
 })
 

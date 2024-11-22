@@ -5,6 +5,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
+import "animate.css/animate.compat.css"
 
 function App() {
     const location = useLocation();
