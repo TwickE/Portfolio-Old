@@ -1,11 +1,16 @@
 import Navbar from "../components/main-components/Navbar/Navbar"
+import MatrixRainingCode from "../components/main-components/MatrixRainingCode/MatrixRainingCode"
+import Footer from "../components/main-components/Footer/Footer"
 
 function NotFound() {
     return (
-        <>
-            <Navbar activeLink="" />
-            <h1>404: Page not found</h1>
-        </>
+        <div style={{minHeight: '100vh'}}>
+            <MatrixRainingCode />
+            <div style={{position: 'absolute', top: '0px', left: '0px', width: '100%'}}>
+                <Navbar />
+                <Footer />
+            </div>
+        </div>
     )
 }
 
