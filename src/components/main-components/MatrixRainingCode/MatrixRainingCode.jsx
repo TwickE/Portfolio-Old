@@ -25,7 +25,7 @@ const MatrixRainingCode = () => {
             ctx.fillStyle = "rgba(0, 0, 0, 0.04)"
             ctx.fillRect(0, 0, width, height)
             ctx.fillStyle = "#283AFF"
-            ctx.font = "15px monospace"
+            ctx.font = "16px monospace"
 
             for (let i = 0; i < drops.length; i++) {
                 const text = charArray[Math.floor(Math.random() * charArray.length)]
