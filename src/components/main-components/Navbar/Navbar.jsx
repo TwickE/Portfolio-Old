@@ -155,7 +155,7 @@ function Navbar(props) {
 }
 
 Navbar.propTypes = {
-    activeLink: PropTypes.string.isRequired
+    activeLink: PropTypes.string
 };
 
 export default Navbar
