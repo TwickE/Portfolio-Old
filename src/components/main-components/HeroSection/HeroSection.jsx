@@ -35,21 +35,23 @@ function HeroSection() {
                             clickFunction: downloadCV
                         }}
                     />
-                    <a className='social-button' style={{marginLeft: "5px"}} href='https://www.linkedin.com/in/frederico-silva-727a8b21a/' target='_blank'>
-                        <svg>
-                            <use href={`${iconsFile}#linkedin-icon`}></use>
-                        </svg>
-                    </a>
-                    <a className='social-button' href='https://github.com/TwickE' target='_blank'>
-                        <svg>
-                            <use href={`${iconsFile}#github-icon`}></use>
-                        </svg>
-                    </a>
-                    <a className='social-button' href='https://codepen.io/TwickE' target='_blank'>
-                        <svg>
-                            <use href={`${iconsFile}#codepen-icon`}></use>
-                        </svg>
-                    </a>
+                    <div className='container-buttons'>
+                        <a className='social-button' style={{marginLeft: "5px"}} href='https://www.linkedin.com/in/frederico-silva-727a8b21a/' target='_blank'>
+                            <svg>
+                                <use href={`${iconsFile}#linkedin-icon`}></use>
+                            </svg>
+                        </a>
+                        <a className='social-button' href='https://github.com/TwickE' target='_blank'>
+                            <svg>
+                                <use href={`${iconsFile}#github-icon`}></use>
+                            </svg>
+                        </a>
+                        <a className='social-button' href='https://codepen.io/TwickE' target='_blank'>
+                            <svg>
+                                <use href={`${iconsFile}#codepen-icon`}></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </ScrollAnimation>
             <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={20} className='container-photo'>

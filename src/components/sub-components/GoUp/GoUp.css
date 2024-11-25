@@ -43,3 +43,10 @@
     height: 35px;
     fill: var(--small-skill-badge-border-color);
 }
+
+@media only screen and (max-width: 720px) {
+    .go-up-container {
+        right: 25px;
+        bottom: 25px;
+    }
+}
