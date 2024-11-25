@@ -6,6 +6,7 @@ import CV from '../../../assets/cv.pdf'
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
 import educationData from '../../../assets/json/education.json'
 import workData from '../../../assets/json/work.json'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 function MyProjectsSection(props) {
     const firstEducationCardRef = useRef(null);
@@ -14,10 +15,6 @@ function MyProjectsSection(props) {
     const firstWorkCardRef = useRef(null);
     const lastWorkCardRef = useRef(null);
     const [workBarHeight, setWorkBarHeight] = useState(0);
-    const titleRef = useRef(null);
-    const educationRef = useRef(null);
-    const workRef = useRef(null);
-    const downloadCVRef = useRef(null);
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
@@ -56,65 +53,14 @@ function MyProjectsSection(props) {
         document.body.removeChild(link);
     }
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.target === educationRef.current) {
-                    entry.target.classList.toggle('left-card-animationOn', entry.isIntersecting);
-                    entry.target.classList.toggle('left-card-animationOff', !entry.isIntersecting);
-                } else if (entry.target === workRef.current) {
-                    entry.target.classList.toggle('right-card-animationOn', entry.isIntersecting);
-                    entry.target.classList.toggle('right-card-animationOff', !entry.isIntersecting);
-                } else if (entry.target === titleRef.current) {
-                    entry.target.classList.toggle('text-animationOn', entry.isIntersecting);
-                    entry.target.classList.toggle('text-animationOff', !entry.isIntersecting);
-                } else if (entry.target === downloadCVRef.current) {
-                    entry.target.classList.toggle('text-animationOn', entry.isIntersecting);
-                    entry.target.classList.toggle('text-animationOff', !entry.isIntersecting);
-                }
-            });
-        });
-
-        const titleElement = titleRef.current;
-        const downloadCVElement = downloadCVRef.current;
-        const educationElement = educationRef.current;
-        const workElement = workRef.current;
-
-        if (titleRef.current) {
-            observer.observe(titleRef.current);
-        }
-        if (downloadCVRef.current) {
-            observer.observe(downloadCVRef.current);
-        }
-        if (educationRef.current) {
-            observer.observe(educationRef.current);
-        }
-        if (workRef.current) {
-            observer.observe(workRef.current);
-        }
-
-        return () => {
-            if (titleElement) {
-                observer.unobserve(titleElement);
-            }
-            if (downloadCVElement) {
-                observer.unobserve(downloadCVElement);
-            }
-            if (educationElement) {
-                observer.unobserve(educationElement);
-            }
-            if (workElement) {
-                observer.unobserve(workElement);
-            }
-        };
-    }, []);
-
     return (
         <section style={backgroundColor} className='my-resume-container'>
             <div className='my-resume-inner-container'>
-                <h2 ref={titleRef}>My Resume</h2>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                    <h2>My Resume</h2>
+                </ScrollAnimation>
                 <div className='resume-container'>
-                    <div className='resume-small-container' ref={educationRef}>
+                    <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50} className='resume-small-container'>
                         <h3>Education</h3>
                         <div className='resume-data-container'
                         style={{ '--education-bar-height': `${educationBarHeight}px` }}>
@@ -129,8 +75,8 @@ function MyProjectsSection(props) {
                                 />
                             ))}
                         </div>
-                    </div>
-                    <div className='resume-small-container' ref={workRef}>
+                    </ScrollAnimation>
+                    <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={50} className='resume-small-container'>
                         <h3>Work Experience</h3>
                         <div className='resume-data-container'
                         style={{ '--work-bar-height': `${workBarHeight}px` }}>
@@ -145,20 +91,20 @@ function MyProjectsSection(props) {
                                 />
                             ))}
                         </div>
-                    </div>
+                    </ScrollAnimation>
                 </div>
-                <span style={{display: 'block', width: 'fit-content', margin: 'auto'}} ref={downloadCVRef}>
-                <OutlineButton
-                    buttonProps={{
-                        buttonSmall: false,
-                        startImage: false,
-                        text: 'Download CV',
-                        endImage: true,
-                        endImageSrc: 'download-icon',
-                        clickFunction: downloadCV
-                    }}
-                />
-                </span>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20} style={{width: 'fit-content', margin: 'auto'}}>
+                    <OutlineButton
+                        buttonProps={{
+                            buttonSmall: false,
+                            startImage: false,
+                            text: 'Download CV',
+                            endImage: true,
+                            endImageSrc: 'download-icon',
+                            clickFunction: downloadCV
+                        }}
+                    />
+                </ScrollAnimation>
                 
             </div>
         </section>

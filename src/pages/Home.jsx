@@ -7,9 +7,11 @@ import ContactSection from "../components/main-components/ContactSection/Contact
 import Footer from "../components/main-components/Footer/Footer"
 import useScrollToTop from "../hooks/useScrollToTop"
 import GoUp from "../components/sub-components/GoUp/GoUp"
+import useScrollUpdate from "../hooks/useScrollUpdate"
 
 function Home() {
     useScrollToTop();
+    useScrollUpdate();
 
     return (
         <>

@@ -4,9 +4,11 @@ import Footer from "../components/main-components/Footer/Footer"
 import NotFoundSection from "../components/main-components/NotFoundSection/NotFoundSection"
 import useScrollToTop from "../hooks/useScrollToTop"
 import GoUp from "../components/sub-components/GoUp/GoUp"
+import useScrollUpdate from "../hooks/useScrollUpdate"
 
 function NotFound() {
     useScrollToTop();
+    useScrollUpdate();
 
     return (
         <div style={{minHeight: '100vh'}}>

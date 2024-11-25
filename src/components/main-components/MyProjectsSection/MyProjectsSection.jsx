@@ -34,10 +34,10 @@ function MyProjectsSection(props) {
     return (
         <section style={backgroundColor} className='my-projects-conatiner'>
             <div className='my-projects-inner-conatiner'>
-                <ScrollAnimation animatePreScroll={false} animateIn='fadeInUp' offset={20}>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
                     <h2>My Projects</h2>
                 </ScrollAnimation>
-                <ScrollAnimation animatePreScroll={false} animateIn='fadeInUp' offset={20}>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
                     <p>I bring creative ideas to life through detailed, user-focused solutions. Each project showcases my ability to blend innovation with functionality, delivering results that exceed expectations and drive success.</p>
                 </ScrollAnimation>
                 <div className='cards-container'>
@@ -60,7 +60,7 @@ function MyProjectsSection(props) {
                     }
                 </div>
             </div>
-            <ScrollAnimation animateIn='fadeInUp' offset={20}>
+            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
                 <button className='filled-button' ref={seeMoreButtonRef} onClick={handleSeeMoreProjectsClick} style={displayButton()}>See More Projects</button>
             </ScrollAnimation>
         </section>
