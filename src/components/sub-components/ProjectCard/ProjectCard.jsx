@@ -38,7 +38,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
     }
 
     return (
-        <ScrollAnimation animatePreScroll={false} animateIn={cardProps.cardAnimation} offset={50} className='card-container' ref={ref}>
+        <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn={cardProps.cardAnimation} offset={50} className='card-container' ref={ref}>
             <h3>{cardProps.cardTitle}</h3>
             <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>

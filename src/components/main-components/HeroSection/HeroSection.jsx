@@ -3,6 +3,7 @@ import OutlineButton from '../../sub-components/OutlineButton/OutlineButton.jsx'
 import CV from '../../../assets/CV.pdf'
 import iconsFile from '../../../assets/icons.svg'
 import profilePhoto from '../../../assets/profilePhoto.webp'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 function HeroSection() {
     const downloadCV = () => {
@@ -16,7 +17,7 @@ function HeroSection() {
 
     return (
         <main className="hero-section">
-            <div className='container-info fadeInLeft'>
+            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={20} className='container-info'>
                 <h2>Hi, I am Fred</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
                 <div className='container-photo-small'>
@@ -50,10 +51,10 @@ function HeroSection() {
                         </svg>
                     </a>
                 </div>
-            </div>
-            <div className='container-photo fadeInRight'>
+            </ScrollAnimation>
+            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={20} className='container-photo'>
                 <img className='profile-photo' src={profilePhoto} alt="Profile Photo"/>
-            </div>
+            </ScrollAnimation>
         </main>
         
     )

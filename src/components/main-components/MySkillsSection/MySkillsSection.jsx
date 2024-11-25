@@ -26,21 +26,20 @@ function MySkillsSection(props) {
     return (
         <section style={backgroundColor} className='my-skills-conatiner'>
             <div className='my-skills-inner-conatiner'>
-                <ScrollAnimation animateIn='fadeInUp' offset={20}>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
                     <h2>My Skills</h2>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn='fadeInUp' offset={20}>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
                     <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achive your goals.</p>
                 </ScrollAnimation>
                 <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove}>
                     {skills.map((skill, index) => (
-                        <ScrollAnimation animateIn='fadeInLeft' key={index} offset={50}>
-                            <SkillBadge
-                                skillLink={skill.skillLink}
-                                skillName={skill.skillName}
-                                skillImage={loadedImages[skill.skillImage]}
-                            />
-                        </ScrollAnimation>
+                        <SkillBadge
+                            key={index}
+                            skillLink={skill.skillLink}
+                            skillName={skill.skillName}
+                            skillImage={loadedImages[skill.skillImage]}
+                        />
                     ))}
                 </div>
             </div>

@@ -4,9 +4,11 @@ import useScrollToTop from "../hooks/useScrollToTop"
 import ContactSection from "../components/main-components/ContactSection/ContactSection"
 import GoUp from "../components/sub-components/GoUp/GoUp"
 import Footer from "../components/main-components/Footer/Footer"
+import useScrollUpdate from "../hooks/useScrollUpdate"
 
 function Contact() {
     useScrollToTop();
+    useScrollUpdate();
 
     return (
         <>
