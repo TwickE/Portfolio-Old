@@ -4,13 +4,14 @@ import Footer from "../components/main-components/Footer/Footer"
 import MySkillsSection from "../components/main-components/MySkillsSection/MySkillsSection"
 import MyResumeSection from "../components/main-components/MyResumeSection/MyResumeSection"
 import LetsTalkSection from "../components/main-components/LetsTalkSection/LetsTalkSection"
-import ScrollToTop from "../hooks/ScrollToTop"
+import useScrollToTop from "../hooks/useScrollToTop"
 import GoUp from "../components/sub-components/GoUp/GoUp"
 
 function About() {
+    useScrollToTop();
+
     return (
         <>
-            <ScrollToTop />
             <Navbar activeLink="about" />
             <BreadcrumbSection location="About" />
             <MySkillsSection backgroundColor={true}/>
