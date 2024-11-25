@@ -38,7 +38,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
     }
 
     return (
-        <ScrollAnimation key={index} animateIn={index %2 === 0 ? 'fadeInLeft' : 'fadeInRight'} offset={50} className='card-container' ref={ref}>
+        <ScrollAnimation animatePreScroll={false} animateIn={cardProps.cardAnimation} offset={50} className='card-container' ref={ref}>
             <h3>{cardProps.cardTitle}</h3>
             <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>
@@ -105,7 +105,8 @@ ProjectCard.propTypes = {
         cardImages: PropTypes.arrayOf(PropTypes.shape({
             image: PropTypes.string.isRequired,
             imageDescription: PropTypes.string.isRequired
-        })).isRequired
+        })).isRequired,
+        cardAnimation: PropTypes.string.isRequired
     }).isRequired
 };
 
