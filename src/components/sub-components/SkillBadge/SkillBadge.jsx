@@ -18,7 +18,7 @@ SkillBadge.displayName = 'SkillBadge';
 
 SkillBadge.propTypes = {
     skillLink: PropTypes.string.isRequired,
-    skillImage: PropTypes.string.isRequired,
+    skillImage: PropTypes.string,
     skillName: PropTypes.string.isRequired
 };
 
