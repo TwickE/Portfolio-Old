@@ -2,12 +2,12 @@ import './MySkillsSection.css'
 import PropTypes from 'prop-types';
 import SkillBadge from '../../sub-components/SkillBadge/SkillBadge'
 import skillsJSON from '../../../assets/json/skills.json'
-import useLoadImages from '../../../hooks/useLoadImages'
+import useLoadAllImages from '../../../hooks/useLoadAllImages'
 import { useRef } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function MySkillsSection(props) {
-    const { skills, loadedImages } = useLoadImages(skillsJSON);
+    const images = useLoadAllImages();
     const badgesContainerRef = useRef(null);
 
     const backgroundColor = {
@@ -30,15 +30,15 @@ function MySkillsSection(props) {
                     <h2>My Skills</h2>
                 </ScrollAnimation>
                 <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
-                    <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achive your goals.</p>
+                    <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achieve your goals.</p>
                 </ScrollAnimation>
                 <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove}>
-                    {skills.map((skill, index) => (
+                    {skillsJSON.map((skill, index) => (
                         <SkillBadge
                             key={index}
                             skillLink={skill.skillLink}
                             skillName={skill.skillName}
-                            skillImage={loadedImages[skill.skillImage]}
+                            skillImage={images[skill.skillImage]}
                         />
                     ))}
                 </div>
@@ -51,4 +51,4 @@ MySkillsSection.propTypes = {
     backgroundColor: PropTypes.bool.isRequired
 };
 
-export default MySkillsSection
+export default MySkillsSection;
