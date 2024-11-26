@@ -61,7 +61,7 @@ function ContactSection(props) {
                         </div>
                         <div className='form-devide-inputs'>
                             <input className='form-inputs' type="email" name='Email Adress' placeholder='Email Adress' required />
-                            <input className='form-inputs' type="tel" name='Phone Number' placeholder='Phone Number' required />
+                            <input className='form-inputs' type="tel" pattern='[0-9+ ]*' name='Phone Number' placeholder='Phone Number' required />
                         </div>
                         <textarea className='form-textarea' name='Message' placeholder='Message' required></textarea>
                         <button className='filled-button form-button'>Send Message</button>
