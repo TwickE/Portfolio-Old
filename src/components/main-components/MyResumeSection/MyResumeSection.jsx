@@ -67,7 +67,7 @@ function MyProjectsSection(props) {
                             {educationData.map((card, index) => (
                                 <ResumeCard
                                     key={index}
-                                    icon='education-icon'
+                                    icon={card.icon}
                                     date={card.date}
                                     title={card.title}
                                     location={card.place}
