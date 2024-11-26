@@ -2,36 +2,43 @@
     {
         "date": "2023 - 2025",
         "title": "Master's Degree in Computer Science",
-        "place": "Faculdade de Ciências da Universidade de Lisboa"
+        "place": "Faculdade de Ciências da Universidade de Lisboa",
+        "icon": "education-icon"
     },
     {
         "date": "2024 - 1 Month",
         "title": "Tailwind CSS Course",
-        "place": "Youtube - Online Course"
+        "place": "Youtube - Online Course",
+        "icon": "onlinecourse-icon"
     },
     {
         "date": "2024 - 3 Months",
         "title": "Learn React JS Course",
-        "place": "Scrimba - Online Course"
+        "place": "Scrimba - Online Course",
+        "icon": "onlinecourse-icon"
     },
     {
         "date": "2020 - 2023",
         "title": "Bachelor's Degree in Computer Science",
-        "place": "Instituto Superior de Tecnologias Avançadas"
+        "place": "Instituto Superior de Tecnologias Avançadas",
+        "icon": "education-icon"
     },
     {
         "date": "2021 - 3 Months",
         "title": "Figma - Design mobile & web apps",
-        "place": "Udemy - Online Course"
+        "place": "Udemy - Online Course",
+        "icon": "onlinecourse-icon"
     },
     {
         "date": "2021 - 8 Months",
         "title": "Web Developer Bootcamp",
-        "place": "Udemy - Online Course"
+        "place": "Udemy - Online Course",
+        "icon": "onlinecourse-icon"
     },
     {
         "date": "2017 - 2020",
         "title": "Professional Technician Course in Computer Systems Management and Programming",
-        "place": "Escola Secundária Rainha Dona Leonor"
+        "place": "Escola Secundária Rainha Dona Leonor",
+        "icon": "education-icon"
     }
 ]
