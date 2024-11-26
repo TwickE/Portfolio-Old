@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: var(--text-color);
 }
 
 .container-not-found-info > h1 {
@@ -18,49 +18,10 @@
 }
 
 .container-not-found-info > h2 {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     text-align: center;
-}
-
-.container-not-found-info > button {
-    font-size: 2rem;
-    padding: 34px 70px;
-}
-
-@media only screen and (max-width: 1000px) {
-    .container-not-found-info > h1 {
-        font-size: 8rem;
-    }
-    
-    .container-not-found-info > h2 {
-        font-size: 3rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    .container-not-found-info > button {
-        font-size: 1.8rem;
-        padding: 30px 62px;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .container-not-found-info > h1 {
-        font-size: 6.4rem;
-    }
-    
-    .container-not-found-info > h2 {
-        font-size: 2.4rem;
-        margin-top: 0.8rem;
-        margin-bottom: 1.4rem;
-    }
-    
-    .container-not-found-info > button {
-        font-size: 1.2rem;
-        padding: 25px 52px;
-    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -69,14 +30,9 @@
     }
     
     .container-not-found-info > h2 {
-        font-size: 1.8rem;
-        margin-top: 0.8rem;
-        margin-bottom: 1.4rem;
-        padding: 0 12px;
-    }
-    
-    .container-not-found-info > button {
         font-size: 1rem;
-        padding: 17px 35px;
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+        padding: 0 12px;
     }
 }

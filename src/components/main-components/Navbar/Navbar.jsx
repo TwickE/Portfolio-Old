@@ -10,9 +10,10 @@ function Navbar(props) {
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
     const location = useLocation();
-
+    
     const changeNavbarColor = () => {
-        if(location.pathname !== '/' && scrolled === false) {
+        const paths = ['/about', '/projects', '/contact'];
+        if(paths.includes(location.pathname) && scrolled === false) {
             return {
                 color: 'white',
                 fill: 'white'

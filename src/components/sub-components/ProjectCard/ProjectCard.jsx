@@ -53,7 +53,6 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
                             text: link.linkTitle,
                             endImage: true,
                             endImageSrc: 'arrow-icon',
-                            endImageRotate: true,
                             clickFunction: () => window.open(link.linkUrl)
                         }}
                     />

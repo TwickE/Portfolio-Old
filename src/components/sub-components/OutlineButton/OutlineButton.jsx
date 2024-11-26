@@ -6,13 +6,13 @@ function OutlineButton({ buttonProps }) {
     return (
         <button className={`outline-button ${buttonProps.buttonSmall ? 'small' : 'large'}`} onClick={buttonProps.clickFunction}>
             {buttonProps.startImage && (
-                <svg className='margin-right'>
+                <svg>
                     <use href={`${iconsFile}#${buttonProps.startImageSrc}`}></use>
                 </svg>
             )}
             {buttonProps.text}
             {buttonProps.endImage && (
-                <svg className={`margin-left ${buttonProps.endImageRotate ? 'rotate' : ''}`}>
+                <svg>
                     <use href={`${iconsFile}#${buttonProps.endImageSrc}`}></use>
                 </svg>
             )}
@@ -28,7 +28,6 @@ OutlineButton.propTypes = {
         text: PropTypes.string.isRequired,
         endImage: PropTypes.bool.isRequired,
         endImageSrc: PropTypes.string,
-        endImageRotate: PropTypes.bool,
         clickFunction: PropTypes.func.isRequired
     }).isRequired
 };
