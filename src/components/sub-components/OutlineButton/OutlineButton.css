@@ -27,6 +27,7 @@
     width: 19px;
     height: 19px;
     fill: var(--primary-color);
+    transition: rotate 0.4s;
    
 }
 

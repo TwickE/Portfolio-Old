@@ -10,13 +10,19 @@ function Navbar(props) {
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
     const location = useLocation();
-    
-    const changeNavbarColor = () => {
+
+    const changeNavbarColor = (mobileMenuIcon) => {
         const paths = ['/about', '/projects', '/contact'];
-        if(paths.includes(location.pathname) && scrolled === false) {
-            return {
-                color: 'white',
-                fill: 'white'
+        if (paths.includes(location.pathname) && scrolled === false) {
+            if(mobileMenuIcon) {
+                return {
+                    backgroundColor: 'white',
+                }
+            } else {
+                return {
+                    color: 'white',
+                    fill: 'white',
+                }
             }
         }
     }
@@ -80,14 +86,12 @@ function Navbar(props) {
     return (
         <header className={scrolled ? 'scrolled' : ''}>
             <nav className='navbar'>
-                <div className='navbar-section'>
-                    <Link to='/'>
-                        <svg className='logo' style={changeNavbarColor()} >
-                            <use href={`${iconsFile}#main-icon`}></use>
-                        </svg>
-                    </Link>
+                <Link to='/' className='navbar-section'>
+                    <svg className='logo' style={changeNavbarColor()} >
+                        <use href={`${iconsFile}#main-icon`}></use>
+                    </svg>
                     <span style={changeNavbarColor()} >Fred&apos;s Portfolio</span>
-                </div>
+                </Link>
                 <div className='navbar-section'>
                     <ul className='navbar-items'>
                         <li className='navbar-item'>
@@ -125,10 +129,10 @@ function Navbar(props) {
                 <div className='mobile-menu'>
                     <button className='filled-button'>Hire Me!</button>
                     <button className={`menu-button ${isMenuActive ? 'shrink' : ''}`} onClick={handleMenuButtonClick}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span style={changeNavbarColor(true)}></span>
+                        <span style={changeNavbarColor(true)}></span>
+                        <span style={changeNavbarColor(true)}></span>
+                        <span style={changeNavbarColor(true)}></span>
                     </button>
                 </div>
             </nav>

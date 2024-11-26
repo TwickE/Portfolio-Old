@@ -78,3 +78,18 @@ body {
 .filled-button:hover {
     background-position: -100%;
 }
+
+@keyframes rippleText {
+    0% {
+        transform: translate3D(0, 0, 0) scale(1) rotateY(0);
+    }
+
+    15% {
+        transform: translate3D(2px, -2px, 2px) scale(1.2);
+        color: var(--text-color);
+    }
+
+    30% {
+        transform: translate3D(0, 0, 0) scale(1);
+    }
+}
