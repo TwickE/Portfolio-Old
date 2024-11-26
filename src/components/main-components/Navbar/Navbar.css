@@ -171,6 +171,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 15px;
     padding: 20px;
     color: var(--text-color);
@@ -183,7 +184,7 @@ header {
     background-color: var(--accent-color);
 }
 
-.theme-submenu-item>svg {
+.theme-submenu-item > svg {
     width: 21px;
     height: 21px;
     fill: var(--text-color);
@@ -196,10 +197,6 @@ header {
 
 .mobile-menu {
     display: none;
-}
-
-.no-scroll {
-    overflow: hidden;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -328,6 +325,7 @@ header {
 
     .mobile-menu-theme {
         position: relative;
+        cursor: pointer;
     }
 
     .mobile-menu-theme::after {
@@ -339,6 +337,11 @@ header {
 
     .mobile-menu-theme.active::after {
         content: '\2212';
+    }
+
+    .mobile-menu-theme-items {
+        height: 0px;
+        opacity: 0;
     }
 
     .mobile-menu-theme-item {

@@ -5,16 +5,67 @@ import { useEffect, useState } from 'react';
 import iconsFile from '../../../assets/icons.svg'
 
 function Navbar(props) {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState(null);
+    const [mobileMenu, setMobileMenu] = useState(false);
+    const [mobileThemeMenu, setMobileThemeMenu] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [isMenuActive, setIsMenuActive] = useState(false);
-    const [mobileThemeMenuActive, setMobileThemeMenuActive] = useState(false);
     const location = useLocation();
+
+    const toggleDarkMode = () => {
+        localStorage.theme = 'dark'
+        setTheme('dark')
+        document.querySelector('html').setAttribute('data-theme', localStorage.theme);
+        setMobileThemeMenu(false);
+        setMobileMenu(false);
+        document.body.style.overflow = 'auto';
+    }
+
+    const toggleLightMode = () => {
+        localStorage.theme = 'light'
+        setTheme('light')
+        document.querySelector('html').setAttribute('data-theme', localStorage.theme); 
+        setMobileThemeMenu(false);
+        setMobileMenu(false);
+        document.body.style.overflow = 'auto';
+    }
+
+    const toggleSystemMode = () => {
+        localStorage.removeItem('theme');
+        setTheme('system');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.querySelector('html').setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+        setMobileThemeMenu(false);
+        setMobileMenu(false);
+        document.body.style.overflow = 'auto';
+    }
+
+    useEffect(() => {
+        if (localStorage.theme === 'dark') {
+            toggleDarkMode();
+        } else if (localStorage.theme === 'light') {
+            toggleLightMode();
+        } else {
+            toggleSystemMode();
+        }
+
+        const systemThemeListener = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleSystemThemeChange = (e) => {
+            if (theme === 'system') {
+                document.querySelector('html').setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        };
+
+        systemThemeListener.addEventListener('change', handleSystemThemeChange);
+
+        return () => {
+            systemThemeListener.removeEventListener('change', handleSystemThemeChange);
+        };
+    }, [theme]);
 
     const changeNavbarColor = (mobileMenuIcon) => {
         const paths = ['/about', '/projects', '/contact'];
         if (paths.includes(location.pathname) && scrolled === false) {
-            if(mobileMenuIcon) {
+            if (mobileMenuIcon) {
                 return {
                     backgroundColor: 'white',
                 }
@@ -27,29 +78,39 @@ function Navbar(props) {
         }
     }
 
-    const mobileMenuItemsStyles = {
-        height: isMenuActive ? 'calc(100dvh - 100px)' : '0px',
-        opacity: isMenuActive ? 1 : 0
+    const [delayedMobileMenuStyles, setDelayedMobileMenuStyles] = useState({});
+    const handleMobileMenuClick = () => {
+        setMobileMenu((prevMobileMenu) => !prevMobileMenu);
+        document.body.style.overflow = !mobileMenu ? 'hidden' : 'auto';
+        setTimeout(() => {
+            setDelayedMobileMenuStyles({
+                height: !mobileMenu ? 'calc(100dvh - 100px)' : '0px',
+                opacity: !mobileMenu ? 1 : 0
+            });
+        }, 100);
+    }
+
+    const [delayedMobileThemeMenuStyles, setDelayedMobileThemeMenuStyles] = useState({});
+    const handleMobileThemeMenuClick = () => {
+        setMobileThemeMenu((prevMobileThemeMenu) => !prevMobileThemeMenu);
+        setTimeout(() => {
+            setDelayedMobileThemeMenuStyles({
+                height: !mobileThemeMenu ? 'fit-content' : '0px',
+                opacity: !mobileThemeMenu ? 1 : 0
+            });
+        }, 100);
     }
 
     useEffect(() => {
         const closeMenu = () => {
-            setIsMenuActive(false);
-            setMobileThemeMenuActive(false);
-            document.body.classList.remove('no-scroll');
+            setMobileMenu(false);
+            setMobileThemeMenu(false);
+            document.body.style.overflow = 'auto';
         }
         window.addEventListener('resize', closeMenu);
         return () => {
             window.removeEventListener('resize', closeMenu);
         };
-    }, []);
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-            document.querySelector('html').setAttribute('data-theme', savedTheme);
-        }
     }, []);
 
     useEffect(() => {
@@ -66,22 +127,6 @@ function Navbar(props) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
-    const toggleTheme = (e) => {
-        const newTheme = e.target.innerText.toLowerCase();
-        setTheme(newTheme);
-        document.querySelector('html').setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
-
-    const handleMenuButtonClick = () => {
-        setIsMenuActive(!isMenuActive);
-        document.body.classList.toggle('no-scroll', !isMenuActive);
-    };
-
-    const toggleMobileThemeButton = () => {
-        setMobileThemeMenuActive(!mobileThemeMenuActive);
-    };
 
     return (
         <header className={scrolled ? 'scrolled' : ''}>
@@ -109,17 +154,23 @@ function Navbar(props) {
                         <li className='navbar-item theme-menu'>
                             <span style={changeNavbarColor()} >Theme</span>
                             <ul className='theme-submenu'>
-                                <div className='theme-submenu-item' onClick={toggleTheme}>
+                                <div className='theme-submenu-item' onClick={() => toggleLightMode()}>
                                     <svg className={theme === 'light' ? 'active-mode' : ''}>
                                         <use href={`${iconsFile}#lightmode-icon`}></use>
                                     </svg>
                                     <li className={theme === 'light' ? 'active-mode' : ''}>Light</li>
                                 </div>
-                                <div className='theme-submenu-item' onClick={toggleTheme}>
+                                <div className='theme-submenu-item' onClick={() => toggleDarkMode()}>
                                     <svg className={theme === 'dark' ? 'active-mode' : ''}>
                                         <use href={`${iconsFile}#darkmode-icon`}></use>
                                     </svg>
                                     <li className={theme === 'dark' ? 'active-mode' : ''}>Dark</li>
+                                </div>
+                                <div className='theme-submenu-item' onClick={() => toggleSystemMode()}>
+                                    <svg className={theme === 'system' ? 'active-mode' : ''}>
+                                        <use href={`${iconsFile}#systemmode-icon`}></use>
+                                    </svg>
+                                    <li className={theme === 'system' ? 'active-mode' : ''}>System</li>
                                 </div>
                             </ul>
                         </li>
@@ -127,8 +178,8 @@ function Navbar(props) {
                     <button className='filled-button' onClick={() => (window.open('https://www.linkedin.com/in/frederico-silva-727a8b21a/', '_blank'))}>Hire Me!</button>
                 </div>
                 <div className='mobile-menu'>
-                    <button className='filled-button'>Hire Me!</button>
-                    <button className={`menu-button ${isMenuActive ? 'shrink' : ''}`} onClick={handleMenuButtonClick}>
+                    <button className='filled-button' onClick={() => (window.open('https://www.linkedin.com/in/frederico-silva-727a8b21a/', '_blank'))}>Hire Me!</button>
+                    <button className={`menu-button ${mobileMenu ? 'shrink' : ''}`} onClick={handleMobileMenuClick}>
                         <span style={changeNavbarColor(true)}></span>
                         <span style={changeNavbarColor(true)}></span>
                         <span style={changeNavbarColor(true)}></span>
@@ -136,25 +187,37 @@ function Navbar(props) {
                     </button>
                 </div>
             </nav>
-            <div style={mobileMenuItemsStyles} className='mobile-menu-items'>
-                <Link style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className='mobile-menu-link' to='/'>Home</Link>
-                <Link style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className='mobile-menu-link' to='/about'>About</Link>
-                <Link style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className='mobile-menu-link' to='/projects'>Projects</Link>
-                <Link style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className='mobile-menu-link' to='/contact'>Contact</Link>
-                <span style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className={`mobile-menu-link mobile-menu-theme ${mobileThemeMenuActive ? 'active' : ''}`} onClick={toggleMobileThemeButton}>Theme</span>
-                <div style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className={`mobile-menu-theme-item ${mobileThemeMenuActive ? 'visible' : 'hidden'}`} onClick={toggleTheme}>
-                    <svg className={theme === 'light' ? 'active-mode' : ''}>
-                        <use href={`${iconsFile}#lightmode-icon`}></use>
-                    </svg>
-                    <span className={theme === 'light' ? 'active-mode' : ''}>Light</span>
+            {mobileMenu &&
+                <div style={delayedMobileMenuStyles} className={`mobile-menu-items ${mobileMenu ? 'active' : ''}`}>
+                    <Link className='mobile-menu-link' to='/'>Home</Link>
+                    <Link className='mobile-menu-link' to='/about'>About</Link>
+                    <Link className='mobile-menu-link' to='/projects'>Projects</Link>
+                    <Link className='mobile-menu-link' to='/contact'>Contact</Link>
+                    <span className={`mobile-menu-link mobile-menu-theme ${mobileThemeMenu ? 'active' : ''}`} onClick={handleMobileThemeMenuClick}>Theme</span>
+                    {mobileThemeMenu &&
+                        <div style={delayedMobileThemeMenuStyles} className='mobile-menu-theme-items'>
+                            <div className='mobile-menu-theme-item' onClick={() => toggleLightMode()}>
+                                <svg className={theme === 'light' ? 'active-mode' : ''}>
+                                    <use href={`${iconsFile}#lightmode-icon`}></use>
+                                </svg>
+                                <span className={theme === 'light' ? 'active-mode' : ''}>Light</span>
+                            </div>
+                            <div className='mobile-menu-theme-item' onClick={() => toggleDarkMode()}>
+                                <svg className={theme === 'dark' ? 'active-mode' : ''}>
+                                    <use href={`${iconsFile}#darkmode-icon`}></use>
+                                </svg>
+                                <span className={theme === 'dark' ? 'active-mode' : ''}>Dark</span>
+                            </div>
+                            <div className='mobile-menu-theme-item' onClick={() => toggleSystemMode()}>
+                                <svg className={theme === 'system' ? 'active-mode' : ''}>
+                                    <use href={`${iconsFile}#systemmode-icon`}></use>
+                                </svg>
+                                <span className={theme === 'system' ? 'active-mode' : ''}>System</span>
+                            </div>
+                        </div>
+                    }
                 </div>
-                <div style={{ pointerEvents: isMenuActive ? 'auto' : 'none' }} className={`mobile-menu-theme-item ${mobileThemeMenuActive ? 'visible' : 'hidden'}`} onClick={toggleTheme}>
-                    <svg className={theme === 'dark' ? 'active-mode' : ''}>
-                        <use href={`${iconsFile}#darkmode-icon`}></use>
-                    </svg>
-                    <span className={theme === 'dark' ? 'active-mode' : ''}>Dark</span>
-                </div>
-            </div>
+            }
         </header>
     )
 }

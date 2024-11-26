@@ -58,6 +58,10 @@ form > p {
     font-size: 1rem;
 }
 
+.form-inputs:user-invalid {
+    border: 1px solid red;
+}
+
 .form-inputs::placeholder {
     color: var(--grey);
 }
