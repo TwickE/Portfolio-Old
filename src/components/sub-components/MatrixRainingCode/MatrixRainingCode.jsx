@@ -22,7 +22,8 @@ const MatrixRainingCode = () => {
         let lastFrameTime = Date.now()
 
         const draw = () => {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.04)"
+            const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--matrix-background-color')
+            ctx.fillStyle = backgroundColor
             ctx.fillRect(0, 0, width, height)
             ctx.fillStyle = "#283AFF"
             ctx.font = "16px monospace"

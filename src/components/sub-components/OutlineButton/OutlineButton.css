@@ -1,4 +1,7 @@
 .outline-button {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     font-size: 1rem;
@@ -24,15 +27,7 @@
     width: 19px;
     height: 19px;
     fill: var(--primary-color);
-    transition: 0s;
-}
-
-.margin-right {
-    margin-right: 5px;
-}
-
-.margin-left {
-    margin-left: 5px;
+   
 }
 
 .outline-button:hover {
@@ -44,7 +39,6 @@
     fill: #FFFFFF;
 }
 
-.outline-button:hover .rotate  {
-    transform: rotate(45deg);
-    transition: transform 0.3s;
+.outline-button:hover svg:nth-child(2) {
+    rotate: 45deg;
 }

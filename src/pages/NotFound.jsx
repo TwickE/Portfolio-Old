@@ -1,5 +1,5 @@
 import Navbar from "../components/main-components/Navbar/Navbar"
-import MatrixRainingCode from "../components/main-components/MatrixRainingCode/MatrixRainingCode"
+import MatrixRainingCode from "../components/sub-components/MatrixRainingCode/MatrixRainingCode"
 import Footer from "../components/main-components/Footer/Footer"
 import NotFoundSection from "../components/main-components/NotFoundSection/NotFoundSection"
 import useScrollToTop from "../hooks/useScrollToTop"
