@@ -314,6 +314,16 @@ header {
         z-index: 1;
     }
 
+    .show {
+        height: calc(100dvh - 100px);
+        opacity: 1;
+    }
+
+    .hide {
+        height: 0px;
+        opacity: 0;
+    }
+
     .mobile-menu-link {
         width: 700px;
         margin:  15px auto;
@@ -342,6 +352,11 @@ header {
     .mobile-menu-theme-items {
         height: 0px;
         opacity: 0;
+    }
+
+    .show-theme {
+        height: fit-content;
+        opacity: 1;
     }
 
     .mobile-menu-theme-item {
