@@ -23,7 +23,7 @@ function Navbar(props) {
     const toggleLightMode = () => {
         localStorage.theme = 'light'
         setTheme('light')
-        document.querySelector('html').setAttribute('data-theme', localStorage.theme); 
+        document.querySelector('html').setAttribute('data-theme', localStorage.theme);
         setMobileThemeMenu(false);
         setMobileMenu(false);
         document.body.style.overflow = 'auto';
@@ -78,28 +78,40 @@ function Navbar(props) {
         }
     }
 
-    const [delayedMobileMenuStyles, setDelayedMobileMenuStyles] = useState({});
+    const [delayedMobileMenuStyles, setDelayedMobileMenuStyles] = useState(false);
     const handleMobileMenuClick = () => {
-        setMobileMenu((prevMobileMenu) => !prevMobileMenu);
-        document.body.style.overflow = !mobileMenu ? 'hidden' : 'auto';
-        setTimeout(() => {
-            setDelayedMobileMenuStyles({
-                height: !mobileMenu ? 'calc(100dvh - 100px)' : '0px',
-                opacity: !mobileMenu ? 1 : 0
-            });
-        }, 100);
+        if (!mobileMenu) {
+            setDelayedMobileMenuStyles(true)
+            setTimeout(() => setMobileMenu(true), 10)
+        } else {
+            setMobileMenu(false)
+        }
+    };
+
+    useEffect(() => {
+        if (!mobileMenu) {
+            const timeout = setTimeout(() => setDelayedMobileMenuStyles(false), 300);
+            return () => clearTimeout(timeout);
+        }
+    }, [mobileMenu]);
+
+
+    const [delayedMobileThemeMenuStyles, setDelayedMobileThemeMenuStyles] = useState(false);
+    const handleMobileThemeMenuClick = () => {
+        if (!mobileThemeMenu) {
+            setDelayedMobileThemeMenuStyles(true)
+            setTimeout(() => setMobileThemeMenu(true), 10)
+        } else {
+            setMobileThemeMenu(false)
+        }
     }
 
-    const [delayedMobileThemeMenuStyles, setDelayedMobileThemeMenuStyles] = useState({});
-    const handleMobileThemeMenuClick = () => {
-        setMobileThemeMenu((prevMobileThemeMenu) => !prevMobileThemeMenu);
-        setTimeout(() => {
-            setDelayedMobileThemeMenuStyles({
-                height: !mobileThemeMenu ? 'fit-content' : '0px',
-                opacity: !mobileThemeMenu ? 1 : 0
-            });
-        }, 100);
-    }
+    useEffect(() => {
+        if (!mobileThemeMenu) {
+            const timeout = setTimeout(() => setDelayedMobileThemeMenuStyles(false), 300);
+            return () => clearTimeout(timeout);
+        }
+    }, [mobileThemeMenu]);
 
     useEffect(() => {
         const closeMenu = () => {
@@ -187,15 +199,15 @@ function Navbar(props) {
                     </button>
                 </div>
             </nav>
-            {mobileMenu &&
-                <div style={delayedMobileMenuStyles} className={`mobile-menu-items ${mobileMenu ? 'active' : ''}`}>
+            {delayedMobileMenuStyles &&
+                <div className={`mobile-menu-items ${mobileMenu ? 'show' : 'hide'}`}>
                     <Link className='mobile-menu-link' to='/'>Home</Link>
                     <Link className='mobile-menu-link' to='/about'>About</Link>
                     <Link className='mobile-menu-link' to='/projects'>Projects</Link>
                     <Link className='mobile-menu-link' to='/contact'>Contact</Link>
                     <span className={`mobile-menu-link mobile-menu-theme ${mobileThemeMenu ? 'active' : ''}`} onClick={handleMobileThemeMenuClick}>Theme</span>
-                    {mobileThemeMenu &&
-                        <div style={delayedMobileThemeMenuStyles} className='mobile-menu-theme-items'>
+                    {delayedMobileThemeMenuStyles &&
+                        <div className={`mobile-menu-theme-items ${mobileThemeMenu ? 'show-theme' : 'hide'}`}>
                             <div className='mobile-menu-theme-item' onClick={() => toggleLightMode()}>
                                 <svg className={theme === 'light' ? 'active-mode' : ''}>
                                     <use href={`${iconsFile}#lightmode-icon`}></use>
