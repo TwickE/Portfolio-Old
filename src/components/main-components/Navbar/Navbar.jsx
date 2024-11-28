@@ -81,9 +81,11 @@ function Navbar(props) {
     const [delayedMobileMenuStyles, setDelayedMobileMenuStyles] = useState(false);
     const handleMobileMenuClick = () => {
         if (!mobileMenu) {
+            document.body.style.overflow = 'hidden';
             setDelayedMobileMenuStyles(true)
             setTimeout(() => setMobileMenu(true), 10)
         } else {
+            document.body.style.overflow = 'auto';
             setMobileMenu(false)
         }
     };
@@ -207,7 +209,7 @@ function Navbar(props) {
                     <Link className='mobile-menu-link' to='/contact'>Contact</Link>
                     <span className={`mobile-menu-link mobile-menu-theme ${mobileThemeMenu ? 'active' : ''}`} onClick={handleMobileThemeMenuClick}>Theme</span>
                     {delayedMobileThemeMenuStyles &&
-                        <div className={`mobile-menu-theme-items ${mobileThemeMenu ? 'show-theme' : 'hide'}`}>
+                        <div className={mobileThemeMenu ? 'show-theme' : 'hide'}>
                             <div className='mobile-menu-theme-item' onClick={() => toggleLightMode()}>
                                 <svg className={theme === 'light' ? 'active-mode' : ''}>
                                     <use href={`${iconsFile}#lightmode-icon`}></use>

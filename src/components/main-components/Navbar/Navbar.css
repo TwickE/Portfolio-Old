@@ -310,7 +310,7 @@ header {
         position: fixed;
         top: 100px;
         opacity: 0;
-        background-color: var(--secondary-color);
+        background-color: var(--background-color2);
         z-index: 1;
     }
 
@@ -328,7 +328,7 @@ header {
         width: 700px;
         margin:  15px auto;
         font-size: 1.5rem;
-        color: #FFFFFF;
+        color: var(--text-color);
         text-transform: uppercase;
         text-decoration: none;
     }
@@ -349,11 +349,6 @@ header {
         content: '\2212';
     }
 
-    .mobile-menu-theme-items {
-        height: 0px;
-        opacity: 0;
-    }
-
     .show-theme {
         height: fit-content;
         opacity: 1;
@@ -366,7 +361,7 @@ header {
         gap: 15px;
         padding: 0 20px;
         margin: 10px auto;
-        color: #FFFFFF;
+        color: var(--text-color);
         font-size: 1.3rem;
         cursor: pointer;
         transition: 0.4s;
@@ -375,7 +370,7 @@ header {
     .mobile-menu-theme-item>svg {
         width: 21px;
         height: 21px;
-        fill: #FFFFFF;
+        fill: var(--text-color);
         transition: 0s;
     }
 
