@@ -1,7 +1,7 @@
 import './MySkillsSection.css'
 import PropTypes from 'prop-types';
 import SkillBadge from '../../sub-components/SkillBadge/SkillBadge'
-import skillsJSON from '../../../assets/json/skills.json'
+import { skills } from '../../../assets/data.js'
 import useLoadAllImages from '../../../hooks/useLoadAllImages'
 import { useRef } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -33,7 +33,7 @@ function MySkillsSection(props) {
                     <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achieve your goals.</p>
                 </ScrollAnimation>
                 <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove}>
-                    {skillsJSON.map((skill, index) => (
+                    {skills.map((skill, index) => (
                         <SkillBadge
                             key={index}
                             skillLink={skill.skillLink}
