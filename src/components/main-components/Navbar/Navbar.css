@@ -30,6 +30,12 @@ header {
     text-decoration: none;
 }
 
+.logo-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .logo {
     width: 60px;
     height: 60px;

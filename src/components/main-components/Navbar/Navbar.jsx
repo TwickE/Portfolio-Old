@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import iconsFile from '../../../assets/icons.svg'
@@ -10,6 +10,15 @@ function Navbar(props) {
     const [mobileThemeMenu, setMobileThemeMenu] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLogoClick = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
 
     const toggleDarkMode = () => {
         localStorage.theme = 'dark'
@@ -145,12 +154,12 @@ function Navbar(props) {
     return (
         <header className={scrolled ? 'scrolled' : ''}>
             <nav className='navbar'>
-                <Link to='/' className='navbar-section'>
+                <button onClick={handleLogoClick} className='navbar-section logo-button'>
                     <svg className='logo' style={changeNavbarColor()} >
                         <use href={`${iconsFile}#main-icon`}></use>
                     </svg>
                     <span style={changeNavbarColor()} >Fred&apos;s Portfolio</span>
-                </Link>
+                </button>
                 <div className='navbar-section'>
                     <ul className='navbar-items'>
                         <li className='navbar-item'>
