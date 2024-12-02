@@ -2,7 +2,7 @@ import './MyProjectsSection.css'
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import ProjectCard from '../../sub-components/ProjectCard/ProjectCard';
-import cardsData from '../../../assets/json/cards.json'
+import { projects } from '../../../assets/data.js';
 import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -43,14 +43,14 @@ function MyProjectsSection(props) {
                 <div className='cards-container'>
                     {
                         props.allProjects ? (
-                            cardsData.map((card, index) => (
+                            projects.map((card, index) => (
                                     <ProjectCard
                                         key={index}
                                         cardProps={{...card, cardAnimation: index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}}
                                     />
                             ))
                         ) : (
-                            cardsData.slice(0, 4).map((card, index) => (
+                            projects.slice(0, 4).map((card, index) => (
                                 <ProjectCard
                                     key={index} 
                                     cardProps={{...card, cardAnimation: index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}}

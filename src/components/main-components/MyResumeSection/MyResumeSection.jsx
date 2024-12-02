@@ -4,8 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import OutlineButton from '../../sub-components/OutlineButton/OutlineButton';
 import CV from '../../../assets/cv.pdf'
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
-import educationData from '../../../assets/json/education.json'
-import workData from '../../../assets/json/work.json'
+import { education, work } from '../../../assets/data.js';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function MyProjectsSection(props) {
@@ -64,14 +63,14 @@ function MyProjectsSection(props) {
                         <h3>Education</h3>
                         <div className='resume-data-container'
                         style={{ '--education-bar-height': `${educationBarHeight}px` }}>
-                            {educationData.map((card, index) => (
+                            {education.map((card, index) => (
                                 <ResumeCard
                                     key={index}
                                     icon={card.icon}
                                     date={card.date}
                                     title={card.title}
                                     location={card.place}
-                                    ref={index === 0 ? firstEducationCardRef : index === educationData.length - 1 ? lastEducationCardRef : null}
+                                    ref={index === 0 ? firstEducationCardRef : index === education.length - 1 ? lastEducationCardRef : null}
                                 />
                             ))}
                         </div>
@@ -80,14 +79,14 @@ function MyProjectsSection(props) {
                         <h3>Work Experience</h3>
                         <div className='resume-data-container'
                         style={{ '--work-bar-height': `${workBarHeight}px` }}>
-                            {workData.map((card, index) => (
+                            {work.map((card, index) => (
                                 <ResumeCard
                                     key={index}
                                     icon='work-icon'
                                     date={card.date}
                                     title={card.title}
                                     location={card.place}
-                                    ref={index === 0 ? firstWorkCardRef : index === workData.length - 1 ? lastWorkCardRef : null}
+                                    ref={index === 0 ? firstWorkCardRef : index === work.length - 1 ? lastWorkCardRef : null}
                                 />
                             ))}
                         </div>
