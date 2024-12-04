@@ -1,9 +1,11 @@
 .skill-badge {
     width: 140px;
     height: 140px;
-    border: 1px solid var(--secondary-color);
+    background: rgba( 10, 18, 100, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.20 );
     border-radius: 20px;
-    background-color: var(--accent-color);
     display: flex;
     flex-direction: column;
     align-items: center;

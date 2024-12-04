@@ -161,7 +161,7 @@ function Navbar(props) {
                     <span style={changeNavbarColor()} >Fred&apos;s Portfolio</span>
                 </button>
                 <div className='navbar-section'>
-                    <ul className='navbar-items'>
+                    <div className='navbar-items'>
                         <li className='navbar-item'>
                             <Link className={`navbar-link ${props.activeLink === 'home' ? 'link-active' : ''}`} style={changeNavbarColor()} to='/'>Home</Link>
                         </li>
@@ -177,27 +177,27 @@ function Navbar(props) {
                         <li className='navbar-item theme-menu'>
                             <span style={changeNavbarColor()} >Theme</span>
                             <ul className='theme-submenu'>
-                                <div className='theme-submenu-item' onClick={() => toggleLightMode()}>
+                                <li className='theme-submenu-item' onClick={() => toggleLightMode()}>
                                     <svg className={theme === 'light' ? 'active-mode' : ''}>
                                         <use href={`${iconsFile}#lightmode-icon`}></use>
                                     </svg>
-                                    <li className={theme === 'light' ? 'active-mode' : ''}>Light</li>
-                                </div>
-                                <div className='theme-submenu-item' onClick={() => toggleDarkMode()}>
+                                    <span className={theme === 'light' ? 'active-mode' : ''}>Light</span>
+                                </li>
+                                <li className='theme-submenu-item' onClick={() => toggleDarkMode()}>
                                     <svg className={theme === 'dark' ? 'active-mode' : ''}>
                                         <use href={`${iconsFile}#darkmode-icon`}></use>
                                     </svg>
-                                    <li className={theme === 'dark' ? 'active-mode' : ''}>Dark</li>
-                                </div>
-                                <div className='theme-submenu-item' onClick={() => toggleSystemMode()}>
+                                    <span className={theme === 'dark' ? 'active-mode' : ''}>Dark</span>
+                                </li>
+                                <li className='theme-submenu-item' onClick={() => toggleSystemMode()}>
                                     <svg className={theme === 'system' ? 'active-mode' : ''}>
                                         <use href={`${iconsFile}#systemmode-icon`}></use>
                                     </svg>
-                                    <li className={theme === 'system' ? 'active-mode' : ''}>System</li>
-                                </div>
+                                    <span className={theme === 'system' ? 'active-mode' : ''}>System</span>
+                                </li>
                             </ul>
                         </li>
-                    </ul>
+                    </div>
                     <button className='filled-button' onClick={() => (window.open('https://www.linkedin.com/in/frederico-silva-727a8b21a/', '_blank'))}>Hire Me!</button>
                 </div>
                 <div className='mobile-menu'>
