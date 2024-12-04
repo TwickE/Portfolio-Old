@@ -4,6 +4,7 @@
     --secondary-color: #0A1264;
     --accent-color: #E3EBFF;
     --background-color1: #FFFFFF;
+    --background-color1-glass: rgb(255, 255, 255, 0.5);
     --background-color2: #F3F3FC;
     --text-color: #0E0C1C;
     --grey: #747779;
@@ -23,6 +24,7 @@
     --secondary-color: #0a1264;
     --accent-color: #0E0C1C;
     --background-color1: #070915;
+    --background-color1-glass: rgb(7, 9, 21, 0.5);
     --background-color2: #050509;
     --text-color: #FFFFFF;
     --grey: #747779;
