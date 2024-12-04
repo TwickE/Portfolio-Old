@@ -1,19 +1,12 @@
 import './HeroSection.css'
 import OutlineButton from '../../sub-components/OutlineButton/OutlineButton.jsx'
-import CV from '../../../assets/CV.pdf'
+import useDownloadCV from '../../../hooks/useDownloadCV.jsx'
 import iconsFile from '../../../assets/icons.svg'
 import profilePhoto from '../../../assets/profilePhoto.webp'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function HeroSection() {
-    const downloadCV = () => {
-        const link = document.createElement('a');
-        link.href = CV;
-        link.download = 'cv.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
+    const downloadCV = useDownloadCV();
 
     return (
         <main className="hero-section">

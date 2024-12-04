@@ -2,7 +2,7 @@ import './MyResumeSection.css'
 import PropTypes from 'prop-types';
 import { useRef, useEffect, useState } from 'react';
 import OutlineButton from '../../sub-components/OutlineButton/OutlineButton';
-import CV from '../../../assets/cv.pdf'
+import useDownloadCV from '../../../hooks/useDownloadCV.jsx';
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
 import { education, work } from '../../../assets/data.js';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -14,6 +14,7 @@ function MyProjectsSection(props) {
     const firstWorkCardRef = useRef(null);
     const lastWorkCardRef = useRef(null);
     const [workBarHeight, setWorkBarHeight] = useState(0);
+    const downloadCV = useDownloadCV();
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
@@ -42,15 +43,6 @@ function MyProjectsSection(props) {
             window.removeEventListener('resize', calculateHeights);
         };
     }, []);
-
-    const downloadCV = () => {
-        const link = document.createElement('a');
-        link.href = CV;
-        link.download = 'cv.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
 
     return (
         <section style={backgroundColor} className='my-resume-container'>
