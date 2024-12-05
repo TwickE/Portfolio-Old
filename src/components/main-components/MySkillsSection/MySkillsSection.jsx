@@ -2,12 +2,10 @@ import './MySkillsSection.css'
 import PropTypes from 'prop-types';
 import SkillBadge from '../../sub-components/SkillBadge/SkillBadge'
 import { skills } from '../../../assets/data.js'
-import useLoadAllImages from '../../../hooks/useLoadAllImages'
 import { useRef } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function MySkillsSection(props) {
-    const images = useLoadAllImages();
     const badgesContainerRef = useRef(null);
 
     const backgroundColor = {
@@ -34,12 +32,12 @@ function MySkillsSection(props) {
                 </ScrollAnimation>
                 <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove}>
                     {skills.map((skill, index) => (
-                        <SkillBadge
-                            key={index}
-                            skillLink={skill.skillLink}
-                            skillName={skill.skillName}
-                            skillImage={images[skill.skillImage]}
-                        />
+                         <SkillBadge
+                             key={index}
+                             skillLink={skill.skillLink}
+                             skillName={skill.skillName}
+                             skillImage={skill.skillImage}
+                         />
                     ))}
                 </div>
             </div>

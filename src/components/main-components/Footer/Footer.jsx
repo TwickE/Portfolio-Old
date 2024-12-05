@@ -1,7 +1,7 @@
 import './Footer.css'
 import iconsFile from '../../../assets/icons.svg'
 import { Link } from 'react-router-dom'
-import ReactImage from '../../../assets/skills-images/react-icon.webp'
+import ReactImage from '../../../assets/skills-images.svg'
 import { useEffect, useState } from 'react';
 
 function Footer() {
@@ -43,7 +43,9 @@ function Footer() {
                     <Link className='footer-navlink' to='/contact'>Contact</Link>
                 </div>
                 <div className='footer-credits'>
-                    <img className='footer-react-icon' src={ReactImage} alt="React Icon" />
+                    <svg className='footer-react-icon'>
+                        <use href={`${ReactImage}#react-icon`}></use>
+                    </svg>
                     <p>Made with React JS</p>
                     <p>{`© ${currentYear} All rights reserved by Frederico Silva`}</p>
                 </div>

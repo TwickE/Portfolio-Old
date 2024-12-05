@@ -15,7 +15,7 @@
     background-color: var(--small-skill-badge-background-color);
 }
 
-.small-skill-badge> img {
+.small-skill-badge> svg {
     width: 19px;
     height: 19px;
 }
