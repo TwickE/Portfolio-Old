@@ -3,10 +3,12 @@ import iconsFile from '../../../assets/icons.svg'
 import { Link } from 'react-router-dom'
 import ReactImage from '../../../assets/skills-images.svg'
 import { useEffect, useState } from 'react';
+import useNavigateHome from '../../../hooks/useNavigateHome';
 
 function Footer() {
     const currentYear = new Date().getFullYear();
     const [footerStyle, setFooterStyle] = useState({});
+    const handleLogoClick = useNavigateHome();
 
     useEffect(() => {
         const checkFooterPosition = () => {
@@ -31,11 +33,11 @@ function Footer() {
     return (
         <footer style={footerStyle} className='footer-container'>
             <div className='footer-inner-container'>
-                <Link className='footer-navlink' to='/'>
+                <button className='footer-navlink' onClick={handleLogoClick}>
                     <svg className='footer-main-icon'>
                         <use href={`${iconsFile}#main-icon`}></use>
                     </svg>
-                </Link>
+                </button>
                 <div className='footer-navlink-container'>
                     <Link className='footer-navlink' to='/'>Home</Link>
                     <Link className='footer-navlink' to='/about'>About</Link>
