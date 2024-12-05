@@ -1,7 +1,8 @@
 import './Navbar.css'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import useNavigateHome from '../../../hooks/useNavigateHome';
 import iconsFile from '../../../assets/icons.svg'
 
 function Navbar(props) {
@@ -9,16 +10,7 @@ function Navbar(props) {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [mobileThemeMenu, setMobileThemeMenu] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    const handleLogoClick = () => {
-        if (location.pathname !== '/') {
-            navigate('/');
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    }
+    const handleLogoClick = useNavigateHome();
 
     const toggleDarkMode = () => {
         localStorage.theme = 'dark'
