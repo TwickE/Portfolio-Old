@@ -1,0 +1,20 @@
+.spinner {
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    background-color: (--background-color1);
+}
+
+.spinner > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
