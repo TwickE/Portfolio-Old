@@ -5,10 +5,8 @@ import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
 import { useState, forwardRef } from 'react';
 import Swal from 'sweetalert2'
 import ScrollAnimation from 'react-animate-on-scroll';
-import useLoadAllImages from '../../../hooks/useLoadAllImages';
 
 const ProjectCard = forwardRef(({ cardProps }, ref) => {
-    const images = useLoadAllImages();
     const [selectedImage, setSelectedImage] = useState({
         image: cardProps.cardImages[0].image,
         imageDescription: cardProps.cardImages[0].imageDescription
@@ -63,7 +61,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
                     <SmallSkillBadge
                         key={index}
                         text={badge.badgeTitle}
-                        icon={images[badge.badgeImage]}
+                        icon={badge.badgeImage}
                     />
                 ))}
             </div>

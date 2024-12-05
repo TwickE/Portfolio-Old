@@ -23,39 +23,39 @@ export const projects = [
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
-                "badgeImage": "css-icon.webp"
+                "badgeImage": "css-icon"
             },
             {
                 "badgeTitle": "JavaScript",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "php",
-                "badgeImage": "react-icon.webp"
+                "badgeImage": "react-icon"
             },
             {
                 "badgeTitle": "Ajax",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "MySQL",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "Local Storage",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "Coockies",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "Session Storage",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             }
         ],
         "cardImages": [
@@ -88,11 +88,11 @@ export const projects = [
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
-                "badgeImage": "css-icon.webp"
+                "badgeImage": "css-icon"
             }
         ],
         "cardImages": [
@@ -149,23 +149,23 @@ export const projects = [
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
-                "badgeImage": "css-icon.webp"
+                "badgeImage": "css-icon"
             },
             {
                 "badgeTitle": "JavaScript",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "React JS",
-                "badgeImage": "react-icon.webp"
+                "badgeImage": "react-icon"
             },
             {
                 "badgeTitle": "API",
-                "badgeImage": "javascript-icon.webp"
+                "badgeImage": "javascript-icon"
             }
         ],
         "cardImages": [
@@ -198,15 +198,15 @@ export const projects = [
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "JavaScript",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
-                "badgeImage": "css-icon.webp"
+                "badgeImage": "css-icon"
             }
         ],
         "cardImages": [
@@ -243,15 +243,15 @@ export const projects = [
         "cardSmallBadges": [
             {
                 "badgeTitle": "HTML",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "JavaScript",
-                "badgeImage": "html-icon.webp"
+                "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
-                "badgeImage": "css-icon.webp"
+                "badgeImage": "css-icon"
             }
         ],
         "cardImages": [
@@ -338,161 +338,161 @@ export const skills = [
     {
         "skillLink": "https://developer.mozilla.org/docs/Web/HTML",
         "skillName": "HTML",
-        "skillImage": "html-icon.webp"
+        "skillImage": "html-icon"
     },
     {
         "skillLink": "https://developer.mozilla.org/docs/Web/CSS",
         "skillName": "CSS",
-        "skillImage": "css-icon.webp"
+        "skillImage": "css-icon"
     },
     {
         "skillLink": "https://tailwindcss.com/",
         "skillName": "Tailwind CSS",
-        "skillImage": "tailwindcss-icon.webp"
+        "skillImage": "tailwindcss-icon"
     },
     {
         "skillLink": "https://sass-lang.com/",
         "skillName": "Sass",
-        "skillImage": "sass-icon.webp"
+        "skillImage": "sass-icon"
     },
     {
         "skillLink": "https://getbootstrap.com/",
         "skillName": "Bootstrap",
-        "skillImage": "bootstrap-icon.webp"
+        "skillImage": "bootstrap-icon"
     },
     {
         "skillLink": "https://developer.mozilla.org/docs/Web/JavaScript",
         "skillName": "JavaScript",
-        "skillImage": "javascript-icon.webp"
+        "skillImage": "javascript-icon"
     },
     {
         "skillLink": "https://www.typescriptlang.org/",
         "skillName": "TypeScript",
-        "skillImage": "typescript-icon.webp"
+        "skillImage": "typescript-icon"
     },
     {
         "skillLink": "https://www.php.net/",
         "skillName": "php",
-        "skillImage": "php-icon.webp"
+        "skillImage": "php-icon"
     },
     {
         "skillLink": "https://learn.microsoft.com/dotnet/csharp/",
         "skillName": "C#",
-        "skillImage": "csharp-icon.webp"
+        "skillImage": "csharp-icon"
     },
     {
         "skillLink": "https://learn.microsoft.com/cpp/?view=msvc-170",
         "skillName": "C++",
-        "skillImage": "cplusplus-icon.webp"
+        "skillImage": "cplusplus-icon"
     },
     {
         "skillLink": "https://www.swift.org/",
         "skillName": "Swift",
-        "skillImage": "swift-icon.webp"
+        "skillImage": "swift-icon"
     },
     {
         "skillLink": "https://www.java.com/",
         "skillName": "Java",
-        "skillImage": "java-icon.webp"
+        "skillImage": "java-icon"
     },
     {
         "skillLink": "https://kotlinlang.org/",
         "skillName": "Kotlin",
-        "skillImage": "kotlin-icon.webp"
+        "skillImage": "kotlin-icon"
     },
     {
         "skillLink": "https://www.python.org/",
         "skillName": "Python",
-        "skillImage": "python-icon.webp"
+        "skillImage": "python-icon"
     },
     {
         "skillLink": "https://react.dev/",
         "skillName": "React JS",
-        "skillImage": "react-icon.webp"
+        "skillImage": "react-icon"
     },
     {
         "skillLink": "https://reactnative.dev/",
         "skillName": "React Native",
-        "skillImage": "react-icon.webp"
+        "skillImage": "react-icon"
     },
     {
         "skillLink": "https://angular.dev/",
         "skillName": "Angular",
-        "skillImage": "angular-icon.webp"
+        "skillImage": "angular-icon"
     },
     {
         "skillLink": "https://ionicframework.com/",
         "skillName": "Ionic",
-        "skillImage": "ionic-icon.webp"
+        "skillImage": "ionic-icon"
     },
     {
         "skillLink": "https://expressjs.com/",
         "skillName": "Express",
-        "skillImage": "express-icon.webp"
+        "skillImage": "express-icon"
     },
     {
         "skillLink": "https://nodejs.org/",
         "skillName": "NodeJS",
-        "skillImage": "nodejs-icon.webp"
+        "skillImage": "nodejs-icon"
     },
     {
         "skillLink": "https://www.mysql.com/",
         "skillName": "MySQL",
-        "skillImage": "mysql-icon.webp"
+        "skillImage": "mysql-icon"
     },
     {
         "skillLink": "https://www.mongodb.com/",
         "skillName": "MongoDB",
-        "skillImage": "mongodb-icon.webp"
+        "skillImage": "mongodb-icon"
     },
     {
         "skillLink": "https://firebase.google.com/",
         "skillName": "Firebase",
-        "skillImage": "firebase-icon.webp"
+        "skillImage": "firebase-icon"
     },
     {
         "skillLink": "https://code.visualstudio.com/",
-        "skillName": "Visual Studio Code",
-        "skillImage": "vscode-icon.webp"
+        "skillName": "VS Code",
+        "skillImage": "vscode-icon"
     },
     {
         "skillLink": "https://visualstudio.microsoft.com/",
         "skillName": "Visual Studio",
-        "skillImage": "visualstudio-icon.webp"
+        "skillImage": "visualstudio-icon"
     },
     {
         "skillLink": "https://developer.android.com/",
         "skillName": "Android Studio",
-        "skillImage": "androidstudio-icon.webp"
+        "skillImage": "androidstudio-icon"
     },
     {
         "skillLink": "https://developer.apple.com/xcode/",
         "skillName": "Xcode",
-        "skillImage": "xcode-icon.webp"
+        "skillImage": "xcode-icon"
     },
     {
         "skillLink": "https://figma.com/",
         "skillName": "Figma",
-        "skillImage": "figma-icon.webp"
+        "skillImage": "figma-icon"
     },
     {
         "skillLink": "https://www.npmjs.com/",
         "skillName": "npm",
-        "skillImage": "npm-icon.webp"
+        "skillImage": "npm-icon"
     },
     {
         "skillLink": "https://git-scm.com/",
         "skillName": "git",
-        "skillImage": "git-icon.webp"
+        "skillImage": "git-icon"
     },
     {
         "skillLink": "https://www.gnu.org/software/bash/",
         "skillName": "Bash",
-        "skillImage": "bash-icon.webp"
+        "skillImage": "bash-icon"
     },
     {
         "skillLink": "https://unity.com/",
         "skillName": "Unity",
-        "skillImage": "unity-icon.webp"
+        "skillImage": "unity-icon"
     }
 ]

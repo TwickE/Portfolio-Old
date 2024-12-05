@@ -15,7 +15,7 @@
     text-decoration: none;
 }
 
-.skill-badge > img {
+.skill-badge > svg {
     width: 60px;
     height: 60px;
     filter: grayscale(100%);
@@ -33,7 +33,7 @@
     box-shadow: 0px 0px 10px var(--primary-color);
 }
 
-.skill-badge:hover > img {
+.skill-badge:hover > svg {
     filter: grayscale(0%);
 }
 
@@ -46,7 +46,7 @@
         border: 1px solid var(--primary-color);
     }
 
-    .skill-badge > img {
+    .skill-badge > svg {
         filter: grayscale(0%);
     }
 
