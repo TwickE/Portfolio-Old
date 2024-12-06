@@ -1,22 +1,29 @@
 import './GoUp.css'
 import iconsFile from '../../../assets/icons.svg'
-import React from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 function GoUp() {
-    const [fillAmount, setFillAmount] = React.useState('0')
-    const [maxFillAmount] = React.useState('307.919')
+    const [fillAmount, setFillAmount] = useState(0)
+    const maxFillAmount = 307.919;
 
-    const updateFillAmount = React.useCallback(() => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight;
-        const winHeight = window.innerHeight;
-        const scrollableHeight = docHeight - winHeight;
-        const scrollPercentage = scrollTop / scrollableHeight;
-        const newFillAmount = scrollPercentage * maxFillAmount;
-        setFillAmount(newFillAmount);
+    const updateFillAmount = useCallback(() => {
+        try {
+            const docHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight
+            );
+            const winHeight = window.innerHeight;
+            const scrollTop = window.scrollY;
+            const scrollableHeight = docHeight - winHeight;
+            const scrollPercentage = scrollTop / scrollableHeight;
+            const newFillAmount = scrollPercentage * maxFillAmount;
+            setFillAmount(newFillAmount);
+        } catch (error) {
+            console.error('Error updating fill amount:', error);
+        }
     }, [maxFillAmount]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', updateFillAmount);
         return () => {
             window.removeEventListener('scroll', updateFillAmount);

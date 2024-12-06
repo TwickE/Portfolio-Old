@@ -7,7 +7,7 @@ import skillsImages from '../../../assets/skills-images.svg';
 const SkillBadge = forwardRef((props, ref) => {
     return (
         <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50}>
-            <a href={props.skillLink} className='skill-badge' target='_blank' ref={ref}>
+            <a href={props.skillLink} className='skill-badge' target='_blank' ref={ref} aria-label={`${props.skillName} skill`}>
                 <svg>
                     <use href={`${skillsImages}#${props.skillImage}`}></use>
                 </svg>
@@ -21,7 +21,7 @@ SkillBadge.displayName = 'SkillBadge';
 
 SkillBadge.propTypes = {
     skillLink: PropTypes.string.isRequired,
-    skillImage: PropTypes.string,
+    skillImage: PropTypes.string.isRequired,
     skillName: PropTypes.string.isRequired
 };
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import backgroundImage from '../../../assets/breadcrumbBackground.webp'
 import { Link } from 'react-router-dom';
 import iconsFile from '../../../assets/icons.svg'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 function BreadcrumbSection(props) {
     const breadcrumbBackgroundImage = {
@@ -12,12 +12,12 @@ function BreadcrumbSection(props) {
     const breadcrumbRef = useRef(null);
     const [breadcrumbHeight, setBreadcrumbHeight] = useState(0);
 
-    const updateBreadcrumbHeight = () => {
+    const updateBreadcrumbHeight = useCallback(() => {
         if (breadcrumbRef.current) {
             const { height } = breadcrumbRef.current.getBoundingClientRect();
             setBreadcrumbHeight(height - 100);
         }
-    };
+    }, []);
 
     useEffect(() => {
         updateBreadcrumbHeight();
@@ -26,7 +26,7 @@ function BreadcrumbSection(props) {
         return () => {
             window.removeEventListener('resize', updateBreadcrumbHeight);
         };
-    }, []);
+    }, [updateBreadcrumbHeight]);
 
     return (
         <>

@@ -58,7 +58,7 @@ form > p {
     font-size: 1rem;
 }
 
-.form-inputs:user-invalid {
+.form-inputs:user-invalid, .form-textarea:user-invalid {
     border: 1px solid red;
 }
 

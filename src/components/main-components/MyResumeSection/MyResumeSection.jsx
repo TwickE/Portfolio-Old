@@ -1,6 +1,6 @@
 import './MyResumeSection.css'
 import PropTypes from 'prop-types';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import OutlineButton from '../../sub-components/OutlineButton/OutlineButton';
 import useDownloadCV from '../../../hooks/useDownloadCV.jsx';
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
@@ -20,29 +20,44 @@ function MyProjectsSection(props) {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
     }
 
-    const calculateHeights = () => {
-        if (firstEducationCardRef.current && lastEducationCardRef.current) {
-            const firstEducationCardRect = firstEducationCardRef.current.getBoundingClientRect();
-            const lastEducationCardRect = lastEducationCardRef.current.getBoundingClientRect();
-            const educationHeight = lastEducationCardRect.top + window.scrollY - (firstEducationCardRect.top + window.scrollY);
-            setEducationBarHeight(educationHeight);
-        }
+    const calculateHeights = useCallback(() => {
+        try {
+            if (firstEducationCardRef.current && lastEducationCardRef.current) {
+                const firstEducationRect = firstEducationCardRef.current.getBoundingClientRect();
+                const lastEducationRect = lastEducationCardRef.current.getBoundingClientRect();
+                const educationHeight = lastEducationRect.top + window.scrollY - (firstEducationRect.top + window.scrollY);
+                setEducationBarHeight(educationHeight);
+            }
 
-        if (firstWorkCardRef.current && lastWorkCardRef.current) {
-            const firstWorkCardRect = firstWorkCardRef.current.getBoundingClientRect();
-            const lastWorkCardRect = lastWorkCardRef.current.getBoundingClientRect();
-            const workHeight = lastWorkCardRect.top + window.scrollY - (firstWorkCardRect.top + window.scrollY);
-            setWorkBarHeight(workHeight);
+            if (firstWorkCardRef.current && lastWorkCardRef.current) {
+                const firstWorkRect = firstWorkCardRef.current.getBoundingClientRect();
+                const lastWorkRect = lastWorkCardRef.current.getBoundingClientRect();
+                const workHeight = lastWorkRect.top + window.scrollY - (firstWorkRect.top + window.scrollY);
+                setWorkBarHeight(workHeight);
+            }
+        } catch (error) {
+            console.error('Error calculating heights:', error);
         }
-    };
+    }, []);
 
     useEffect(() => {
-        calculateHeights();
-        window.addEventListener('resize', calculateHeights);
+        const resizeObserver = new ResizeObserver(() => {
+            calculateHeights();
+        });
+
+        const elements = [
+            firstEducationCardRef.current,
+            lastEducationCardRef.current,
+            firstWorkCardRef.current,
+            lastWorkCardRef.current
+        ].filter(Boolean);
+
+        elements.forEach(element => resizeObserver.observe(element));
+
         return () => {
-            window.removeEventListener('resize', calculateHeights);
+            resizeObserver.disconnect();
         };
-    }, []);
+    }, [calculateHeights]);
 
     return (
         <section style={backgroundColor} className='my-resume-container'>
@@ -54,7 +69,7 @@ function MyProjectsSection(props) {
                     <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50} className='resume-small-container'>
                         <h3>Education</h3>
                         <div className='resume-data-container'
-                        style={{ '--education-bar-height': `${educationBarHeight}px` }}>
+                            style={{ '--education-bar-height': `${educationBarHeight}px` }}>
                             {education.map((card, index) => (
                                 <ResumeCard
                                     key={index}
@@ -70,7 +85,7 @@ function MyProjectsSection(props) {
                     <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={50} className='resume-small-container'>
                         <h3>Work Experience</h3>
                         <div className='resume-data-container'
-                        style={{ '--work-bar-height': `${workBarHeight}px` }}>
+                            style={{ '--work-bar-height': `${workBarHeight}px` }}>
                             {work.map((card, index) => (
                                 <ResumeCard
                                     key={index}
@@ -84,7 +99,7 @@ function MyProjectsSection(props) {
                         </div>
                     </ScrollAnimation>
                 </div>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20} style={{width: 'fit-content', margin: 'auto'}}>
+                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20} style={{ width: 'fit-content', margin: 'auto' }}>
                     <OutlineButton
                         buttonProps={{
                             buttonSmall: false,
@@ -96,7 +111,7 @@ function MyProjectsSection(props) {
                         }}
                     />
                 </ScrollAnimation>
-                
+
             </div>
         </section>
     )
