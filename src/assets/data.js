@@ -1,23 +1,70 @@
 export const projects = [
     {
-        "cardTitle": "Quizzical",
-        "date": "Sep 2024 - Sep 2024",
-        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardTitle": "Aora",
+        "date": "Oct 2024 - Sep Oct",
+        "cardDescription": "Aora is a mobile app for iOS and Android built in React Native with Expo, Tailwind CSS and Appwrite for back-end.",
         "cardLinks": [
             {
                 "linkTitle": "Github",
                 "linkImage": "github-icon",
-                "linkUrl": "https://github.com/TwickE/Quizzical"
+                "linkUrl": "https://github.com/TwickE/Aora"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "React Native",
+                "badgeImage": "react-icon"
             },
             {
-                "linkTitle": "Website",
-                "linkImage": "web-icon",
-                "linkUrl": "https://twicke.github.io/Quizzical/"
+                "badgeTitle": "Tailwind CSS",
+                "badgeImage": "tailwindcss-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "Expo",
+                "badgeImage": "expo-icon"
+            },
+            {
+                "badgeTitle": "Appwrite",
+                "badgeImage": "appwrite-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Aora1.png?raw=true",
+                "imageDescription": "Aora Onboarding, Sign In and Sign Up Screens"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Aora2.png?raw=true",
+                "imageDescription": "Aora Home Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Aora3.png?raw=true",
+                "imageDescription": "Aora Create Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Aora4.png?raw=true",
+                "imageDescription": "Aora Profile Screen"
+            },
+        ]
+    },
+    {
+        "cardTitle": "Meme Creator",
+        "date": "Oct 2021 - Nov 2021",
+        "cardDescription": "A web application to create memes built with HTML CSS JavaScript PHP and MySQL.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/MemeCreator"
             },
             {
                 "linkTitle": "Figma",
                 "linkImage": "figma-icon",
-                "linkUrl": "https://twicke.github.io/Quizzical/"
+                "linkUrl": "https://www.figma.com/design/7yub7c0bVwgTbKDz1hL0Rw/Meme-Creator?node-id=0-1&t=N3gdfyIAs7YKRvb0-1"
             }
         ],
         "cardSmallBadges": [
@@ -35,54 +82,82 @@ export const projects = [
             },
             {
                 "badgeTitle": "php",
-                "badgeImage": "react-icon"
+                "badgeImage": "php-icon"
             },
             {
                 "badgeTitle": "Ajax",
-                "badgeImage": "javascript-icon"
+                "badgeImage": "ajax-icon"
+            },
+            {
+                "badgeTitle": "jQuery",
+                "badgeImage": "jquery-icon"
             },
             {
                 "badgeTitle": "MySQL",
-                "badgeImage": "javascript-icon"
+                "badgeImage": "mysql-icon"
+            },
+            {
+                "badgeTitle": "Cookies",
+                "badgeImage": "cookies-icon"
             },
             {
                 "badgeTitle": "Local Storage",
-                "badgeImage": "javascript-icon"
+                "badgeImage": "localstorage-icon"
             },
             {
-                "badgeTitle": "Coockies",
-                "badgeImage": "javascript-icon"
+                "badgeTitle": "Dark Mode",
+                "badgeImage": "darkmode-icon"
             },
             {
-                "badgeTitle": "Session Storage",
-                "badgeImage": "javascript-icon"
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
             }
         ],
         "cardImages": [
             {
-                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical1.png?raw=true",
-                "imageDescription": "Quizzical start screen"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCHome.png?raw=true",
+                "imageDescription": "Website home page Light Mode"
             },
             {
-                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Quizzical2.png?raw=true",
-                "imageDescription": "Quizzical end screen with score"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCHomeDark.png?raw=true",
+                "imageDescription": "Website home page Dark Mode"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCLogin.png?raw=true",
+                "imageDescription": "User login with e-mail and password"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCRegisto.png?raw=true",
+                "imageDescription": "User registration with first name, last name, email, password and confirm password"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCProfile.png?raw=true",
+                "imageDescription": "User profile page, where the user can change the first name, last name and profile picture"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCAdmin.png?raw=true",
+                "imageDescription": "The page where admin users can see, add and remove meme templates"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MCStudio.png?raw=true",
+                "imageDescription": "The page where all users can create memes using the existing templates"
             }
         ]
     },
     {
-        "cardTitle": "Quizzical 2",
-        "date": "Sep 2024 - Sep 2024",
-        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardTitle": "Chess Game",
+        "date": "Mar 2023 - Mar 2023",
+        "cardDescription": "Chess Game using HTML CSS and Javascript",
         "cardLinks": [
             {
                 "linkTitle": "Github",
                 "linkImage": "github-icon",
-                "linkUrl": "https://github.com/TwickE/Quizzical"
+                "linkUrl": "https://github.com/TwickE/ChessGame"
             },
             {
                 "linkTitle": "Website",
                 "linkImage": "web-icon",
-                "linkUrl": "https://twicke.github.io/Quizzical/"
+                "linkUrl": "https://twicke.github.io/ChessGame/"
             }
         ],
         "cardSmallBadges": [
@@ -93,40 +168,93 @@ export const projects = [
             {
                 "badgeTitle": "CSS",
                 "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "javaScript",
+                "badgeImage": "javascript-icon"
             }
         ],
         "cardImages": [
             {
-                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
-                "imageDescription": "Image 1"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/ChessGame.png?raw=true",
+                "imageDescription": "Chess game page"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Retro Runner - Against Time",
+        "date": "Dec 2023 - Jan 2024",
+        "cardDescription": "Retro Runner - Against Time is a local multiplayer game made in unity where two players compete against each other on various levels where the objective is to earn as many points as possible to beat the other player.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/RetroRunner-AgainstTime"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "linkTitle": "Game",
+                "linkImage": "play-icon",
+                "linkUrl": "https://twicke.itch.io/retro-runner-against-time"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "Unity",
+                "badgeImage": "unity-icon"
             },
             {
-                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
-                "imageDescription": "Image 2"
+                "badgeTitle": "C#",
+                "badgeImage": "csharp-icon"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "badgeTitle": "Multiplayer",
+                "badgeImage": "multiplayer-icon"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "badgeTitle": "Platformer",
+                "badgeImage": "platformer-icon"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "badgeTitle": "2D",
+                "badgeImage": "2d-icon"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "badgeTitle": "Game",
+                "badgeImage": "game-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTime1.png?raw=true",
+                "imageDescription": "Level 1"
             },
             {
-                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
-                "imageDescription": "Image 2"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTime2.png?raw=true",
+                "imageDescription": "Level 2"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTime3.png?raw=true",
+                "imageDescription": "Level 3"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTimeScoreBoard.png?raw=true",
+                "imageDescription": "Score Board"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTimeFirePlayer.gif?raw=true",
+                "imageDescription": "Player 1"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/WASD.gif?raw=true",
+                "imageDescription": "Player 1 Controls"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner-AgainstTimeWaterPlayer.gif?raw=true",
+                "imageDescription": "Player 2"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Arrows.gif?raw=true",
+                "imageDescription": "Player 2 Controls"
             }
         ]
     },
@@ -165,7 +293,11 @@ export const projects = [
             },
             {
                 "badgeTitle": "API",
-                "badgeImage": "javascript-icon"
+                "badgeImage": "api-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
             }
         ],
         "cardImages": [
@@ -180,19 +312,24 @@ export const projects = [
         ]
     },
     {
-        "cardTitle": "Quizzical 2",
-        "date": "Sep 2024 - Sep 2024",
-        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardTitle": "FlyHighUL",
+        "date": "May 2024 - Sep 2024",
+        "cardDescription": "An immersive experience for virtual visitors to the University of Lisbon, allowing them to explore the campus in a unique, engaging and interactive way.",
         "cardLinks": [
             {
                 "linkTitle": "Github",
                 "linkImage": "github-icon",
-                "linkUrl": "https://github.com/TwickE/Quizzical"
+                "linkUrl": "https://github.com/TwickE/FlyHighUL"
             },
             {
                 "linkTitle": "Website",
                 "linkImage": "web-icon",
-                "linkUrl": "https://twicke.github.io/Quizzical/"
+                "linkUrl": "https://twicke.github.io/FlyHighUL/"
+            },
+            {
+                "linkTitle": "Figma",
+                "linkImage": "figma-icon",
+                "linkUrl": "https://www.figma.com/design/h2103GOXrtA31lcjfnZXQ4/Fly-High---Multimedia?node-id=0-1&t=6ev8tqwjkZFljkQR-1"
             }
         ],
         "cardSmallBadges": [
@@ -201,43 +338,71 @@ export const projects = [
                 "badgeImage": "html-icon"
             },
             {
-                "badgeTitle": "JavaScript",
-                "badgeImage": "html-icon"
-            },
-            {
                 "badgeTitle": "CSS",
                 "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "Local Storage",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "Themes",
+                "badgeImage": "darkmode-icon"
+            },
+            {
+                "badgeTitle": "Frame Interpolation",
+                "badgeImage": "frameinterpolation-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
             }
         ],
         "cardImages": [
             {
-                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
-                "imageDescription": "Image 1"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL1.png?raw=true",
+                "imageDescription": "WebApp desktop version main page in two themes: blue and green"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL2.png?raw=true",
+                "imageDescription": "WebApp desktop version main page in two themes: red and arange"
             },
             {
-                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
-                "imageDescription": "Image 2"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL3.png?raw=true",
+                "imageDescription": "WebApp desktop version video library page"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL4.png?raw=true",
+                "imageDescription": "WebApp mobile version main page in two themes: blue and green"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL5.png?raw=true",
+                "imageDescription": "WebApp mobile version main page in two themes: red and arange"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/FlyHighUL6.png?raw=true",
+                "imageDescription": "WebApp mobile version video library page"
             }
         ]
     },
     {
-        "cardTitle": "Quizzical 5",
-        "date": "Sep 2024 - Sep 2024",
-        "cardDescription": "A Quiz App made in React JS using the Open Trivia DB.",
+        "cardTitle": "Nike Website",
+        "date": "Oct 2024 - Oct 2024",
+        "cardDescription": "A Nike Website made in React JS with Tailwind CSS",
         "cardLinks": [
             {
                 "linkTitle": "Github",
                 "linkImage": "github-icon",
-                "linkUrl": "https://github.com/TwickE/Quizzical"
+                "linkUrl": "https://github.com/TwickE/NikeWebsite"
             },
             {
                 "linkTitle": "Website",
                 "linkImage": "web-icon",
-                "linkUrl": "https://twicke.github.io/Quizzical/"
+                "linkUrl": "https://twicke.github.io/NikeWebsite/"
             }
         ],
         "cardSmallBadges": [
@@ -247,25 +412,581 @@ export const projects = [
             },
             {
                 "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "Tailwind CSS",
+                "badgeImage": "tailwindcss-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "Dark Mode",
+                "badgeImage": "darkmode-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/NikeWebsite1.png?raw=true",
+                "imageDescription": "Ligh Mode Home Page"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/NikeWebsite2.png?raw=true",
+                "imageDescription": "Dark Mode Home Page"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/NikeWebsite3.png?raw=true",
+                "imageDescription": "Theme Menu Toggler"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Notes App",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A simple notes App made in React JS and Firebase Cloud Firestore.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/NotesApp"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
                 "badgeImage": "html-icon"
             },
             {
                 "badgeTitle": "CSS",
                 "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "Firebase",
+                "badgeImage": "firebase-icon"
+            },
+            {
+                "badgeTitle": "Local Storage",
+                "badgeImage": "localstorage-icon"
+            },
+            {
+                "badgeTitle": "Debouncing",
+                "badgeImage": "debouncing-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
             }
         ],
         "cardImages": [
             {
-                "image": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
-                "imageDescription": "Image 1"
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/ReactNotesApp.png?raw=true",
+                "imageDescription": "Notes App"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Tenzies Game",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A Tenzies game made in React JS",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/TenziesGame"
             },
             {
-                "image": "https://www.superpet.club/blog/wp-content/uploads/2024/02/estimular-gatos.jpg",
-                "imageDescription": "Image 2"
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/TenziesGame/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
             },
             {
-                "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/AhzTqcPdAUA9QcXoYDir4L3KEROWOaNqJRQ0UECA.webp?id=c3e71b20deda7cea2b896bfe2377ef6a",
-                "imageDescription": "Image 2"
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "Local Storage",
+                "badgeImage": "localstorage-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/TenziesGame.png?raw=true",
+                "imageDescription": "Tenzies Game"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Playfair Cypher",
+        "date": "Nov 2022 - Jan 2023",
+        "cardDescription": "Playfair cypher encrypt and decrypt algorithm made using javascript",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/PlayfairCypher"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/PlayfairCypher/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "javaScript",
+                "badgeImage": "javascript-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/PlayfairCypher.png?raw=true",
+                "imageDescription": "Playfair Cypher Interface"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Retro Runner",
+        "date": "May 2023 - Jun 2023",
+        "cardDescription": "Retro Runner is a 2D multiplayer platformer game made in Unity.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/RetroRunner"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "Unity",
+                "badgeImage": "unity-icon"
+            },
+            {
+                "badgeTitle": "C#",
+                "badgeImage": "csharp-icon"
+            },
+            {
+                "badgeTitle": "Multiplayer",
+                "badgeImage": "multiplayer-icon"
+            },
+            {
+                "badgeTitle": "Platformer",
+                "badgeImage": "platformer-icon"
+            },
+            {
+                "badgeTitle": "2D",
+                "badgeImage": "2d-icon"
+            },
+            {
+                "badgeTitle": "Game",
+                "badgeImage": "game-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner1.png?raw=true",
+                "imageDescription": "Level 1"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner2.png?raw=true",
+                "imageDescription": "Level 2"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner3.png?raw=true",
+                "imageDescription": "Level 3"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner4.png?raw=true",
+                "imageDescription": "Level 4"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RetroRunner5.png?raw=true",
+                "imageDescription": "Level 5"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Budget Planner",
+        "date": "Mar 2023 - Mar 2023",
+        "cardDescription": "Budget Planner App buit with Ionic",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/BudgetPlanner"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/BudgetPlanner/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "Ionic",
+                "badgeImage": "ionic-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/BudgetPlannerIOS.png?raw=true",
+                "imageDescription": "IOS Version"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/BudgetPlannerAndroid.png?raw=true",
+                "imageDescription": "Android Version"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/BudgetPlannerDesktop.png?raw=true",
+                "imageDescription": "Desktop Version"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Task Tracker App",
+        "date": "Mar 2023 - Mar 2023",
+        "cardDescription": "Task Tracker App made with Angular, TypeScript and JSON Server",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/TaskTracker"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "TypeScript",
+                "badgeImage": "typescript-icon"
+            },
+            {
+                "badgeTitle": "Angular",
+                "badgeImage": "angular-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/TaskTrackerApp.png?raw=true",
+                "imageDescription": "Task Tracker App"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Neumorphism Calculator",
+        "date": "Feb 2023 - Feb 2023",
+        "cardDescription": "A simple javascript calculator.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/Neumorphism-Calculator"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/Neumorphism-Calculator/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/Calculator.png?raw=true",
+                "imageDescription": "Calculator Interface"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Small Projects",
+        "date": "Nov 2022 - Mar 2023",
+        "cardDescription": "Various Small Projects created using HTML, CSS and Javascript.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/SmallProjects"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/SmallProjects/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "API",
+                "badgeImage": "api-icon"
+            },
+            {
+                "badgeTitle": "Local Storage",
+                "badgeImage": "localstorage-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/SmallProjects.png?raw=true",
+                "imageDescription": "Main Page"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/CountdownApp.png?raw=true",
+                "imageDescription": "Countdown App"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/QuizApp1.png?raw=true",
+                "imageDescription": "Quiz App Questions"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/QuizApp2.png?raw=true",
+                "imageDescription": "Quiz App Results"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RecipeApp1.png?raw=true",
+                "imageDescription": "Recipe App Recipe Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/RecipeApp2.png?raw=true",
+                "imageDescription": "Recipe App Recipe Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/NotesApp.png?raw=true",
+                "imageDescription": "Notes App Home Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/ToDoApp.png?raw=true",
+                "imageDescription": "ToDo App Home Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MoviesApp.png?raw=true",
+                "imageDescription": "Movies App Home Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/GithubProfilesApp.png?raw=true",
+                "imageDescription": "Github Profiles App Home Screen"
+            },
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/DrawingApp.png?raw=true",
+                "imageDescription": "Drawing App Home Screen"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Meme Generator",
+        "date": "Sep 2024 - Sep 2024",
+        "cardDescription": "A meme generator WebApp made in React JS using the imgflip API",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/MemeGenerator"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/MemeGenerator/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "API",
+                "badgeImage": "api-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/MemeGenerator.png?raw=true",
+                "imageDescription": "Meme Generator Interface"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Travel Journal",
+        "date": "Aug 2024 - Aug 2024",
+        "cardDescription": "A Travel Journal Website made with React JS.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/TravelJournal"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/TravelJournal/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            },
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/TravelJournal.png?raw=true",
+                "imageDescription": "Travel Journal Interface"
+            }
+        ]
+    },
+    {
+        "cardTitle": "Business Card",
+        "date": "Jul 2024 - Jul 2024",
+        "cardDescription": "A Business Card made with React JS and my firs React project.",
+        "cardLinks": [
+            {
+                "linkTitle": "Github",
+                "linkImage": "github-icon",
+                "linkUrl": "https://github.com/TwickE/BusinessCard"
+            },
+            {
+                "linkTitle": "Website",
+                "linkImage": "web-icon",
+                "linkUrl": "https://twicke.github.io/BusinessCard/"
+            }
+        ],
+        "cardSmallBadges": [
+            {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
+                "badgeTitle": "JavaScript",
+                "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "CSS",
+                "badgeImage": "css-icon"
+            },
+            {
+                "badgeTitle": "React JS",
+                "badgeImage": "react-icon"
+            }
+        ],
+        "cardImages": [
+            {
+                "image": "https://github.com/TwickE/ReadmeImages/blob/main/BusinessCard.png?raw=true",
+                "imageDescription": "Business Card"
             }
         ]
     }
