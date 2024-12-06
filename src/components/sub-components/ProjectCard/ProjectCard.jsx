@@ -2,38 +2,43 @@ import './ProjectCard.css'
 import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
 import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
-import { useState, forwardRef } from 'react';
+import { useState, forwardRef, useCallback } from 'react';
 import Swal from 'sweetalert2'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const ProjectCard = forwardRef(({ cardProps }, ref) => {
     const [selectedImage, setSelectedImage] = useState({
-        image: cardProps.cardImages[0].image,
-        imageDescription: cardProps.cardImages[0].imageDescription
+        image: cardProps.cardImages[0]?.image || '',
+        imageDescription: cardProps.cardImages[0]?.imageDescription || ''
     });
 
-    const handleImageClick = (image, imageDescription) => {
+    const handleImageClick = useCallback((image, imageDescription) => {
         setSelectedImage({ image, imageDescription });
-    };
+    }, []);
 
-    const openImageModal = () => {
-        document.body.style.overflow = 'hidden'
-        Swal.fire({
-            imageUrl: selectedImage.image,
-            imageAlt: selectedImage.imageDescription,
-            width: 'fit-content',
-            background: 'var(--background-color1)',
-            showConfirmButton: false,
-            showCloseButton: true,
-            padding: '0',
-            customClass: {
-                closeButton: 'close-button',
-                image: 'modal-image'
-            }
-        }).then(() => {
-            document.body.style.overflow = 'auto'
-        })
-    }
+    const openImageModal = useCallback(async () => {
+        try {
+            document.body.style.overflow = 'hidden';
+
+            await Swal.fire({
+                imageUrl: selectedImage.image,
+                imageAlt: selectedImage.imageDescription,
+                width: 'fit-content',
+                background: 'var(--background-color1)',
+                showConfirmButton: false,
+                showCloseButton: true,
+                padding: '0',
+                customClass: {
+                    closeButton: 'close-button',
+                    image: 'modal-image'
+                }
+            });
+        } catch (error) {
+            console.error('Error opening modal:', error);
+        } finally {
+            document.body.style.overflow = 'auto';
+        }
+    }, [selectedImage]);
 
     return (
         <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn={cardProps.cardAnimation} offset={50} className='card-container' ref={ref}>

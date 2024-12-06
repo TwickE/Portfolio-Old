@@ -1,40 +1,67 @@
 import './ContactSection.css'
 import PropTypes from 'prop-types';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Swal from 'sweetalert2'
 import ContactBadge from '../../sub-components/ContactBadge/ContactBadge';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 function ContactSection(props) {
     const formRef = useRef(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
     }
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        
+        if (isSubmitting) return;
+        
+        try {
+            setIsSubmitting(true);
+            const formData = new FormData(e.target);
+            formData.append("access_key", import.meta.env.VITE_FORM_API_KEY);
 
-        formData.append("access_key", import.meta.env.VITE_FORM_API_KEY);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            });
 
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: json
-        }).then((res) => res.json());
+            const res = await response.json();
 
-        if (res.success) {
-            Swal.fire({
-                title: "Success!",
-                text: "Message sent successfully!",
-                icon: "success",
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            if (res.success) {
+                await Swal.fire({
+                    title: "Success!",
+                    text: "Message sent successfully!",
+                    icon: "success",
+                    color: "var(--text-color)",
+                    background: "var(--accent-color)",
+                    buttonsStyling: false,
+                    customClass: {
+                        confirmButton: "filled-button"
+                    },
+                    confirmButtonText: "Ok"
+                });
+                formRef.current?.reset();
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            await Swal.fire({
+                title: "Error!",
+                text: "Failed to send message. Please try again.",
+                icon: "error",
                 color: "var(--text-color)",
                 background: "var(--accent-color)",
                 buttonsStyling: false,
@@ -42,9 +69,9 @@ function ContactSection(props) {
                     confirmButton: "filled-button"
                 },
                 confirmButtonText: "Ok"
-
             });
-            formRef.current.reset();
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -64,7 +91,9 @@ function ContactSection(props) {
                             <input className='form-inputs' type="tel" pattern='[0-9+ ]*' name='Phone Number' placeholder='Phone Number' required />
                         </div>
                         <textarea className='form-textarea' name='Message' placeholder='Message' required></textarea>
-                        <button className='filled-button form-button'>Send Message</button>
+                        <button className='filled-button form-button' disabled={isSubmitting}>
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>
                     </form>
                 </ScrollAnimation>
                 <div className='contact-badges-container'>
