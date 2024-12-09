@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 import Swal from 'sweetalert2'
 import ContactBadge from '../../sub-components/ContactBadge/ContactBadge';
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
 function ContactSection(props) {
     const formRef = useRef(null);
+    const formVisible = useScrollAnimation(formRef, 50);
+
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const backgroundColor = {
@@ -15,9 +17,9 @@ function ContactSection(props) {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (isSubmitting) return;
-        
+
         try {
             setIsSubmitting(true);
             const formData = new FormData(e.target);
@@ -78,24 +80,22 @@ function ContactSection(props) {
     return (
         <section style={backgroundColor} className='contact-conatiner'>
             <div className='contact-inner-container'>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50}>
-                    <form ref={formRef} onSubmit={onSubmit}>
-                        <h2>Let&apos;s Talk!</h2>
-                        <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
-                        <div className='form-devide-inputs'>
-                            <input className='form-inputs' type="text" name='First Name' placeholder='First Name' required />
-                            <input className='form-inputs' type="text" name='Last Name' placeholder='Last Name' required />
-                        </div>
-                        <div className='form-devide-inputs'>
-                            <input className='form-inputs' type="email" name='Email Adress' placeholder='Email Adress' required />
-                            <input className='form-inputs' type="tel" pattern='[0-9+ ]*' name='Phone Number' placeholder='Phone Number' required />
-                        </div>
-                        <textarea className='form-textarea' name='Message' placeholder='Message' required></textarea>
-                        <button className='filled-button form-button' disabled={isSubmitting}>
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
-                        </button>
-                    </form>
-                </ScrollAnimation>
+                <form ref={formRef} onSubmit={onSubmit} className={formVisible ? 'fadeInLeft' : 'no-animation'}>
+                    <h2>Let&apos;s Talk!</h2>
+                    <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
+                    <div className='form-devide-inputs'>
+                        <input className='form-inputs' type="text" name='First Name' placeholder='First Name' required />
+                        <input className='form-inputs' type="text" name='Last Name' placeholder='Last Name' required />
+                    </div>
+                    <div className='form-devide-inputs'>
+                        <input className='form-inputs' type="email" name='Email Adress' placeholder='Email Adress' required />
+                        <input className='form-inputs' type="tel" pattern='[0-9+ ]*' name='Phone Number' placeholder='Phone Number' required />
+                    </div>
+                    <textarea className='form-textarea' name='Message' placeholder='Message' required></textarea>
+                    <button className='filled-button form-button' disabled={isSubmitting}>
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </button>
+                </form>
                 <div className='contact-badges-container'>
                     <ContactBadge
                         link='mailto: fredericosilva2002@hotmail.com'

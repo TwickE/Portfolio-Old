@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import SkillBadge from '../../sub-components/SkillBadge/SkillBadge'
 import { skills } from '../../../assets/data.js'
 import { useRef, useCallback } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
 function MySkillsSection(props) {
     const badgesContainerRef = useRef(null);
+
+    const h2Ref = useRef(null);
+    const h2Visible = useScrollAnimation(h2Ref, 20);
+    const pRef = useRef(null);
+    const pVisible = useScrollAnimation(pRef, 20);
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
@@ -24,12 +29,12 @@ function MySkillsSection(props) {
     return (
         <section style={backgroundColor} className='my-skills-conatiner'>
             <div className='my-skills-inner-conatiner'>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                <div ref={h2Ref} className={h2Visible ? 'fadeInUp' : 'no-animation'}>
                     <h2>My Skills</h2>
-                </ScrollAnimation>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                </div>
+                <div ref={pRef} className={pVisible ? 'fadeInUp' : 'no-animation'}>
                     <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achieve your goals.</p>
-                </ScrollAnimation>
+                </div>
                 <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove} role='list' aria-label='Skills list'>
                     {skills.map((skill, index) => (
                          <SkillBadge

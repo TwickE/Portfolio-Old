@@ -1,11 +1,15 @@
 import './ContactBadge.css'
 import PropTypes from 'prop-types';
 import iconsFile from '../../../assets/icons.svg'
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
+import { useRef } from 'react';
 
 function ContactBadge(props) {
+    const contactRef = useRef(null);
+    const contactVisible = useScrollAnimation(contactRef, 50);
+
     return (
-        <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={20}>
+        <div ref={contactRef} className={contactVisible ? 'fadeInRight' : 'no-animation'}>
             <a className='contact-badge' href={props.link} target='_blank'>
                 <span>
                     <svg>
@@ -17,7 +21,7 @@ function ContactBadge(props) {
                     <h4>{props.text}</h4>
                 </div>
             </a>
-        </ScrollAnimation>
+        </div>
     )
 }
 
