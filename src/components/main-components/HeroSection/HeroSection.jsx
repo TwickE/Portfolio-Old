@@ -3,14 +3,20 @@ import OutlineButton from '../../sub-components/OutlineButton/OutlineButton.jsx'
 import useDownloadCV from '../../../hooks/useDownloadCV.jsx'
 import iconsFile from '../../../assets/icons.svg'
 import profilePhoto from '../../../assets/profilePhoto.webp'
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
+import { useRef } from 'react';
 
 function HeroSection() {
     const downloadCV = useDownloadCV();
 
+    const photoRef = useRef(null);
+    const photoVisible = useScrollAnimation(photoRef, 0);
+    const infoRef = useRef(null);
+    const infoVisible = useScrollAnimation(infoRef, 0);
+
     return (
         <main className="hero-section">
-            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={20} className='container-info'>
+            <div ref={infoRef} className={`container-info ${infoVisible ? 'fadeInLeft' : 'no-animation'}`}>
                 <h2>Hi, I am Fred</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
                 <div className='container-photo-small'>
@@ -46,10 +52,10 @@ function HeroSection() {
                         </a>
                     </div>
                 </div>
-            </ScrollAnimation>
-            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={20} className='container-photo'>
+            </div>
+            <div ref={photoRef} className={`container-photo ${photoVisible ? 'fadeInRight' : 'no-animation'}`}>
                 <img className='profile-photo' src={profilePhoto} alt="Profile Photo" loading='lazy'/>
-            </ScrollAnimation>
+            </div>
         </main>
         
     )

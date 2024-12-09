@@ -5,7 +5,7 @@ import OutlineButton from '../../sub-components/OutlineButton/OutlineButton';
 import useDownloadCV from '../../../hooks/useDownloadCV.jsx';
 import ResumeCard from '../../sub-components/ResumeCard/ResumeCard';
 import { education, work } from '../../../assets/data.js';
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
 function MyProjectsSection(props) {
     const firstEducationCardRef = useRef(null);
@@ -15,6 +15,16 @@ function MyProjectsSection(props) {
     const lastWorkCardRef = useRef(null);
     const [workBarHeight, setWorkBarHeight] = useState(0);
     const downloadCV = useDownloadCV();
+
+    const h2Ref = useRef(null);
+    const h2Visible = useScrollAnimation(h2Ref, 20);
+    const educationRef = useRef(null);
+    const educationVisible = useScrollAnimation(educationRef, 50);
+    const workRef = useRef(null);
+    const workVisible = useScrollAnimation(workRef, 50);
+    const buttonRef = useRef(null);
+    const buttonVisible = useScrollAnimation(buttonRef, 50);
+    
 
     const backgroundColor = {
         backgroundColor: props.backgroundColor ? 'var(--background-color2)' : 'var(--background-color1)'
@@ -62,11 +72,11 @@ function MyProjectsSection(props) {
     return (
         <section style={backgroundColor} className='my-resume-container'>
             <div className='my-resume-inner-container'>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                <div ref={h2Ref} className={h2Visible ? 'fadeInUp' : 'no-animation'}>
                     <h2>My Resume</h2>
-                </ScrollAnimation>
+                </div>
                 <div className='resume-container'>
-                    <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50} className='resume-small-container'>
+                    <div ref={educationRef} className={`resume-small-container ${educationVisible ? 'fadeInLeft' : 'no-animation'}`}>
                         <h3>Education</h3>
                         <div className='resume-data-container'
                             style={{ '--education-bar-height': `${educationBarHeight}px` }}>
@@ -81,8 +91,8 @@ function MyProjectsSection(props) {
                                 />
                             ))}
                         </div>
-                    </ScrollAnimation>
-                    <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInRight' offset={50} className='resume-small-container'>
+                    </div>
+                    <div ref={workRef} className={`resume-small-container ${workVisible ? 'fadeInRight' : 'no-animation'}`}>
                         <h3>Work Experience</h3>
                         <div className='resume-data-container'
                             style={{ '--work-bar-height': `${workBarHeight}px` }}>
@@ -97,9 +107,9 @@ function MyProjectsSection(props) {
                                 />
                             ))}
                         </div>
-                    </ScrollAnimation>
+                    </div>
                 </div>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20} style={{ width: 'fit-content', margin: 'auto' }}>
+                <div ref={buttonRef} className={buttonVisible ? 'fadeInUp' : 'no-animation'} style={{ width: 'fit-content', margin: 'auto' }}>
                     <OutlineButton
                         buttonProps={{
                             buttonSmall: false,
@@ -110,7 +120,7 @@ function MyProjectsSection(props) {
                             clickFunction: downloadCV
                         }}
                     />
-                </ScrollAnimation>
+                </div>
 
             </div>
         </section>

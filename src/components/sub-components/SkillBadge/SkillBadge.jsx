@@ -1,19 +1,22 @@
 import './SkillBadge.css'
 import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
+import { forwardRef, useRef } from 'react';
 import skillsImages from '../../../assets/skills-images.svg';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
 const SkillBadge = forwardRef((props, ref) => {
+    const skillRef = useRef(null);
+    const skillVisible = useScrollAnimation(skillRef, 100);
+
     return (
-        <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInLeft' offset={50}>
+        <div ref={skillRef} className={skillVisible ? 'fadeInLeft' : 'no-animation'}>
             <a href={props.skillLink} className='skill-badge' target='_blank' ref={ref} aria-label={`${props.skillName} skill`}>
                 <svg>
                     <use href={`${skillsImages}#${props.skillImage}`}></use>
                 </svg>
                 <h3>{props.skillName}</h3>
             </a>
-        </ScrollAnimation>
+        </div>
     )
 });
 

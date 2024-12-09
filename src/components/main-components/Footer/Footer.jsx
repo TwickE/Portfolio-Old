@@ -1,39 +1,17 @@
 import './Footer.css'
 import iconsFile from '../../../assets/icons.svg'
 import ReactImage from '../../../assets/skills-images.svg'
-import { useEffect, useState, useCallback } from 'react';
 import useNavigateHome from '../../../hooks/useNavigateHome';
 
 function Footer() {
     const currentYear = new Date().getFullYear();
-    const [footerStyle, setFooterStyle] = useState({});
     const handleHomeClick = useNavigateHome();
     const handleAboutClick = useNavigateHome('/about');
     const handleProjectsClick = useNavigateHome('/projects');
     const handleContactClick = useNavigateHome('/contact');
 
-    const checkFooterPosition = useCallback(() => {
-        const contentHeight = document.body.scrollHeight;
-        const viewportHeight = window.innerHeight;
-
-        if (contentHeight < viewportHeight) {
-            setFooterStyle({ position: 'fixed'});
-        } else {
-            setFooterStyle({ position: 'static' });
-        }
-    }, []);
-
-    useEffect(() => {
-        checkFooterPosition();
-        window.addEventListener('resize', checkFooterPosition);
-
-        return () => {
-            window.removeEventListener('resize', checkFooterPosition);
-        };
-    }, [checkFooterPosition]);
-
     return (
-        <footer style={footerStyle} className='footer-container'>
+        <footer className='footer-container'>
             <div className='footer-inner-container'>
                 <button className='footer-navlink' onClick={handleHomeClick}>
                     <svg className='footer-main-icon'>

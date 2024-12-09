@@ -6,7 +6,6 @@ const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-import "animate.css/animate.compat.css"
 
 function App() {
     const location = useLocation();

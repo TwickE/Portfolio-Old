@@ -8,7 +8,7 @@ function Spinner() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowSpinner(true);
-        }, 50);
+        }, 150);
 
         return () => clearTimeout(timer);
     }, []);

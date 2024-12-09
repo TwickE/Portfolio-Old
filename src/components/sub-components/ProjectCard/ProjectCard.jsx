@@ -2,17 +2,38 @@ import './ProjectCard.css'
 import PropTypes from 'prop-types';
 import OutlineButton from '../OutlineButton/OutlineButton';
 import SmallSkillBadge from '../SmallSkillBadge/SmallSkillBadge';
-import { useState, forwardRef, useCallback } from 'react';
+import { useState, forwardRef, useCallback, useEffect, useRef, useImperativeHandle } from 'react';
 import Swal from 'sweetalert2'
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
-const ProjectCard = forwardRef(({ cardProps }, ref) => {
+const ProjectCard = forwardRef(({ cardProps }, forwardedRef) => {
+    const localRef = useRef(null);
+    const ref = forwardedRef || localRef;
+    const cardVisible = useScrollAnimation(ref, 200);
+
+    useImperativeHandle(forwardedRef, () => ({
+        scrollIntoView: () => ref.current?.scrollIntoView()
+    }), [ref]);
+
     const [selectedImage, setSelectedImage] = useState({
         image: cardProps.cardImages[0]?.image || '',
         imageDescription: cardProps.cardImages[0]?.imageDescription || ''
     });
 
-    const handleImageClick = useCallback((image, imageDescription) => {
+    useEffect(() => {
+        cardProps.cardImages.forEach(img => {
+            const image = new Image();
+            image.src = img.image;
+        });
+    }, [cardProps.cardImages]);
+
+    const handleImageClick = useCallback(async (image, imageDescription) => {
+        const loadImage = new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve();
+            img.src = image;
+        });
+        await loadImage;
         setSelectedImage({ image, imageDescription });
     }, []);
 
@@ -41,7 +62,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
     }, [selectedImage]);
 
     return (
-        <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn={cardProps.cardAnimation} offset={50} className='card-container' ref={ref}>
+        <div ref={ref} className={`card-container ${cardVisible ? cardProps.cardAnimation : 'no-animation'}`}>
             <h3>{cardProps.cardTitle}</h3>
             <span>{cardProps.date}</span>
             <p>{cardProps.cardDescription}</p>
@@ -84,7 +105,7 @@ const ProjectCard = forwardRef(({ cardProps }, ref) => {
                 </div>
                 <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} onClick={() => openImageModal()} />
             </div>
-        </ScrollAnimation>
+        </div>
     )
 })
 

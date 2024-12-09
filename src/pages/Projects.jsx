@@ -4,12 +4,9 @@ import useScrollToTop from "../hooks/useScrollToTop"
 import MyProjectsSection from "../components/main-components/MyProjectsSection/MyProjectsSection"
 import GoUp from "../components/sub-components/GoUp/GoUp"
 import Footer from "../components/main-components/Footer/Footer"
-import useScrollUpdate from "../hooks/useScrollUpdate"
-
 
 function Projects() {
     useScrollToTop();
-    useScrollUpdate();
 
     return (
         <>

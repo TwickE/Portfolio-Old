@@ -1,12 +1,18 @@
 import './MyProjectsSection.css'
 import PropTypes from 'prop-types';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import ProjectCard from '../../sub-components/ProjectCard/ProjectCard';
-import { projects } from '../../../assets/data.js';
 import { useNavigate } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
+import useScrollAnimation from '../../../hooks/useScrollAnimation.jsx'
 
 function MyProjectsSection(props) {
+    const h2Ref = useRef(null);
+    const h2Visible = useScrollAnimation(h2Ref, 20);
+    const pRef = useRef(null);
+    const pVisible = useScrollAnimation(pRef, 20);
+    const buttonRef = useRef(null);
+    const buttonVisible = useScrollAnimation(buttonRef, 50);
+
     const navigate = useNavigate();
     const seeMoreButtonRef = useRef(null);
 
@@ -31,38 +37,40 @@ function MyProjectsSection(props) {
         }
     }
 
+    const [displayedProjects, setDisplayedProjects] = useState([]);
+
+    useEffect(() => {
+        import('../../../assets/data.js').then(({ projects }) => {
+            setDisplayedProjects(
+                props.allProjects ? projects : projects.slice(0, 4)
+            );
+        });
+    }, [props.allProjects]);
+
     return (
         <section style={backgroundColor} className='my-projects-conatiner'>
             <div className='my-projects-inner-conatiner'>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                <div ref={h2Ref} className={h2Visible ? 'fadeInUp' : 'no-animation'}>
                     <h2>My Projects</h2>
-                </ScrollAnimation>
-                <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+                </div>
+                <div ref={pRef} className={pVisible ? 'fadeInUp' : 'no-animation'}>
                     <p>I bring creative ideas to life through detailed, user-focused solutions. Each project showcases my ability to blend innovation with functionality, delivering results that exceed expectations and drive success.</p>
-                </ScrollAnimation>
+                </div>
                 <div className='cards-container'>
-                    {
-                        props.allProjects ? (
-                            projects.map((card, index) => (
-                                    <ProjectCard
-                                        key={index}
-                                        cardProps={{...card, cardAnimation: index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}}
-                                    />
-                            ))
-                        ) : (
-                            projects.slice(0, 4).map((card, index) => (
-                                <ProjectCard
-                                    key={index} 
-                                    cardProps={{...card, cardAnimation: index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}}
-                                />
-                            ))
-                        )
-                    }
+                    {displayedProjects.map((card, index) => (
+                        <ProjectCard
+                            key={card.id || index}
+                            cardProps={{
+                                ...card,
+                                cardAnimation: index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
-            <ScrollAnimation animatePreScroll={false} animateOnce={true} animateIn='fadeInUp' offset={20}>
+            <div ref={buttonRef} className={buttonVisible ? 'fadeInUp' : 'no-animation'}>
                 <button className='filled-button' ref={seeMoreButtonRef} onClick={handleSeeMoreProjectsClick} style={displayButton()}>See More Projects</button>
-            </ScrollAnimation>
+            </div>
         </section>
     )
 }

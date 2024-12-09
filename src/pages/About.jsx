@@ -6,11 +6,9 @@ import MyResumeSection from "../components/main-components/MyResumeSection/MyRes
 import LetsTalkSection from "../components/main-components/LetsTalkSection/LetsTalkSection"
 import useScrollToTop from "../hooks/useScrollToTop"
 import GoUp from "../components/sub-components/GoUp/GoUp"
-import useScrollUpdate from "../hooks/useScrollUpdate"
 
 function About() {
     useScrollToTop();
-    useScrollUpdate();
 
     return (
         <>
