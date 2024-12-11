@@ -30,6 +30,10 @@ export const projects = [
             {
                 "badgeTitle": "Appwrite",
                 "badgeImage": "appwrite-icon"
+            },
+            {
+                "badgeTitle": "Authentication",
+                "badgeImage": "authentication-icon"
             }
         ],
         "cardImages": [
@@ -111,6 +115,10 @@ export const projects = [
             {
                 "badgeTitle": "Responsive",
                 "badgeImage": "responsive-icon"
+            },
+            {
+                "badgeTitle": "Authentication",
+                "badgeImage": "authentication-icon"
             }
         ],
         "cardImages": [

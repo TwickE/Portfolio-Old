@@ -26,6 +26,14 @@ function MySkillsSection(props) {
         badgesContainer.style.setProperty('--y', `${y}px`);
     }, []);
 
+    const handleMouseEnter = useCallback(() => {
+        const badgesContainer = badgesContainerRef.current;
+        if (badgesContainer) {
+            badgesContainer.style.setProperty('--x', '-999px');
+            badgesContainer.style.setProperty('--y', '-999px');
+        }
+    }, []);
+
     return (
         <section style={backgroundColor} className='my-skills-conatiner'>
             <div className='my-skills-inner-conatiner'>
@@ -35,7 +43,7 @@ function MySkillsSection(props) {
                 <div ref={pRef} className={pVisible ? 'fadeInUp' : 'no-animation'}>
                     <p>I can put your ideas and thus your wishes in the form of a unique solution that can help you achieve your goals.</p>
                 </div>
-                <div className='badges-container' ref={badgesContainerRef} onMouseMove={handleMouseMove} role='list' aria-label='Skills list'>
+                <div className='badges-container' ref={badgesContainerRef} onMouseEnter={handleMouseEnter} onMouseMove={handleMouseMove} role='list' aria-label='Skills list'>
                     {skills.map((skill, index) => (
                          <SkillBadge
                              key={index}
