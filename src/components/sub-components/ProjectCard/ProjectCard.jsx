@@ -100,10 +100,12 @@ const ProjectCard = forwardRef(({ cardProps }, forwardedRef) => {
                             alt={image.imageDescription}
                             className={selectedImage.image === image.image ? 'selected-image-border' : ''}
                             onClick={() => handleImageClick(image.image)}
+                            loading="lazy"
+                            decoding="async"
                         />
                     ))}
                 </div>
-                <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} onClick={() => openImageModal()} />
+                <img className='selected-image' src={selectedImage.image} alt={selectedImage.imageDescription} onClick={() => openImageModal()} loading="lazy" decoding="async"/>
             </div>
         </div>
     )

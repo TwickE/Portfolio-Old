@@ -20,7 +20,7 @@ function HeroSection() {
                 <h2>Hi, I am Fred</h2>
                 <h1>A Full Stack Developer +<br></br>UX Designer</h1>
                 <div className='container-photo-small'>
-                    <img className='profile-photo' src={profilePhoto} alt="Profile Photo" loading='lazy'/>
+                    <img className='profile-photo' src={profilePhoto} alt="Profile Photo" loading='lazy' decoding='async'/>
                 </div>
                 <p>I&rsquo;m a technology enthusiast with a focus on Web Development. I consider myself a curious individual, always eager to learn new things.</p>
                 <div className='container-buttons'>
@@ -54,7 +54,7 @@ function HeroSection() {
                 </div>
             </div>
             <div ref={photoRef} className={`container-photo ${photoVisible ? 'fadeInRight' : 'no-animation'}`}>
-                <img className='profile-photo' src={profilePhoto} alt="Profile Photo" loading='lazy'/>
+                <img className='profile-photo' src={profilePhoto} alt="Profile Photo" loading='lazy' decoding='async'/>
             </div>
         </main>
         
