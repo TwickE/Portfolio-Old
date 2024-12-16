@@ -9,14 +9,26 @@ const SkillBadge = forwardRef((props, ref) => {
     const skillVisible = useScrollAnimation(skillRef, 100);
 
     return (
-        <div ref={skillRef} className={skillVisible ? 'fadeInLeft' : 'no-animation'}>
-            <a href={props.skillLink} className='skill-badge' target='_blank' ref={ref} aria-label={`${props.skillName} skill`}>
-                <svg>
-                    <use href={`${skillsImages}#${props.skillImage}`}></use>
-                </svg>
-                <h3>{props.skillName}</h3>
-            </a>
-        </div>
+        props.mainSkill ? (
+            <div ref={skillRef} className={skillVisible ? 'fadeInLeft' : 'no-animation'}>
+                <a href={props.skillLink} className='main-skill-badge' target='_blank' ref={ref} aria-label={`${props.skillName} skill`}>
+                    <span></span>
+                    <svg>
+                        <use href={`${skillsImages}#${props.skillImage}`}></use>
+                    </svg>
+                    <h3>{props.skillName}</h3>
+                </a>
+            </div>
+        ) : (
+            <div ref={skillRef} className={skillVisible ? 'fadeInLeft' : 'no-animation'}>
+                <a href={props.skillLink} className='skill-badge' target='_blank' ref={ref} aria-label={`${props.skillName} skill`}>
+                    <svg>
+                        <use href={`${skillsImages}#${props.skillImage}`}></use>
+                    </svg>
+                    <h3>{props.skillName}</h3>
+                </a>
+            </div>
+        )
     )
 });
 
@@ -25,7 +37,8 @@ SkillBadge.displayName = 'SkillBadge';
 SkillBadge.propTypes = {
     skillLink: PropTypes.string.isRequired,
     skillImage: PropTypes.string.isRequired,
-    skillName: PropTypes.string.isRequired
+    skillName: PropTypes.string.isRequired,
+    mainSkill: PropTypes.bool.isRequired
 };
 
 export default SkillBadge

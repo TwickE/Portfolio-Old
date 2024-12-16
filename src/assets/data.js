@@ -1111,7 +1111,7 @@ export const work = [
     }
 ]
 
-export const skills = [
+export const mainSkills = [
     {
         "skillLink": "https://developer.mozilla.org/docs/Web/HTML",
         "skillName": "HTML",
@@ -1128,6 +1128,84 @@ export const skills = [
         "skillImage": "tailwindcss-icon"
     },
     {
+        "skillLink": "https://developer.mozilla.org/docs/Web/JavaScript",
+        "skillName": "JavaScript",
+        "skillImage": "javascript-icon"
+    },
+    {
+        "skillLink": "https://react.dev/",
+        "skillName": "React JS",
+        "skillImage": "react-icon"
+    },
+    {
+        "skillLink": "https://reactnative.dev/",
+        "skillName": "React Native",
+        "skillImage": "react-icon"
+    },
+    {
+        "skillLink": "https://expressjs.com/",
+        "skillName": "Express",
+        "skillImage": "express-icon"
+    },
+    {
+        "skillLink": "https://expo.dev/",
+        "skillName": "Expo",
+        "skillImage": "expo-icon"
+    },
+    {
+        "skillLink": "https://render.com/",
+        "skillName": "Render",
+        "skillImage": "render-icon"
+    },
+    {
+        "skillLink": "https://nodejs.org/",
+        "skillName": "NodeJS",
+        "skillImage": "nodejs-icon"
+    },
+    {
+        "skillLink": "https://www.mysql.com/",
+        "skillName": "MySQL",
+        "skillImage": "mysql-icon"
+    },
+    {
+        "skillLink": "https://www.mongodb.com/",
+        "skillName": "MongoDB",
+        "skillImage": "mongodb-icon"
+    },
+    {
+        "skillLink": "https://firebase.google.com/",
+        "skillName": "Firebase",
+        "skillImage": "firebase-icon"
+    },
+    {
+        "skillLink": "https://code.visualstudio.com/",
+        "skillName": "VS Code",
+        "skillImage": "vscode-icon"
+    },
+    {
+        "skillLink": "https://figma.com/",
+        "skillName": "Figma",
+        "skillImage": "figma-icon"
+    },
+    {
+        "skillLink": "https://www.npmjs.com/",
+        "skillName": "npm",
+        "skillImage": "npm-icon"
+    },
+    {
+        "skillLink": "https://git-scm.com/",
+        "skillName": "git",
+        "skillImage": "git-icon"
+    },
+    {
+        "skillLink": "https://www.gnu.org/software/bash/",
+        "skillName": "Bash",
+        "skillImage": "bash-icon"
+    }
+]
+
+export const otherSkills = [
+    {
         "skillLink": "https://sass-lang.com/",
         "skillName": "Sass",
         "skillImage": "sass-icon"
@@ -1136,11 +1214,6 @@ export const skills = [
         "skillLink": "https://getbootstrap.com/",
         "skillName": "Bootstrap",
         "skillImage": "bootstrap-icon"
-    },
-    {
-        "skillLink": "https://developer.mozilla.org/docs/Web/JavaScript",
-        "skillName": "JavaScript",
-        "skillImage": "javascript-icon"
     },
     {
         "skillLink": "https://www.typescriptlang.org/",
@@ -1183,16 +1256,6 @@ export const skills = [
         "skillImage": "python-icon"
     },
     {
-        "skillLink": "https://react.dev/",
-        "skillName": "React JS",
-        "skillImage": "react-icon"
-    },
-    {
-        "skillLink": "https://reactnative.dev/",
-        "skillName": "React Native",
-        "skillImage": "react-icon"
-    },
-    {
         "skillLink": "https://angular.dev/",
         "skillName": "Angular",
         "skillImage": "angular-icon"
@@ -1203,49 +1266,9 @@ export const skills = [
         "skillImage": "ionic-icon"
     },
     {
-        "skillLink": "https://expressjs.com/",
-        "skillName": "Express",
-        "skillImage": "express-icon"
-    },
-    {
-        "skillLink": "https://expo.dev/",
-        "skillName": "Expo",
-        "skillImage": "expo-icon"
-    },
-    {
-        "skillLink": "https://render.com/",
-        "skillName": "Render",
-        "skillImage": "render-icon"
-    },
-    {
-        "skillLink": "https://nodejs.org/",
-        "skillName": "NodeJS",
-        "skillImage": "nodejs-icon"
-    },
-    {
-        "skillLink": "https://www.mysql.com/",
-        "skillName": "MySQL",
-        "skillImage": "mysql-icon"
-    },
-    {
-        "skillLink": "https://www.mongodb.com/",
-        "skillName": "MongoDB",
-        "skillImage": "mongodb-icon"
-    },
-    {
-        "skillLink": "https://firebase.google.com/",
-        "skillName": "Firebase",
-        "skillImage": "firebase-icon"
-    },
-    {
         "skillLink": "https://appwrite.io/",
         "skillName": "Appwrite",
         "skillImage": "appwrite-icon"
-    },
-    {
-        "skillLink": "https://code.visualstudio.com/",
-        "skillName": "VS Code",
-        "skillImage": "vscode-icon"
     },
     {
         "skillLink": "https://visualstudio.microsoft.com/",
@@ -1261,26 +1284,6 @@ export const skills = [
         "skillLink": "https://developer.apple.com/xcode/",
         "skillName": "Xcode",
         "skillImage": "xcode-icon"
-    },
-    {
-        "skillLink": "https://figma.com/",
-        "skillName": "Figma",
-        "skillImage": "figma-icon"
-    },
-    {
-        "skillLink": "https://www.npmjs.com/",
-        "skillName": "npm",
-        "skillImage": "npm-icon"
-    },
-    {
-        "skillLink": "https://git-scm.com/",
-        "skillName": "git",
-        "skillImage": "git-icon"
-    },
-    {
-        "skillLink": "https://www.gnu.org/software/bash/",
-        "skillName": "Bash",
-        "skillImage": "bash-icon"
     },
     {
         "skillLink": "https://unity.com/",

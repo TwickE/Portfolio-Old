@@ -74,68 +74,6 @@ function ContactSection(props) {
         }
     };
 
-    /* const onSubmit = async (e) => {
-        e.preventDefault();
-
-        if (isSubmitting) return;
-
-        try {
-            setIsSubmitting(true);
-            const formData = new FormData(e.target);
-            formData.append("access_key", import.meta.env.VITE_FORM_API_KEY);
-
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: json
-            });
-
-            const res = await response.json();
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            if (res.success) {
-                await Swal.fire({
-                    title: "Success!",
-                    text: "Message sent successfully!",
-                    icon: "success",
-                    color: "var(--text-color)",
-                    background: "var(--accent-color)",
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: "filled-button"
-                    },
-                    confirmButtonText: "Ok"
-                });
-                formRef.current?.reset();
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            await Swal.fire({
-                title: "Error!",
-                text: "Failed to send message. Please try again.",
-                icon: "error",
-                color: "var(--text-color)",
-                background: "var(--accent-color)",
-                buttonsStyling: false,
-                customClass: {
-                    confirmButton: "filled-button"
-                },
-                confirmButtonText: "Ok"
-            });
-        } finally {
-            setIsSubmitting(false);
-        }
-    }; */
-
     return (
         <section style={backgroundColor} className='contact-conatiner'>
             <div className='contact-inner-container'>
