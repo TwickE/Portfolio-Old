@@ -49,7 +49,7 @@
     left: var(--x, 0);
     width: 200px;
     height: 200px;
-    background: var(--radial-gradient);
+    background: var(--primary-color);
     border-radius: 50%;
     filter: blur(65px);
     pointer-events: none;

@@ -1,10 +1,10 @@
 .hero-section {
     width: 1320px;
-    min-height: calc(100dvh - 250px);
+    min-height: calc(100dvh - 200px);
     margin: auto;
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -16,7 +16,7 @@
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background: var(--radial-gradient);
+    background: var(--primary-color);
     filter: blur(150px);
     margin-top: -5%;
     z-index: -1;
@@ -106,10 +106,9 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: var(--radial-gradient);
+    background: var(--primary-color);
     filter: blur(150px);
     margin-left: -5%;
-    margin-bottom: -5%;
     z-index: -1;
 }
 
@@ -227,10 +226,9 @@
         width: 220px;
         height: 220px;
         border-radius: 50%;
-        background: var(--radial-gradient);
+        background: var(--primary-color);
         filter: blur(150px);
         margin-left: -5%;
-        margin-bottom: -5%;
     }
 
     .profile-photo {

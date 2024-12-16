@@ -12,6 +12,10 @@ export const projects = [
         ],
         "cardSmallBadges": [
             {
+                "badgeTitle": "HTML",
+                "badgeImage": "html-icon"
+            },
+            {
                 "badgeTitle": "React Native",
                 "badgeImage": "react-icon"
             },
@@ -26,6 +30,10 @@ export const projects = [
             {
                 "badgeTitle": "Expo",
                 "badgeImage": "expo-icon"
+            },
+            {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
             },
             {
                 "badgeTitle": "Appwrite",
@@ -300,6 +308,10 @@ export const projects = [
                 "badgeImage": "react-icon"
             },
             {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            },
+            {
                 "badgeTitle": "API",
                 "badgeImage": "api-icon"
             },
@@ -351,11 +363,11 @@ export const projects = [
             },
             {
                 "badgeTitle": "JavaScript",
-                "badgeImage": "css-icon"
+                "badgeImage": "javascript-icon"
             },
             {
                 "badgeTitle": "Local Storage",
-                "badgeImage": "css-icon"
+                "badgeImage": "localstorage-icon"
             },
             {
                 "badgeTitle": "Themes",
@@ -431,6 +443,10 @@ export const projects = [
                 "badgeImage": "react-icon"
             },
             {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            },
+            {
                 "badgeTitle": "Dark Mode",
                 "badgeImage": "darkmode-icon"
             },
@@ -481,6 +497,10 @@ export const projects = [
             {
                 "badgeTitle": "React JS",
                 "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
             },
             {
                 "badgeTitle": "Firebase",
@@ -540,6 +560,10 @@ export const projects = [
                 "badgeImage": "react-icon"
             },
             {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            },
+            {
                 "badgeTitle": "Local Storage",
                 "badgeImage": "localstorage-icon"
             },
@@ -581,8 +605,12 @@ export const projects = [
                 "badgeImage": "css-icon"
             },
             {
-                "badgeTitle": "javaScript",
+                "badgeTitle": "JavaScript",
                 "badgeImage": "javascript-icon"
+            },
+            {
+                "badgeTitle": "Responsive",
+                "badgeImage": "responsive-icon"
             }
         ],
         "cardImages": [
@@ -686,6 +714,10 @@ export const projects = [
                 "badgeImage": "ionic-icon"
             },
             {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            },
+            {
                 "badgeTitle": "Responsive",
                 "badgeImage": "responsive-icon"
             }
@@ -732,6 +764,10 @@ export const projects = [
             {
                 "badgeTitle": "Angular",
                 "badgeImage": "angular-icon"
+            },
+            {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
             }
         ],
         "cardImages": [
@@ -901,6 +937,10 @@ export const projects = [
                 "badgeImage": "react-icon"
             },
             {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            },
+            {
                 "badgeTitle": "API",
                 "badgeImage": "api-icon"
             },
@@ -949,6 +989,10 @@ export const projects = [
                 "badgeTitle": "React JS",
                 "badgeImage": "react-icon"
             },
+            {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
+            }
         ],
         "cardImages": [
             {
@@ -989,6 +1033,10 @@ export const projects = [
             {
                 "badgeTitle": "React JS",
                 "badgeImage": "react-icon"
+            },
+            {
+                "badgeTitle": "Node JS",
+                "badgeImage": "nodejs-icon"
             }
         ],
         "cardImages": [
@@ -1160,6 +1208,16 @@ export const skills = [
         "skillImage": "express-icon"
     },
     {
+        "skillLink": "https://expo.dev/",
+        "skillName": "Expo",
+        "skillImage": "expo-icon"
+    },
+    {
+        "skillLink": "https://render.com/",
+        "skillName": "Render",
+        "skillImage": "render-icon"
+    },
+    {
         "skillLink": "https://nodejs.org/",
         "skillName": "NodeJS",
         "skillImage": "nodejs-icon"
@@ -1178,6 +1236,11 @@ export const skills = [
         "skillLink": "https://firebase.google.com/",
         "skillName": "Firebase",
         "skillImage": "firebase-icon"
+    },
+    {
+        "skillLink": "https://appwrite.io/",
+        "skillName": "Appwrite",
+        "skillImage": "appwrite-icon"
     },
     {
         "skillLink": "https://code.visualstudio.com/",

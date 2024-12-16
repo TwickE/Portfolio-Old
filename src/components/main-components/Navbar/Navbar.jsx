@@ -65,7 +65,7 @@ function Navbar(props) {
 
     const changeNavbarColor = (mobileMenuIcon) => {
         const paths = ['/about', '/projects', '/contact'];
-        if (paths.includes(location.pathname) && scrolled === false) {
+        if (paths.includes(window.location.hash.slice(1)) && scrolled === false) {
             if (mobileMenuIcon) {
                 return {
                     backgroundColor: 'white',

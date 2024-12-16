@@ -9,9 +9,8 @@ header {
 
 .scrolled {
     background: var(--background-color1-glass);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-bottom: 1px solid rgba( 255, 255, 255, 0.20 );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 0 30px 3px rgba(40, 58, 255, 0.25);
     position: sticky;
 }
