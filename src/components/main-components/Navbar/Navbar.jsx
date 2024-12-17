@@ -198,7 +198,6 @@ function Navbar(props) {
                         <span style={changeNavbarColor(true)}></span>
                         <span style={changeNavbarColor(true)}></span>
                         <span style={changeNavbarColor(true)}></span>
-                        <span style={changeNavbarColor(true)}></span>
                     </button>
                 </div>
             </nav>

@@ -120,6 +120,8 @@ body {
 .fadeInLeft {
     animation-name: fadeInLeft;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @keyframes fadeInRight {
@@ -139,6 +141,8 @@ body {
 .fadeInRight {
     animation-name: fadeInRight;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @keyframes fadeInUp {
@@ -158,6 +162,8 @@ body {
 .fadeInUp {
     animation-name: fadeInUp;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @keyframes zoomIn {
@@ -175,4 +181,13 @@ body {
 .zoomIn {
     animation-name: zoomIn;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }
