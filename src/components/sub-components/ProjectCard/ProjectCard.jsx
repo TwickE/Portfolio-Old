@@ -66,6 +66,10 @@ const ProjectCard = forwardRef(({ cardProps }, forwardedRef) => {
                         container.style.paddingLeft = '48px';
                         container.style.paddingRight = '48px';
                         container.style.paddingBottom = '45px';
+                    } else {
+                        container.style.paddingLeft = '0';
+                        container.style.paddingRight = '0';
+                        container.style.paddingBottom = '0';
                     }
                     const root = createRoot(container);
                     root.render(

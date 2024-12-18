@@ -1,5 +1,5 @@
 import "./Spinner.css";
-import HashLoader from "react-spinners/HashLoader";
+import FadeLoader from "react-spinners/FadeLoader";
 import { useState, useEffect } from 'react';
 
 function Spinner() {
@@ -18,10 +18,13 @@ function Spinner() {
     return (
         <main className="spinner">
             <div>
-                <HashLoader
+                <FadeLoader
+                    height={30}
+                    margin={20}
+                    radius={20}
+                    width={8}
                     color={"#283AFF"}
                     loading={true}
-                    size={150}
                     aria-label="Loading Spinner"
                 />
                 <h1>Loading</h1>
