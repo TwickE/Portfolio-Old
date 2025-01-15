@@ -2,7 +2,7 @@
 Welcome to my personal portfolio website! This site showcases my projects, skills, and experience as a Developer with a focus on Web Development.
 
 ## Live Demo
-[View Portfolio](twicke.github.io/Portfolio/)
+[View Portfolio](https://twicke.github.io/Portfolio)
 
 ## Tech Stack
 - HTML5
