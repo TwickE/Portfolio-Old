@@ -15,16 +15,16 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 - GitHub Pages
 
 ## Home Page Dark Mode
-![Home Page Dark Mode](https://github.com/TwickE/ReadmeImages/blob/main/PortfolioHomeDark.png?raw=true)
+![Home Page Dark Mode](https://github.com/user-attachments/assets/9c9daa72-ce38-4e91-a001-ddb138dd9d84)
 
 ## Home Page Light Mode
-![Home Page Light Mode](https://github.com/TwickE/ReadmeImages/blob/main/PortfolioHomeLight.png?raw=true)
+![Home Page Light Mode](https://github.com/user-attachments/assets/10297580-71b8-4278-825b-e717882fe9de)
 
 ## About Page
-![About Page](https://github.com/TwickE/ReadmeImages/blob/main/PortfolioAbout.png?raw=true)
+![About Page](https://github.com/user-attachments/assets/e0901939-99aa-4980-8900-517566ab6066)
 
 ## Projects Page
-![Projects Page](https://github.com/TwickE/ReadmeImages/blob/main/PortfolioProjects.png?raw=true)
+![Projects Page](https://github.com/user-attachments/assets/2f675915-adc7-41fb-80f3-22c0bf91d925)
 
 ## Contact Page
-![Contact Page](https://github.com/TwickE/ReadmeImages/blob/main/PortfolioContact.png?raw=true)
+![Contact Page](https://github.com/user-attachments/assets/68d08046-b1c5-4891-b086-0a392a7b2b6d)
